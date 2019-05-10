@@ -1,8 +1,7 @@
 
+
+
 <?php
-session_start();
-
-
 
 if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
@@ -25,19 +24,19 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		{
 			if($row<>0){
 			$_SESSION['username'] = $email;
-		echo '<script> alert("Ingresado")</script>';
-			echo "<script>location.href='../Views/Cliente/paginaCliente.php'</script>";
+			echo '<script> alert("Ingresado")</script>';
+			header("location: ../Views/Cliente/paginaCliente.php");
 			
 			}else{
 	//caso contrario regresa al archivo html donde esta el archivo registrar
 				echo '<script language= "javascript">alert("EMAIL O CONTRASEÑA INCORRECTO");</script>';
-				echo "<script>location.href='index.php'</script>";	
+				echo "<script>location.href='index.html'</script>";	
 		
 			}
 }else{
 	
 		echo '<script> alert("ESTE USUARIO NO EXISTE, POR FAVOR REGISTRESE PARA PODER INGRESAR")</script>';
-		echo "<script>location.href='index.php'</script>";
+		echo "<script>location.href='index.html'</script>";
 	}
 
 }
