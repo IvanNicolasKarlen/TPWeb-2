@@ -9,8 +9,12 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
  $email = $_POST['email'];
  $pass = $_POST['pass'];
  $repetir = $_POST['repetir'];
-
-
+ $pais = $_POST['pais'];
+ $lat = $_POST['latitud'];
+ $long = $_POST['longitud'];
+ 
+	//Abrir conexion
+	$conexion = new mysqli($host, $usuario, $clave, $bd);
  
  
 		$consulta="select * from usuario where password = '$pass'";
@@ -24,19 +28,7 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
 		//pregunto si el resultado me devuelve una cierta cantidad de filas
 		$row = $resultado->num_rows;
 		$filas = $verificoEmail->num_rows;
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
+	
 		//pregunto si la cantidad de filas es distinto a cero
 		if($filas<>0)
 		{
@@ -52,7 +44,9 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
 								}
 			}
 	}else {  
-				$sql = "INSERT INTO usuario(email,password,nombre) values('$email','$pass','$nombre')";
+				$sql = "INSERT INTO usuario(email,password,nombre,pais,latitud,longitud)
+				values('$email','$pass','$nombre','$pais', $lat, $long)";
+				
 				if($conexion->query($sql)===true)
 			{
 					echo '<script language= "javascript">alert("Usuario registrado con exito");</script>';

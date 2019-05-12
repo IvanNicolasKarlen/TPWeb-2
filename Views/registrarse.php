@@ -1,10 +1,13 @@
 <?php
 session_start();
+
 /*if (isset($_SESSION['usuario'])){
     header('location: pagina.html');
 }*/
-?>
 
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +39,8 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
+
 </head>
 <body style="background-color: #999999;">
 	
@@ -54,6 +59,7 @@ session_start();
 						<input class="input100" type="text" name="nombre">
 						<span class="focus-input100"></span>
 					</div>
+					
 
 					<div class="wrap-input100 validate-input" data-validate="Ej: Usuario@gmail.com">
 						<span class="label-input100">Email</span>
@@ -72,7 +78,29 @@ session_start();
 						<input class="input100" type="password" name="repetir" >
 						<span class="focus-input100"></span>
 					</div>
+					
+					<!--campo pais-->
+					<div class="wrap-input100 validate-input" data-validate="Ej: Pais">
+						<span class="label-input100">Pais</span>
+						<select name="pais" <!--onchange="muestraLocalidad(this.value)"--> 
 
+						<?php
+						 $connect = mysqli_connect("localhost", "root", "Cuc41515", "logintp");
+							$output = array();
+							$query = "SELECT nombre FROM pais";
+							$result = mysqli_query($connect, $query);
+							while($fila = mysqli_fetch_array($result))
+							{
+								echo "<option value='" . $fila["nombre"] . "'>" . $fila["nombre"] . "</option>";
+					
+							}
+							?>
+						</select>
+					</div>
+					
+			
+					
+				<!--
 					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
@@ -87,15 +115,45 @@ session_start();
 						</div>
 
 						
-					</div>
+					</div>	
+				-->
 
+					
+						
+					<div class="flex-m w-full p-b-33">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="location"  onclick="getLocation()" required>
+							<label class="label-checkbox100" for="ckb1" >
+								<span class="txt1">
+									Permitir compartir mi ubicacion
+								</span>
+							</label>
+						</div>
+
+						
+					</div>
+						
+						<!--Intenntando hacer geolocalizacion-->
+						<!--inputs invisibles para guardar lat y long
+						<input type="text"  class="form-control" name="latitud" id="latitud" value= <?php// echo '<script>latitud.document.getElementById("latitud")</script>'?>>
+						<input type="text"  class="form-control" name="latitud" id="latitud" value=id="latitud" ><p id="latitud"></p>
+						<input type="text"  class="form-control" name="longitud" id="longitud" value=<?php //echo '<script>.innerHTML = position.coords.longitude</script>'?>> 
+						<input type="text"  class="form-control" name="longitud" id="longitud" onclick="getLocation()"/>
+						
+						<p id="y"></p>
+						-->
+						
+								   
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button type="submit" class="login100-form-btn" name="botonRegistrar">
+						<button type="submit" class="login100-form-btn" name="botonRegistrar">
 								Registrarme
 							</button>
+							
 						</div>
+	
+
 
 						<?php
 						if(isset($_POST['registrar']))
@@ -112,9 +170,14 @@ session_start();
 						</a>
 					</div>
 				</form>
+	
+				
+				
 			</div>
 		</div>
 	</div>
+	
+	
 	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -135,3 +198,42 @@ session_start();
 
 </body>
 </html>
+
+						
+<!-- Script para obtener geolocalizacion		-->	
+<script>
+var x = document.getElementById("latitud");
+var y = document.getElementById("y");
+
+function getLocation() {
+  if (navigator.geolocation) {
+	navigator.geolocation.getCurrentPosition(enviarLocalizacion, showError);
+  } else { 
+    x.innerHTML = "La geolocalización no es compatible con este navegador.";
+  }
+}
+
+function enviarLocalizacion(position) {
+	
+	
+	x.innerHTML = position.coords.latitude;
+	y.innerHTML = position.coords.longitude;
+	
+}
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "Usuario negó la solicitud de Geolocalización."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "La información de ubicación no está disponible."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "La solicitud para obtener la ubicación del usuario ha caducado."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "Un error desconocido ocurrió."
+      break;
+  }
+}
+</script>

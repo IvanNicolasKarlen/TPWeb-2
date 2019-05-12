@@ -47,7 +47,7 @@ class Conexion{
 
 $host = "localhost"; //$host = "localhost:3307";
 	$usuario = "root";
-	//$clave = "Cuc41515"; 
+//$clave = "Cuc41515"; 
 	$clave = 11021998;
 	$bd = "logintp";
 	 

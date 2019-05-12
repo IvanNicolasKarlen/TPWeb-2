@@ -9,6 +9,9 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		$email = $_POST["email"]; //Guardo el usuario
 		$password = $_POST["pass"]; //Guardo la contraseña
 		
+		//Abrir conexion
+		//$conexion = new mysqli($host, $usuario, $clave, $bd);
+		
 		$consulta="select * from usuario where password = '$password'";
 		$controlarEmail = "select * from usuario where email = '$email'";
 		
