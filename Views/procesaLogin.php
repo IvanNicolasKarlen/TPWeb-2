@@ -17,11 +17,8 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		$controlarEmail = "select * from usuario where email = '$email'";
 		
 		// ejecutar la consulta
-		//$resultado = $conexion->query($consulta);
-		//$verificoEmail = $conexion->query($controlarEmail);
-		
-		$resultado = $conexion->ejecutarConsulta($consulta);
-		$verificoEmail = $conexion->ejecutarConsulta($controlarEmail);
+		$resultado = $conexion->loguearUsuario($consulta);
+		$verificoEmail = $conexion->loguearUsuario($controlarEmail);
 		
 		//pregunto si el resultado me devuelve una cierta cantidad de filas
 		$row = $resultado->num_rows;

@@ -49,7 +49,7 @@
 				<div class="pull-right">
 					<ul class="header-top-links">
 						
-						<li><a href="../Views/index.php">Iniciar Sesion</a></li>
+						<li><a href="../Views/login.php">Iniciar Sesion</a></li>
 						<li><a href="../Views/Cliente/registrarse.php">Registrarme</a></li>
 						<li class="dropdown default-dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">ENG <i class="fa fa-caret-down"></i></a>

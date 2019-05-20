@@ -91,12 +91,10 @@ session_start();
 						<select name="pais" <!--onchange="muestraLocalidad(this.value)"--> 
 
 						<?php
-						$connect = mysqli_connect("localhost", "root","Cuc41515", "logintp");
-						  //$conexion=new Conexion;
+						 $connect = mysqli_connect("localhost", "root",11021998, "logintp");
 							$output = array();
 							$query = "SELECT nombre FROM pais";
 							$result = mysqli_query($connect, $query);
-							//$result=$conexion->ejecutarConsulta($query);
 							while($fila = mysqli_fetch_array($result))
 							{
 								echo "<option value='" . $fila["nombre"] . "'>" . $fila["nombre"] . "</option>";
@@ -141,10 +139,11 @@ session_start();
 						
 					</div>
 						
-						<!--inputs invisibles(hidden) para guardar lat y long-->
-						
-						<input type="hidden"  class="form-control" name="longitud" id="longitud" value=""> 
-						<input type="hidden"  class="form-control" name="latitud" id="latitud" value="">
+						<!--inputs invisibles para guardar lat y long
+						<input type="text"  class="form-control" name="latitud" id="latitud" value= <?php// echo '<script>latitud.document.getElementById("latitud")</script>'?>>
+						<input type="text"  class="form-control" name="latitud" id="latitud" value=id="latitud" ><p id="latitud"></p>-->
+						<input type="text"  class="form-control" name="longitud" id="longitud" value=""> 
+						<input type="text"  class="form-control" name="latitud" id="latitud" value="">
 						
 						
 						
@@ -214,7 +213,7 @@ function getLocation() {
   if (navigator.geolocation) {
 	navigator.geolocation.getCurrentPosition(enviarLocalizacion, showError);
   } else { 
-    alert("La geolocalizacion no es compatible con este navegador.");
+    alert("La geolocalización no es compatible con este navegador.");
   }
 }
 
@@ -227,21 +226,17 @@ function enviarLocalizacion(position) {
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-      document.getElementById("longitud").value= "Usuario nego la solicitud de Geolocalizacion."
-	  document.getElementById("latitud").value = "Null"
+      x.innerHTML = "Usuario negó la solicitud de Geolocalización."
       break;
     case error.POSITION_UNAVAILABLE:
-      document.getElementById("longitud").value = "La informacion de ubicacion no está disponible."
-	   document.getElementById("latitud").value = "Null"
+      x.innerHTML = "La información de ubicación no está disponible."
       break;
     case error.TIMEOUT:
-      document.getElementById("longitud").value = "La solicitud para obtener la ubicacion del usuario ha caducado."
-       document.getElementById("latitud").value = "Null"
-	  break;
+      x.innerHTML = "La solicitud para obtener la ubicación del usuario ha caducado."
+      break;
     case error.UNKNOWN_ERROR:
-      document.getElementById("longitud").value = "Un error desconocido ocurrio."
-      document.getElementById("latitud").value = "Null"
-	 break;
+      x.innerHTML = "Un error desconocido ocurrió."
+      break;
   }
 }
 </script>

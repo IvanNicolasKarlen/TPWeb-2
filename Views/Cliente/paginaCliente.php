@@ -61,7 +61,7 @@ if(!isset($usuario))
 					<ul class="header-top-links">
 						<li><a href="../Cliente/paginaCliente.php">Inicio</a></li>
 						<li><a href="../Cliente/CerrarSesion.php">Cerrar Sesion</a></li>
-						<li><a href="#">FAQ</a></li>
+						<li><a href="../Cliente/SubirProducto.php">Publicar</a></li>
 						<li class="dropdown default-dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">ENG <i class="fa fa-caret-down"></i></a>
 							<ul class="custom-menu">

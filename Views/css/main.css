@@ -142,6 +142,13 @@ iframe {
 }
 
 
+
+.centrar input{
+	
+	text-align:center;
+	margin-left: 120px;
+	padding-left:auto;
+	}
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {

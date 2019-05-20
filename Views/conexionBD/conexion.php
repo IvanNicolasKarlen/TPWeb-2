@@ -15,6 +15,7 @@ class Conexion{
 	 {
 		 $archivoConfig = "config.ini"; //PARA CAMBIAR LOS DATOS DE ACCESO A LA BD, IR AHI
 		 $confi = parse_ini_file($archivoConfig, true);
+		 
 		 $this->host = $confi["bd"]["host"];
 		 $this->usuario = $confi["bd"]["usuario"];
 		 $this->clave=$confi["bd"]["clave"];
@@ -25,7 +26,7 @@ class Conexion{
 	 
 	 
 	
-	 public function ejecutarConsulta($consulta){
+	 public function loguearUsuario($consulta){
  if(!$resultado = $this->msq->query($consulta) )
  {
 	 echo "Ha ocurrido un error";
@@ -37,20 +38,11 @@ class Conexion{
 	   }
  }
 	 
+	 
+	 
 
 	
 }
-
-/*
-
-$host = "localhost"; //$host = "localhost:3307";
-	$usuario = "root";
-//$clave = "Cuc41515"; 
-	$clave = 11021998;
-	$bd = "logintp";
-	 
-	$conexion = new mysqli($host, $usuario, $clave, $bd);
-*/
 
 
 ?>	

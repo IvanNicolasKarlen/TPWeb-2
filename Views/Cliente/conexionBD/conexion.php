@@ -1,7 +1,7 @@
 <?php
 
 
-/*
+
 class Conexion{
 
 	private $host = "";
@@ -42,17 +42,6 @@ class Conexion{
 
 	
 }
-*/
-
-
-$host = "localhost"; //$host = "localhost:3307";
-	$usuario = "root";
-	//$clave = "Cuc41515"; 
-	$clave = 11021998;
-	$bd = "logintp";
-	 
-	$conexion = new mysqli($host, $usuario, $clave, $bd);
-
 
 
 ?>	
