@@ -1,7 +1,7 @@
 <?php
 
 
-/*
+
 class Conexion{
 
 	private $host = "";
@@ -25,7 +25,7 @@ class Conexion{
 	 
 	 
 	
-	 public function loguearUsuario($consulta){
+	 public function ejecutarConsulta($consulta){
  if(!$resultado = $this->msq->query($consulta) )
  {
 	 echo "Ha ocurrido un error";
@@ -37,13 +37,11 @@ class Conexion{
 	   }
  }
 	 
-	 
-	 
 
 	
 }
-*/
 
+/*
 
 $host = "localhost"; //$host = "localhost:3307";
 	$usuario = "root";
@@ -52,7 +50,7 @@ $host = "localhost"; //$host = "localhost:3307";
 	$bd = "logintp";
 	 
 	$conexion = new mysqli($host, $usuario, $clave, $bd);
-
+*/
 
 
 ?>	

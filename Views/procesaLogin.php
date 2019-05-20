@@ -11,13 +11,17 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		
 		//Abrir conexion
 		//$conexion = new mysqli($host, $usuario, $clave, $bd);
+		$conexion = new Conexion;
 		
 		$consulta="select * from usuario where password = '$password'";
 		$controlarEmail = "select * from usuario where email = '$email'";
 		
 		// ejecutar la consulta
-		$resultado = $conexion->query($consulta);
-		$verificoEmail = $conexion->query($controlarEmail);
+		//$resultado = $conexion->query($consulta);
+		//$verificoEmail = $conexion->query($controlarEmail);
+		
+		$resultado = $conexion->ejecutarConsulta($consulta);
+		$verificoEmail = $conexion->ejecutarConsulta($controlarEmail);
 		
 		//pregunto si el resultado me devuelve una cierta cantidad de filas
 		$row = $resultado->num_rows;

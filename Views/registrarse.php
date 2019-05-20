@@ -60,6 +60,12 @@ session_start();
 						<span class="focus-input100"></span>
 					</div>
 					
+					<!--campo nombre de usuario-->
+					<div class="wrap-input100 validate-input" data-validate="Ej: Usuario123">
+						<span class="label-input100">Usuario</span>
+						<input class="input100" type="text" name="usuario">
+						<span class="focus-input100"></span>
+					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Ej: Usuario@gmail.com">
 						<span class="label-input100">Email</span>
@@ -85,10 +91,12 @@ session_start();
 						<select name="pais" <!--onchange="muestraLocalidad(this.value)"--> 
 
 						<?php
-						 $connect = mysqli_connect("localhost", "root", "Cuc41515", "logintp");
+						$connect = mysqli_connect("localhost", "root","Cuc41515", "logintp");
+						  //$conexion=new Conexion;
 							$output = array();
 							$query = "SELECT nombre FROM pais";
 							$result = mysqli_query($connect, $query);
+							//$result=$conexion->ejecutarConsulta($query);
 							while($fila = mysqli_fetch_array($result))
 							{
 								echo "<option value='" . $fila["nombre"] . "'>" . $fila["nombre"] . "</option>";
@@ -133,15 +141,12 @@ session_start();
 						
 					</div>
 						
-						<!--Intenntando hacer geolocalizacion-->
-						<!--inputs invisibles para guardar lat y long
-						<input type="text"  class="form-control" name="latitud" id="latitud" value= <?php// echo '<script>latitud.document.getElementById("latitud")</script>'?>>
-						<input type="text"  class="form-control" name="latitud" id="latitud" value=id="latitud" ><p id="latitud"></p>
-						<input type="text"  class="form-control" name="longitud" id="longitud" value=<?php //echo '<script>.innerHTML = position.coords.longitude</script>'?>> 
-						<input type="text"  class="form-control" name="longitud" id="longitud" onclick="getLocation()"/>
+						<!--inputs invisibles(hidden) para guardar lat y long-->
 						
-						<p id="y"></p>
-						-->
+						<input type="hidden"  class="form-control" name="longitud" id="longitud" value=""> 
+						<input type="hidden"  class="form-control" name="latitud" id="latitud" value="">
+						
+						
 						
 								   
 					<div class="container-login100-form-btn">
@@ -202,38 +207,41 @@ session_start();
 						
 <!-- Script para obtener geolocalizacion		-->	
 <script>
-var x = document.getElementById("latitud");
-var y = document.getElementById("y");
+/*var x = document.getElementById("latitud");
+var y = document.getElementById("longitud");*/
 
 function getLocation() {
   if (navigator.geolocation) {
 	navigator.geolocation.getCurrentPosition(enviarLocalizacion, showError);
   } else { 
-    x.innerHTML = "La geolocalización no es compatible con este navegador.";
+    alert("La geolocalizacion no es compatible con este navegador.");
   }
 }
 
 function enviarLocalizacion(position) {
 	
-	
-	x.innerHTML = position.coords.latitude;
-	y.innerHTML = position.coords.longitude;
+	document.getElementById("longitud").value = position.coords.longitude;
+	document.getElementById("latitud").value = position.coords.latitude;
 	
 }
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-      x.innerHTML = "Usuario negó la solicitud de Geolocalización."
+      document.getElementById("longitud").value= "Usuario nego la solicitud de Geolocalizacion."
+	  document.getElementById("latitud").value = "Null"
       break;
     case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "La información de ubicación no está disponible."
+      document.getElementById("longitud").value = "La informacion de ubicacion no está disponible."
+	   document.getElementById("latitud").value = "Null"
       break;
     case error.TIMEOUT:
-      x.innerHTML = "La solicitud para obtener la ubicación del usuario ha caducado."
-      break;
+      document.getElementById("longitud").value = "La solicitud para obtener la ubicacion del usuario ha caducado."
+       document.getElementById("latitud").value = "Null"
+	  break;
     case error.UNKNOWN_ERROR:
-      x.innerHTML = "Un error desconocido ocurrió."
-      break;
+      document.getElementById("longitud").value = "Un error desconocido ocurrio."
+      document.getElementById("latitud").value = "Null"
+	 break;
   }
 }
 </script>
