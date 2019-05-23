@@ -41,7 +41,10 @@
 </head>
 
 <body>
-<?php include_once("header.php"); ?>
+<header>
+	<?php include_once("../Cliente/header.php"); ?>
+
+	</header>
 
 <div class="section"> <!-- section -->
 
@@ -178,7 +181,7 @@
 
 
 
-<?php include_once("footer.php"); ?>
+<?php include_once("../Cliente/footer.php"); ?>
 
 
 

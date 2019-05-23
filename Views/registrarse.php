@@ -60,12 +60,6 @@ session_start();
 						<span class="focus-input100"></span>
 					</div>
 					
-					<!--campo nombre de usuario-->
-					<div class="wrap-input100 validate-input" data-validate="Ej: Usuario123">
-						<span class="label-input100">Usuario</span>
-						<input class="input100" type="text" name="usuario">
-						<span class="focus-input100"></span>
-					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Ej: Usuario@gmail.com">
 						<span class="label-input100">Email</span>
@@ -91,7 +85,7 @@ session_start();
 						<select name="pais" <!--onchange="muestraLocalidad(this.value)"--> 
 
 						<?php
-						 $connect = mysqli_connect("localhost", "root",11021998, "logintp");
+						 $connect = mysqli_connect("localhost:3307", "root","", "logintp");
 							$output = array();
 							$query = "SELECT nombre FROM pais";
 							$result = mysqli_query($connect, $query);
@@ -167,7 +161,7 @@ session_start();
 						
 						?>
 						
-						<a href="index.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10
+						<a href="login.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10
 						p-l-30">
 							Login
 							<i class="fa fa-long-arrow-right m-l-5"></i>
@@ -226,16 +220,24 @@ function enviarLocalizacion(position) {
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-      x.innerHTML = "Usuario negó la solicitud de Geolocalización."
+	document.getElementById("longitud").value = "Usuario nego la solicitud de Geolocalizacion."
+	document.getElementById("latitud").value = "Null"
+    
       break;
     case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "La información de ubicación no está disponible."
+	document.getElementById("longitud").value = "La informacion de ubicacion no esta disponible."
+	document.getElementById("latitud").value = "Null"
+       
       break;
     case error.TIMEOUT:
-      x.innerHTML = "La solicitud para obtener la ubicación del usuario ha caducado."
+	document.getElementById("longitud").value = "La solicitud para obtener la ubicacion del usuario ha caducado."
+	document.getElementById("latitud").value = "Null"
+       
       break;
     case error.UNKNOWN_ERROR:
-      x.innerHTML = "Un error desconocido ocurrió."
+	document.getElementById("longitud").value = "Un error desconocido ocurrio."
+	document.getElementById("latitud").value = "Null"
+      
       break;
   }
 }

@@ -12,6 +12,7 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
  $pais = $_POST['pais'];
  $lat = $_POST['latitud'];
  $long = $_POST['longitud'];
+ $usuario="usuario";
  
 	//Abrir conexion
 	$conexion = new Conexion();
@@ -34,24 +35,24 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
 		{
 			if($row<>0){
 			echo '<script language= "javascript"> alert("Atencion, ya existe el usuario ingresado");</script>';
-			echo "<script>location.href=registrarse.php<script>";
+			echo "<script>location.href='registrarse.php';</script>";
 			
 			}else{
 				if($pass<>$repetir){
 						//caso contrario regresa al archivo html donde esta el archivo registrar
 										echo '<script language= "javascript"> alert("Atencion, las contraseñas no coinciden");</script>';
-										echo "<script>location.href=registrarse.php<script>";
+										echo "<script>location.href='registrarse.php';</script>";
 								}
 			}
 	}else {  
-				$sql = "INSERT INTO usuario(email,password,nombre,pais,latitud,longitud)
-				values('$email','$pass','$nombre','$pais', $lat, $long)";
+				$sql = "INSERT INTO usuario(email,password,nombre,pais,rol,latitud,longitud)
+				values('$email','$pass','$nombre','$pais','$usuario', '$lat', '$long')";
 				
-				if($conexion->loguearusuario($sql)===true)
+				if($conexion->loguearUsuario($sql)===true)
 			{
 					echo '<script language= "javascript">alert("Usuario registrado con exito");</script>';
-					echo "<script>location.href=paginaCliente.php<script>";
-	  
+					
+					echo "<script>location.href='../Views/login.php';</script>";
 			}else{
 						echo"error";
 				 }	 
