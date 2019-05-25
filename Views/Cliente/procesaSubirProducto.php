@@ -9,7 +9,6 @@ if(isset($_POST["publicar"])){
  $marca = $_POST['marca'];
  $stock = $_POST['stock'];
  $telefono = $_POST['tel'];
- $whatsapp = $_POST['cel'];
  $genero = $_POST['genero'];
  $formas = $_POST['formas'];
  $envio = $_POST['envio'];
@@ -43,8 +42,8 @@ if(isset($_POST["publicar"])){
 			
 			
 		}else {  
-				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,telefono,whatsapp,genero,descripcion,imgprincipal,modelo1,modelo2,modelo3)
-				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$telefono','$whatsapp','$genero','$descripcion','$imgprincipal','$segunda','$tercera','$cuarta')";
+				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,telefono,genero,descripcion,imgprincipal,modelo1,modelo2,modelo3)
+				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$telefono','$genero','$descripcion','$imgprincipal','$segunda','$tercera','$cuarta')";
 				
 				if($conexion->loguearUsuario($sql)===true)
 			{
