@@ -52,30 +52,31 @@
 
         <div class="row"> <!-- row -->
 
-            <form id="checkout-form" class="clearfix"> <!--form-->
+            <form id="checkout-form" class="clearfix" action="procesaSubirProducto.php" method="post"> <!--form-->
 
                 <div class="col-12 col-md-4"> <!--div col-4 1er-->
                     <div class="form-group">
                         <label>Nombre del producto: </label>
                         <input class="input" type="text" name="nombre"
-                               placeholder="Nombre del producto">
+                               placeholder="Nombre del producto" required>
                     </div>
                     <div class="form-group">
                         <label>Estado: </label>
-                        <select  class="input" name="estado">
-                            <option >Nuevo</option>
+                        <select  class="input" name="estado" required>
+                            <option select=""></option>
+							<option >Nuevo</option>
                             <option >Usado</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Precio: </label>
                         <input class="input" type="number" name="precio"
-                               placeholder="$1799">
+                               placeholder="$1799" required>
                     </div>
                     <div class="form-group">
                         <label>Stock: </label>
-                        <input class="input" type="number" name="Cantidad disponible"
-                               placeholder="999">
+                        <input class="input" type="number" name="stock"
+                               placeholder="999" required>
                     </div>
 
                 </div> <!-- /div col-4 1er-->
@@ -83,7 +84,7 @@
                 <div class="col-12 col-md-4"> <!-- div col-4 2do-->
                     <div class="form-group">
                         <label>Marca: </label>
-                        <input class="input" type="text" name="city" placeholder="Marca">
+                        <input class="input" type="text" name="marca" placeholder="marca" required>
                     </div>
                     <div class="form-group">
                         <label>Teléfono: </label>
@@ -91,13 +92,20 @@
                                placeholder="4458-9896">
                     </div>
                     <div class="form-group">
-                        <label>WhatsApp: </label>
-                        <input class="input" type="number" name="cel"
-                               placeholder="11-2345-6789">
+                        <label>Genero: </label>
+                        <select class="input"  name="genero" required>
+                            <option select=""></option>
+                            <option  >Hombre</option>
+                            <option  >Mujer</option>
+                            <option  >Unisex</option>
+                            <option  >Niño</option>
+							<option  >Niña</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Formas de pago: </label>
-                        <select class="input"  name="formas"required>
+                        <select class="input"  name="formas" required>
+							<option select=""></option>
                             <option >Efectivo</option>
                             <option  >Tarjeta</option>
                             <option  >Mercado de Pago</option>
