@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-05-2019 a las 00:24:47
+-- Tiempo de generación: 25-05-2019 a las 19:57:20
 -- Versión del servidor: 5.7.25-log
 -- Versión de PHP: 7.3.0
 
@@ -61,7 +61,6 @@ CREATE TABLE `producto` (
   `marca` varchar(70) NOT NULL,
   `stock` int(11) NOT NULL,
   `telefono` int(11) NOT NULL,
-  `whatsapp` int(11) NOT NULL,
   `genero` varchar(60) NOT NULL,
   `descripcion` varchar(600) NOT NULL,
   `imgprincipal` varchar(80) NOT NULL,
@@ -74,12 +73,13 @@ CREATE TABLE `producto` (
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `envio`, `marca`, `stock`, `telefono`, `whatsapp`, `genero`, `descripcion`, `imgprincipal`, `modelo1`, `modelo2`, `modelo3`) VALUES
-(1, 'Zapatillas Modernas', 'Nuevo', 1200, '', '', 'Nike', 12, 456, 154321, 'Masculino', '', '', '', '', ''),
-(2, 'Zapatillas Adidas', 'Usado', 1400, '', 'on', 'Adidas', 1200, 46574323, 1538764554, 'Masculino', 'Zapatillas Adidas usadas pero impecables', '', '', '', ''),
-(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 46758439, 1538799873, 'Masculino', 'Soy una descripcion ', '15940444_1318220971550973_7681097437073195512_n.jpg', 'DSC05655[1].jpg', '15940444_1318220971550973_7681097437073195512_n.jpg', 'DSC05655[1].jpg'),
-(4, 'Remeras de Tela', 'Nuevo', 300, '', 'Entrega en Local', 'Lacoste', 20, 49894323, 1548988432, 'Unisex', 'Probando 1 2 3 4', '15940444_1318220971550973_7681097437073195512_n.jpg', '', '', ''),
-(5, 'Remeras de Algodon Super Comodas', 'Nuevo', 1230, 'Efectivo', 'Entrega en Local', 'Nike', 300, 45654345, 1456543254, 'Unisex', 'Remeras Remeras de Algodon Super Comodas', '15940444_1318220971550973_7681097437073195512_n.jpg', '', '', '');
+INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `envio`, `marca`, `stock`, `telefono`, `genero`, `descripcion`, `imgprincipal`, `modelo1`, `modelo2`, `modelo3`) VALUES
+(1, 'Zapatillas Modernas', 'Nuevo', 1200, '', '', 'Nike', 12, 456, 'Masculino', '', '', '', '', ''),
+(2, 'Zapatillas Adidas', 'Usado', 1400, '', 'on', 'Adidas', 1200, 46574323, 'Masculino', 'Zapatillas Adidas usadas pero impecables', '', '', '', ''),
+(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 46758439, 'Masculino', 'Soy una descripcion ', '15940444_1318220971550973_7681097437073195512_n.jpg', 'DSC05655[1].jpg', '15940444_1318220971550973_7681097437073195512_n.jpg', 'DSC05655[1].jpg'),
+(4, 'Remeras de Tela', 'Nuevo', 300, '', 'Entrega en Local', 'Lacoste', 20, 49894323, 'Unisex', 'Probando 1 2 3 4', '15940444_1318220971550973_7681097437073195512_n.jpg', '', '', ''),
+(5, 'Remeras de Algodon Super Comodas', 'Nuevo', 1230, 'Efectivo', 'Entrega en Local', 'Nike', 300, 45654345, 'Unisex', 'Remeras Remeras de Algodon Super Comodas', '15940444_1318220971550973_7681097437073195512_n.jpg', '', '', ''),
+(6, 'A', 'Usado', 234, 'Efectivo', 'Entrega en local', 'Suavicer', 4, 23, 'Hombre', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -148,7 +148,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
