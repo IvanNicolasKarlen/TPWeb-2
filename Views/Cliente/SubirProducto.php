@@ -52,17 +52,17 @@
 
         <div class="row"> <!-- row -->
 
-            <form id="checkout-form" class="clearfix" action="procesaSubirProducto.php" method="post"> <!--form-->
+            <form id="checkout-form" class="clearfix" action="procesaSubirProducto.php" method="post" enctype="multipart/form-data"> <!--form-->
 
                 <div class="col-12 col-md-4"> <!--div col-4 1er-->
                     <div class="form-group">
                         <label>Nombre del producto: </label>
                         <input class="input" type="text" name="nombre"
-                               placeholder="Nombre del producto" required>
+                               placeholder="Nombre del producto" required> <!--required-->
                     </div>
                     <div class="form-group">
                         <label>Estado: </label>
-                        <select  class="input" name="estado" required>
+                        <select  class="input" name="estado" required> <!--required-->
                             <option select=""></option>
 							<option >Nuevo</option>
                             <option >Usado</option>
@@ -71,12 +71,12 @@
                     <div class="form-group">
                         <label>Precio: </label>
                         <input class="input" type="number" name="precio"
-                               placeholder="$1799" required>
+                               placeholder="$1799" required> <!--required-->
                     </div>
                     <div class="form-group">
                         <label>Stock: </label>
                         <input class="input" type="number" name="stock"
-                               placeholder="999" required>
+                               placeholder="999" required> <!--required-->
                     </div>
 
                 </div> <!-- /div col-4 1er-->
@@ -84,7 +84,7 @@
                 <div class="col-12 col-md-4"> <!-- div col-4 2do-->
                     <div class="form-group">
                         <label>Marca: </label>
-                        <input class="input" type="text" name="marca" placeholder="marca" required>
+                        <input class="input" type="text" name="marca" placeholder="marca" required> <!--required-->
                     </div>
                     <div class="form-group">
                         <label>Teléfono: </label>
@@ -93,18 +93,18 @@
                     </div>
                     <div class="form-group">
                         <label>Genero: </label>
-                        <select class="input"  name="genero" required>
+                        <select class="input"  name="genero" required> <!--required-->
                             <option select=""></option>
                             <option  >Hombre</option>
                             <option  >Mujer</option>
                             <option  >Unisex</option>
-                            <option  >Niño</option>
-							<option  >Niña</option>
+                            <option  >Infantil</option>
+							
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Formas de pago: </label>
-                        <select class="input"  name="formas" required>
+                        <select class="input"  name="formas" required> <!--required-->
 							<option select=""></option>
                             <option >Efectivo</option>
                             <option  >Tarjeta</option>
@@ -122,7 +122,7 @@
                         <label>Tipo de envío: </label>
                         <div class="input-checkbox">
                             <input type="radio" name="envio"
-                                   value="Gratis"> <label> Envío gratis</label>
+                                   value="Gratis" required> <label> Envío gratis</label>
                         </div>
                         <div class="input-checkbox">
                             <input class="input-checkbox" type="radio" name="envio"
@@ -147,24 +147,24 @@
                 </div> <!-- /div col-4 3ro-->
                         <h5 style="text-align: center">Subir imagenes:</h5>
                         <div class="form-group">
-                            <div class="col-md-3">
+                            <div class="col-md-3"><label> Imagen principal</label>
                                 <input class="input col-md-3" type="file"
                                        name="archivoA"
                                        id="importData" accept=".jpg,
-                                    .png" />
+                                    .png" required />
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3"><label> Imagen 2</label>
                                 <input class="input col-md-3" type="file"
                                        name="archivoB"
                                        id="importData" accept=".jpg,
-                                    .png" />
+                                    .png" required />
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3"><label> Imagen 3</label>
                                 <input class="input col-md-3" type="file" name="archivoC"
                                        id="importData" accept=".jpg,
                                     .png" />
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3"><label> Imagen 4</label>
                                 <input class="input col-md-3" type="file" name="archivoD"
                                        id="importData" accept=".jpg,
                                     .png" />

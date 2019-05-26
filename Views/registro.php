@@ -45,8 +45,8 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
 								}
 			}
 	}else {  
-				$sql = "INSERT INTO usuario(email,password,nombre,pais,rol,latitud,longitud)
-				values('$email','$pass','$nombre','$pais','$usuario', '$lat', '$long')";
+				$sql = "INSERT INTO usuario(email,password,Nombre,pais,latitud,longitud,rol)
+				values('$email','$pass','$nombre','$pais','$lat', '$long','$usuario')";
 				
 				if($conexion->loguearUsuario($sql)===true)
 			{

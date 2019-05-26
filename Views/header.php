@@ -68,7 +68,7 @@
                             </div>
                             <strong class="text-uppercase">Perfil <i class="fa fa-caret-down"></i></strong>
                         </div>
-                       <a href="registrarse.php" class="text-uppercase">Registrarme</a>
+                       <!--<a href="registrarse.php" class="text-uppercase">Registrarme</a>-->
                         <ul class="custom-menu">
                              <li><a href="../Views/login.php"><i class="fa fa-unlock-alt"></i> Login</a></li>
 							<li><a href="../Views/registrarse.php"><i class="fa fa-user-plus"></i> Registrarme</a></li>

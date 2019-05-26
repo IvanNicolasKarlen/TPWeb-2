@@ -29,7 +29,7 @@ class Conexion{
 	 public function loguearUsuario($consulta){
  if(!$resultado = $this->msq->query($consulta) )
  {
-	 echo "Ha ocurrido un error";
+	 echo "Ha ocurrido un error al ejecutar la consulta   ";
  }else{
 	 
 	 return $resultado; //muestra las filas afectadas

@@ -66,7 +66,7 @@
                             <div class="header-btns-icon">
                                 <i class="fa fa-user-o"></i>
                             </div>
-                            <strong class="text-uppercase">Mi Cuenta <i class="fa fa-caret-down"></i></strong>
+                            <strong class="text-uppercase"><?php $nombre = $_SESSION['nombre']; echo $nombre;?> <i class="fa fa-caret-down"></i></strong>
                         </div>
                        
                         <ul class="custom-menu">
