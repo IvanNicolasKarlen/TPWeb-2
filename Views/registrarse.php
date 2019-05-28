@@ -86,15 +86,15 @@ session_start();
 
 						<?php
 						 
-						 //require_once("conexionBD/conexion.php");
+						 require_once("conexionBD/conexion.php");
 						 
-						 $connect = mysqli_connect("localhost", "root",11021998, "logintp");
-							//$connect = new Conexion();
+						// $connect = mysqli_connect("localhost", "root",11021998, "logintp");
+							$connect = new Conexion();
 							$output = array();
 							$query = "SELECT nombre FROM pais";
-							//$resultado = $connect->loguearUsuario($query);
-							$result = mysqli_query($connect, $query);
-							while($fila = mysqli_fetch_array($result))
+							$resultado = $connect->loguearUsuario($query);
+						//$result = mysqli_query($connect, $query);
+							while($fila = mysqli_fetch_array($resultado))
 							{
 								echo "<option value='" . $fila["nombre"] . "'>" . $fila["nombre"] . "</option>";
 					
