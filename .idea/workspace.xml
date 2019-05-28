@@ -2,248 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f96dc65-ba76-4360-bcfc-0685c0427f42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Login/conectarse.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/conexionBD/conexion.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/css/util.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-ExtraBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-SemiBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/Montserrat-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/montserrat/OFL.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-ExtraBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-ExtraBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-ExtraLightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-SemiBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-SemiBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/fonts/poppins/Poppins-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/images/bg-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/images/icons/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/images/login.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/procesaLogin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/animate/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/animsition/css/animsition.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/animsition/css/animsition.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/animsition/js/animsition.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/animsition/js/animsition.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/js/popper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/bootstrap/js/tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/countdowntime/countdowntime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/css-hamburgers/hamburgers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/daterangepicker/daterangepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/daterangepicker/daterangepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/daterangepicker/moment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/daterangepicker/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/jquery/jquery-3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/select2/select2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/select2/select2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/select2/select2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/vendor/select2/select2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login/verificar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/Registrarse.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/conectarse.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/css/util.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/iconic/css/material-design-iconic-font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/iconic/css/material-design-iconic-font.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-ExtraBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-ExtraBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-ExtraLightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-SemiBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-SemiBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/fonts/poppins/Poppins-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/images/bg-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/images/icons/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/images/icons/map-marker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/images/registrarse.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/js/map-custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/registro.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/animate/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/animsition/css/animsition.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/animsition/css/animsition.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/animsition/js/animsition.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/animsition/js/animsition.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/js/popper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/bootstrap/js/tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/countdowntime/countdowntime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/css-hamburgers/hamburgers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/daterangepicker/daterangepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/daterangepicker/daterangepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/daterangepicker/moment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/daterangepicker/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/jquery/jquery-3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/select2/select2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/select2/select2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/select2/select2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registrarse/vendor/select2/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Cliente/SubirProducto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Cliente/SubirProducto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Cliente/listarPublicaciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Cliente/listarPublicaciones.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Cliente/procesaSubirProducto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Cliente/procesaSubirProducto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/conexionBD/conexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/conexionBD/conexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/conexionBD/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Views/conexionBD/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/procesaSubirProducto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/procesaSubirProducto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logintp.sql" beforeDir="false" afterPath="$PROJECT_DIR$/logintp.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -256,53 +21,64 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/conexionBD/conexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state relative-caret-position="324">
+              <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/index.html">
+        <entry file="file://$PROJECT_DIR$/Views/procesaLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="1513" column="7" lean-forward="true" selection-start-line="1513" selection-start-column="7" selection-end-line="1513" selection-end-column="7" />
+            <state relative-caret-position="735">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/blank.html">
+        <entry file="file://$PROJECT_DIR$/logintp.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="673" column="25" selection-start-line="673" selection-start-column="25" selection-end-line="673" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/checkout.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="857" column="25" selection-start-line="857" selection-start-column="25" selection-end-line="857" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/product-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="1016" column="25" selection-start-line="1016" selection-start-column="25" selection-end-line="1016" selection-end-column="25" />
+            <state relative-caret-position="614">
+              <caret line="114" column="38" lean-forward="true" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/products.html">
+        <entry file="file://$PROJECT_DIR$/Views/Cliente/SubirProducto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="1172" column="7" lean-forward="true" selection-start-line="1172" selection-start-column="7" selection-end-line="1172" selection-end-column="7" />
+            <state relative-caret-position="-420">
+              <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#textarea#0;n#div#1;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2142" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Cliente/listarPublicaciones.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-861">
+              <caret line="16" column="71" lean-forward="true" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Cliente/procesaSubirProducto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="102" column="29" lean-forward="true" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -312,6 +88,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>#F8694A</find>
+      <find>e</find>
     </findStrings>
     <replaceStrings>
       <replace>#6675df</replace>
@@ -328,14 +105,19 @@
       <list>
         <option value="$PROJECT_DIR$/Views/index.php" />
         <option value="$PROJECT_DIR$/Views/registrarse.php" />
-        <option value="$PROJECT_DIR$/Views/conexionBD/conexion.php" />
-        <option value="$PROJECT_DIR$/Views/conexionBD/config.ini" />
         <option value="$PROJECT_DIR$/Views/procesaLogin.php" />
         <option value="$PROJECT_DIR$/Views/index.html" />
         <option value="$PROJECT_DIR$/Views/blank.html" />
         <option value="$PROJECT_DIR$/Views/checkout.html" />
         <option value="$PROJECT_DIR$/Views/product-page.html" />
         <option value="$PROJECT_DIR$/Views/products.html" />
+        <option value="$PROJECT_DIR$/Views/procesaSubirProducto.php" />
+        <option value="$PROJECT_DIR$/Views/conexionBD/config.ini" />
+        <option value="$PROJECT_DIR$/Views/conexionBD/conexion.php" />
+        <option value="$PROJECT_DIR$/Views/Cliente/listarPublicaciones.php" />
+        <option value="$PROJECT_DIR$/Views/Cliente/SubirProducto.php" />
+        <option value="$PROJECT_DIR$/logintp.sql" />
+        <option value="$PROJECT_DIR$/Views/Cliente/procesaSubirProducto.php" />
       </list>
     </option>
   </component>
@@ -358,38 +140,39 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="TPWeb-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPWeb-2" type="462c0819:PsiDirectoryNode" />
+              <item name="tpweb-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpweb-2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TPWeb-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPWeb-2" type="462c0819:PsiDirectoryNode" />
+              <item name="tpweb-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpweb-2" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TPWeb-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPWeb-2" type="462c0819:PsiDirectoryNode" />
+              <item name="tpweb-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpweb-2" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="Cliente" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpweb-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpweb-2" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
               <item name="conexionBD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TPWeb-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TPWeb-2" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -422,16 +205,17 @@
       <workItem from="1557363368469" duration="708000" />
       <workItem from="1557364624270" duration="1209000" />
       <workItem from="1557366069317" duration="341000" />
+      <workItem from="1559055315647" duration="7890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2734000" />
+    <option name="totallyTimeSpent" value="10624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2590879" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26174498" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -487,57 +271,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/procesaLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="89" column="36" lean-forward="true" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/registro.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/conexionBD/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/conexionBD/conexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="1513" column="7" lean-forward="true" selection-start-line="1513" selection-start-column="7" selection-end-line="1513" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/blank.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="673" column="25" selection-start-line="673" selection-start-column="25" selection-end-line="673" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/checkout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="857" column="25" selection-start-line="857" selection-start-column="25" selection-end-line="857" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/product-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="1016" column="25" selection-start-line="1016" selection-start-column="25" selection-end-line="1016" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/js/main.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -549,10 +284,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31773">
+          <caret line="1513" selection-start-line="1513" selection-end-line="1513" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/blank.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14133">
+          <caret line="673" column="25" selection-start-line="673" selection-start-column="25" selection-end-line="673" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/product-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21336">
+          <caret line="1016" column="25" selection-start-line="1016" selection-start-column="25" selection-end-line="1016" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Views/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="1172" column="7" lean-forward="true" selection-start-line="1172" selection-start-column="7" selection-end-line="1172" selection-end-column="7" />
+        <state relative-caret-position="457">
+          <caret line="1172" column="7" selection-start-line="1172" selection-start-column="7" selection-end-line="1172" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="857" column="25" selection-start-line="857" selection-start-column="25" selection-end-line="857" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/procesaSubirProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="63" column="2" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/conexionBD/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="758" column="20" selection-start-line="758" selection-start-column="20" selection-end-line="758" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2142" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logintp.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="114" column="38" lean-forward="true" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Cliente/listarPublicaciones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-861">
+          <caret line="16" column="71" lean-forward="true" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/conexionBD/conexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="37" column="8" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Cliente/procesaSubirProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="102" column="29" lean-forward="true" selection-start-line="102" selection-start-column="29" selection-end-line="102" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/procesaLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Cliente/SubirProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420">
+          <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -12,10 +12,11 @@ if(!isset($usuario))
 		require_once("../conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
 		//Abrir conexion
 		$conexion = new Conexion;
+        $resultadoID=$conexion->buscarUser($usuario);
+
+ 		$consulta="SELECT * FROM producto WHERE idUsuario='$resultadoID'";
 		
- 		$consulta="SELECT * FROM producto WHERE email='$usuario'";
-		
-		// ejecutar la consulta
+		//ejecutar la consulta
 		$resultado = $conexion->loguearUsuario($consulta);
 
 
@@ -72,7 +73,6 @@ if(!isset($usuario))
 		<div class="container">
 			<!-- row -->
 			<div class="row">
-			
 			<div class="col-md-12">
 					<div class="section-title">
 						<h2 class="title">Mis publicaciones &nbsp</h2> 

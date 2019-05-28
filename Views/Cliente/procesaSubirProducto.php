@@ -1,9 +1,8 @@
 
 <?php
 session_start();
-
 $email = $_SESSION['username'];
-echo 'EMAIIIIIIL= '.$email;
+//echo 'EMAIIIIIIL= '.$email;
 
 if(!isset($email))
 {
@@ -25,7 +24,6 @@ $imgprincipal = '';
  $formas = '';
  $envio = '';
  $descripcion = '';
-  $email='';
  
 if(isset($_POST["publicar"])){
  
@@ -43,10 +41,9 @@ if(isset($_POST["publicar"])){
   $segunda = $_FILES["archivoB"]["name"];
  $tercera = $_FILES["archivoC"]["name"];
  $cuarta = $_FILES["archivoD"]["name"];
-  $usuario = $_SESSION['username'] ;
-  echo 'USUARIOOO= '.$usuario;
+  //echo 'USUARIOOO= '.$usuario;
 	$lugar="imgPublicadas/";
-	
+	$categoria=$_POST['categoria'];
 
  //sube la imagen a la carpeta imgPublicadas
 
@@ -107,11 +104,11 @@ echo "<script language='JavaScript'>alert('No se ha elegido ninguna imagen!');</
 	
 	
 		//pregunto si la cantidad de filas es distinto a cero
-		
-			  
+		$idUsuario=$conexion->buscarUser($email);
+
 				
-				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,palabrasClave,genero,descripcion,email,imgprincipal,modelo1,modelo2,modelo3)
-				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$palabras','$genero','$descripcion','$usuario','$imgprincipal','$segunda','$tercera','$cuarta')";
+				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,palabrasClaves,genero,descripcion,imgprincipal,modelo1,modelo2,modelo3,idUsuario,categoria)
+				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$palabras','$genero','$descripcion','$imgprincipal','$segunda','$tercera','$cuarta','$idUsuario','$categoria')";
 				
 				if($conexion->loguearUsuario($sql)===true)	
 			{

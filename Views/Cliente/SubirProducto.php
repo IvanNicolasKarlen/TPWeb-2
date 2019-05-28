@@ -74,6 +74,15 @@ if(!isset($usuario))
                                placeholder="Nombre del producto" required> <!--required-->
                     </div>
                     <div class="form-group">
+                        <label>Categoría: </label>
+                        <select class="input" name="categoria" required>
+                            <option value="Vehiculos">Vehiculos</option>
+                            <option value="Inmuebles">Inmuebles</option>
+                            <option value="Servicios">Servicios</option>
+                            <option value="Productos y otros">Productos y otros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label>Estado: </label>
                         <select  class="input" name="estado" required> <!--required-->
                             <option select=""></option>
@@ -86,15 +95,17 @@ if(!isset($usuario))
                         <input class="input" type="number" name="precio"
                                placeholder="$1799" required> <!--required-->
                     </div>
+
+
+                </div> <!-- /div col-4 1er-->
+
+                <div class="col-12 col-md-4"> <!-- div col-4 2do-->
                     <div class="form-group">
                         <label>Stock: </label>
                         <input class="input" type="number" name="stock"
                                placeholder="999" required> <!--required-->
                     </div>
 
-                </div> <!-- /div col-4 1er-->
-
-                <div class="col-12 col-md-4"> <!-- div col-4 2do-->
                     <div class="form-group">
                         <label>Marca: </label>
                         <input class="input" type="text" name="marca" placeholder="marca" required> <!--required-->
@@ -115,10 +126,15 @@ if(!isset($usuario))
 							
                         </select>
                     </div>
+
+
+                </div> <!-- /div col-4 2do-->
+
+                <div class="col-12 col-md-4"> <!-- div col-4 3ro-->
                     <div class="form-group">
                         <label>Formas de pago: </label>
                         <select class="input"  name="formas" required> <!--required-->
-							<option select=""></option>
+                            <option select=""></option>
                             <option >Efectivo</option>
                             <option  >Tarjeta</option>
                             <option  >Mercado de Pago</option>
@@ -127,10 +143,6 @@ if(!isset($usuario))
 
                         </select>
                     </div>
-
-                </div> <!-- /div col-4 2do-->
-
-                <div class="col-12 col-md-4"> <!-- div col-4 3ro-->
                     <div class="form-group">
                         <label>Tipo de envío: </label>
                         <div class="input-checkbox">
@@ -150,7 +162,7 @@ if(!isset($usuario))
                     </div>
                     <div class="form-group">
                         <label>Descripción: </label>
-                        <textarea style="height: 130px" class="input"
+                        <textarea style="height: 77px" class="input"
                                   name="descripcion"></textarea>
 								  
                     </div>
@@ -164,7 +176,7 @@ if(!isset($usuario))
                                        id="importData" accept=".jpg,
                                     .png" required />
                             </div>
-                       <!--      <div class="col-md-3"><label> Imagen 2</label>
+                          <div class="col-md-3"><label> Imagen 2</label>
                                 <input class="input col-md-3" type="file"
                                        name="archivoB"
                                        id="importData" accept=".jpg,
@@ -180,7 +192,7 @@ if(!isset($usuario))
                                        id="importData" accept=".jpg,
                                     .png" />
                             </div>
-						-->
+
 
                         </div>
 

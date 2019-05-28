@@ -37,7 +37,13 @@ class Conexion{
 
 	   }
  }
-	 
+
+	public function buscarUser($email){
+		$consultaID="SELECT id FROM usuario WHERE email='$email'";
+		$r=$this->loguearUsuario($consultaID);
+		$resultadoID=mysqli_fetch_array($r);
+		return $resultadoID['id'];
+	}
 	 
 	 
 
