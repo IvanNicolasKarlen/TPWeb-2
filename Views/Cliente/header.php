@@ -8,8 +8,8 @@
             </div>
             <div class="pull-right">
                 <ul class="header-top-links">
-                    <li><a href="../Cliente/paginaCliente.php">Inicio</a></li>
-                    <li><a href="../Cliente/CerrarSesion.php">Cerrar Sesion</a></li>
+                    <!--<li><a href="../Cliente/paginaCliente.php">Inicio</a></li>
+                    <li><a href="../Cliente/CerrarSesion.php">Cerrar Sesion</a></li>-->
                     <li class="dropdown default-dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">ENG <i class="fa fa-caret-down"></i></a>
                         <ul class="custom-menu">
@@ -47,15 +47,18 @@
                 <!-- Search -->
                 <div class="header-search">
                     <form>
-                        <input class="input search-input" type="text" placeholder="Enter your keyword">
-                        <select class="input search-categories">
+                        <input class="input " type="text" placeholder="Enter your keyword"/>
+						
+					
+                       <!-- <select class="input search-categories">
                             <option value="0">All Categories</option>
                             <option value="1">Category 01</option>
                             <option value="1">Category 02</option>
-                        </select>
+                        </select>-->
                         <button class="search-btn"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
+				
                 <!-- /Search -->
             </div>
             <div class="pull-right">
@@ -74,7 +77,7 @@
                             <li><a href="#"><i class="fa fa-user-o"></i> Mis Datos</a></li>
                             <li><a href="#"><i class="fa fa-heart-o"></i> Favoritos</a></li>
                             <li><a href="#"><i class="fa fa-check"></i> Ventas</a></li>
-                            <li><a href="#"><i class="fa fa-user-plus"></i> Create An Account</a></li>
+                            <li><a href="listarPublicaciones.php"><i class="fa fa-list"></i> Publicaciones</a></li>
                             
                         </ul>
                     </li>

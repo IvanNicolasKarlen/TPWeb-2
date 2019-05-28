@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+$usuario = $_SESSION['username'];
+
+if(!isset($usuario))
+{
+	header("location: ../index.php");
+}
+?>
+
+
+
 <!doctype html>
 <html>
 <head>
@@ -87,9 +100,9 @@
                         <input class="input" type="text" name="marca" placeholder="marca" required> <!--required-->
                     </div>
                     <div class="form-group">
-                        <label>Teléfono: </label>
-                        <input class="input" type="number" name="tel"
-                               placeholder="4458-9896">
+                        <label>Palabras claves: </label>
+                        <input class="input" type="text" name="palabras"
+                               placeholder="Ej: Color, Talle...">
                     </div>
                     <div class="form-group">
                         <label>Genero: </label>
@@ -124,10 +137,7 @@
                             <input type="radio" name="envio"
                                    value="Gratis" required> <label> Envío gratis</label>
                         </div>
-                        <div class="input-checkbox">
-                            <input class="input-checkbox" type="radio" name="envio"
-                                   value="Domicilio"> <label> Envío a domicilio</label>
-                        </div>
+                       
                         <div class="input-checkbox">
                             <input class="input-checkbox" type="radio" name="envio"
                                    value="Domicilio con cargo"> <label> Envío a domicilio con
@@ -142,10 +152,11 @@
                         <label>Descripción: </label>
                         <textarea style="height: 130px" class="input"
                                   name="descripcion"></textarea>
+								  
                     </div>
-
+<br>
                 </div> <!-- /div col-4 3ro-->
-                        <h5 style="text-align: center">Subir imagenes:</h5>
+                      
                         <div class="form-group">
                             <div class="col-md-3"><label> Imagen principal</label>
                                 <input class="input col-md-3" type="file"
@@ -153,7 +164,7 @@
                                        id="importData" accept=".jpg,
                                     .png" required />
                             </div>
-                            <div class="col-md-3"><label> Imagen 2</label>
+                       <!--      <div class="col-md-3"><label> Imagen 2</label>
                                 <input class="input col-md-3" type="file"
                                        name="archivoB"
                                        id="importData" accept=".jpg,
@@ -169,6 +180,7 @@
                                        id="importData" accept=".jpg,
                                     .png" />
                             </div>
+						-->
 
                         </div>
 
