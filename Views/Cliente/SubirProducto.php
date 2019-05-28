@@ -176,22 +176,6 @@ if(!isset($usuario))
                                        id="importData" accept=".jpg,
                                     .png" required />
                             </div>
-                          <div class="col-md-3"><label> Imagen 2</label>
-                                <input class="input col-md-3" type="file"
-                                       name="archivoB"
-                                       id="importData" accept=".jpg,
-                                    .png" required />
-                            </div>
-                            <div class="col-md-3"><label> Imagen 3</label>
-                                <input class="input col-md-3" type="file" name="archivoC"
-                                       id="importData" accept=".jpg,
-                                    .png" />
-                            </div>
-                            <div class="col-md-3"><label> Imagen 4</label>
-                                <input class="input col-md-3" type="file" name="archivoD"
-                                       id="importData" accept=".jpg,
-                                    .png" />
-                            </div>
 
 
                         </div>

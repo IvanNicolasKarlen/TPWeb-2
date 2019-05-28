@@ -41,7 +41,7 @@ if(isset($_POST["publicar"])){
   $segunda = $_FILES["archivoB"]["name"];
  $tercera = $_FILES["archivoC"]["name"];
  $cuarta = $_FILES["archivoD"]["name"];
-  //echo 'USUARIOOO= '.$usuario;
+  $email = $_SESSION['username'];
 	$lugar="imgPublicadas/";
 	$categoria=$_POST['categoria'];
 
@@ -52,8 +52,6 @@ if(isset($_POST["publicar"])){
 echo "<script language='JavaScript'>alert('No se ha elegido ninguna imagen!');</script>";
 }else 
 { 
-	
-	
 
 	if(@move_uploaded_file($_FILES["archivoA"]["tmp_name"],$lugar . $imgprincipal)){
 	
@@ -61,25 +59,6 @@ echo "<script language='JavaScript'>alert('No se ha elegido ninguna imagen!');</
 		echo "<script language='JavaScript'>alert('No se guardo la imagen Principal!');</script>"; 
 		}
 		
-	
-		if(@move_uploaded_file($_FILES["archivoB"]["tmp_name"],$lugar . $segunda)){
-	}else{
-		echo "<script language='JavaScript'>alert('No se guardo la segunda imagen!');</script>"; 	
-	
-		}
-	
-		if(@move_uploaded_file($_FILES["archivoC"]["tmp_name"],$lugar . $tercera)){
-
-	}else{
-		echo "<script language='JavaScript'>alert('No se guardo la tercera imagen!');</script>";	
-	
-		}
- 
-		if(@move_uploaded_file($_FILES["archivoD"]["tmp_name"],$lugar . $cuarta)){
-	}else{
-		echo "<script language='JavaScript'>alert('No se guardo la cuarta imagen!');</script>";	
-	
-		}
  
  require_once("../conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
 		
@@ -107,13 +86,13 @@ echo "<script language='JavaScript'>alert('No se ha elegido ninguna imagen!');</
 		$idUsuario=$conexion->buscarUser($email);
 
 				
-				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,palabrasClaves,genero,descripcion,imgprincipal,modelo1,modelo2,modelo3,idUsuario,categoria)
-				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$palabras','$genero','$descripcion','$imgprincipal','$segunda','$tercera','$cuarta','$idUsuario','$categoria')";
+				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,genero,categoria,palabrasClaves,descripcion,imgprincipal,idUsuario)
+				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$genero','$categoria','$palabras','$descripcion','$imgprincipal','$idUsuario')";
 				
 				if($conexion->loguearUsuario($sql)===true)	
 			{
 					echo '<script language= "javascript">alert("Producto registrado con exito");</script>';
-					//echo "<script>location.href='subirProducto.php'</script>";
+					echo "<script>location.href='subirProducto.php'</script>";
 	  
 			}else{
 						echo '<script language= "javascript">alert("Error");</script>';
