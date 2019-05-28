@@ -11,9 +11,6 @@ if(!isset($email))
 
 
 $imgprincipal = '';
-  $segunda = '';
- $tercera = '';
- $cuarta = '';
  $nombre = '';
  $estado = '';
  $precio = '';
@@ -38,10 +35,7 @@ if(isset($_POST["publicar"])){
  $envio = $_POST['envio'];
  $descripcion = $_POST['descripcion'];
  $imgprincipal = $_FILES["archivoA"]["name"];
-  $segunda = $_FILES["archivoB"]["name"];
- $tercera = $_FILES["archivoC"]["name"];
- $cuarta = $_FILES["archivoD"]["name"];
-  $email = $_SESSION['username'];
+ $email = $_SESSION['username'];
 	$lugar="imgPublicadas/";
 	$categoria=$_POST['categoria'];
 
