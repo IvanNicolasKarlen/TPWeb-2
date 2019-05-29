@@ -23,8 +23,8 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
 		
 	
 	// ejecutar la consulta
-		$resultado = $conexion->loguearUsuario($consulta);
-		$verificoEmail = $conexion->loguearUsuario($controlarEmail);
+		$resultado = $conexion->realizarConsulta($consulta);
+		$verificoEmail = $conexion->realizarConsulta($controlarEmail);
 		
 		//pregunto si el resultado me devuelve una cierta cantidad de filas
 		$row = $resultado->num_rows;
@@ -48,7 +48,7 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
 				$sql = "INSERT INTO usuario(email,password,Nombre,pais,latitud,longitud,rol)
 				values('$email','$pass','$nombre','$pais','$lat', '$long','$usuario')";
 				
-				if($conexion->loguearUsuario($sql)===true)
+				if($conexion->realizarConsulta($sql)===true)
 			{
 					echo '<script language= "javascript">alert("Usuario registrado con exito");</script>';
 					

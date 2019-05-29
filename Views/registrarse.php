@@ -92,7 +92,7 @@ session_start();
 							$connect = new Conexion();
 							$output = array();
 							$query = "SELECT nombre FROM pais";
-							$resultado = $connect->loguearUsuario($query);
+							$resultado = $connect->realizarConsulta($query);
 						//$result = mysqli_query($connect, $query);
 							while($fila = mysqli_fetch_array($resultado))
 							{

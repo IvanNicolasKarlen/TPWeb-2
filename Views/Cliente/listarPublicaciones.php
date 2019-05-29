@@ -17,7 +17,7 @@ if(!isset($usuario))
  		$consulta="SELECT * FROM producto WHERE idUsuario='$resultadoID'";
 		
 		//ejecutar la consulta
-		$resultado = $conexion->loguearUsuario($consulta);
+		$resultado = $conexion->realizarConsulta($consulta);
 
 
 ?>

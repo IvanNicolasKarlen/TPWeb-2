@@ -20,10 +20,10 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		
 		
 		// ejecutar la consulta
-		$resultado = $conexion->loguearUsuario($consulta);
-		$verificoEmail = $conexion->loguearUsuario($controlarEmail);
-		$verificoNombre=$conexion->loguearUsuario($consultoNombre);
-		$resultadoRol = $conexion->loguearUsuario($consultoRol);
+		$resultado = $conexion->realizarConsulta($consulta);
+		$verificoEmail = $conexion->realizarConsulta($controlarEmail);
+		$verificoNombre=$conexion->realizarConsulta($consultoNombre);
+		$resultadoRol = $conexion->realizarConsulta($consultoRol);
 		
 		//pregunto si el resultado me devuelve una cierta cantidad de filas
 		$row = $resultado->num_rows;
@@ -103,7 +103,7 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		
 		//Hecho con constructor
 		$conexion1 = new Conexion();
-		$conexion1->loguearUsuario();
+		$conexion1->realizarConsulta();
 		
 		$consulta="select * from usuario where password = '$password'";
 		$controlarEmail = "select * from usuario where email = '$email'";
@@ -111,9 +111,9 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		
 		
 		//Query es un metodo de mysqli, como ahora tenemos en Conexion un atributo de este tipo, agregamos tmbn
-		//un metodko loguearUsuario q llama al metodo query del atributo mysqli
-		$resultado = $conexion1->loguearUsuario($consulta);
-		$verificoEmail = $conexion1->loguearUsuario($controlarEmail);
+		//un metodko realizarConsulta q llama al metodo query del atributo mysqli
+		$resultado = $conexion1->realizarConsulta($consulta);
+		$verificoEmail = $conexion1->realizarConsulta($controlarEmail);
 		
 		//pregunto si el resultado me devuelve una cierta cantidad de filas
 		$row = $resultado->num_rows;

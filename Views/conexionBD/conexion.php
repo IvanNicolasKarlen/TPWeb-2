@@ -26,7 +26,7 @@ class Conexion{
 	 
 	 
 	
-	 public function loguearUsuario($consulta){
+	 public function realizarConsulta($consulta){
  if(!$resultado = $this->msq->query($consulta) )
  {
 	 echo "Ha ocurrido un error al ejecutar la consulta   ";
@@ -39,13 +39,28 @@ class Conexion{
  }
 
 	public function buscarUser($email){
-		$consultaID="SELECT id FROM usuario WHERE email='$email'";
-		$r=$this->loguearUsuario($consultaID);
-		$resultadoID=mysqli_fetch_array($r);
-		return $resultadoID['id'];
+			/*Preparamos la consulta. El "(?)" es donde queremos poner nuestro parametro*/
+		$consultaID=$this->msq->prepare("SELECT id FROM usuario WHERE email=(?)");
+			/*Definimos los parametros, la "s" es por String y el $email Es lo q va a
+			reemplazarse en "(?)"*/
+		$consultaID->bind_param("s",$email);
+			/*ejecutamos la consulta*/
+		$consultaID->execute();
+			/*decimos q nos traiga los resultados de la ultima consulta*/
+		$consultaID->store_result();
+		$id=""; //variable pa guardar los resultados
+		$consultaID->bind_result($id); //asignamos la variable donde guardar el resultado
+		$consultaID->fetch(); //los trae y guarda en la variable asignada arriba ($id)
+		return $id; //retornamos
+
 	}
 	 
-	 
+	 public function controlLogin($email,$password){
+		$consulta=$this->msq->prepare("SELECT * FROM Usuario WHERE email=? AND password=?");
+		$consulta->bind_param("ss",$email,$password);
+		$r=$consulta->execute();
+		return $r;
+	 }
 
 	
 }
