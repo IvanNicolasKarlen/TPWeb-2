@@ -13,131 +13,75 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		//$conexion = new mysqli($host, $usuario, $clave, $bd);
 		$conexion = new Conexion;
 		
-		$consulta="select * from usuario where password = '$password'";
+		//Traigo los datos buscados
+		$consultar=$conexion->controlLogin($email,$password);
+		
+		//Busca por email para saber si el email esta o no registrado
 		$controlarEmail = "select * from usuario where email = '$email'";
-		$consultoNombre = "select Nombre from usuario where email = '$email'";
-		$consultoRol = "select rol from usuario where email = '$email'";
+		//Busca por nombre y rol para definir si es un Usuario o Admin
+		$consultoNombre = "select Nombre,rol from usuario where email = '$email'";
 		
 		
 		// ejecutar la consulta
-		$resultado = $conexion->realizarConsulta($consulta);
+		//$resultado = $conexion->realizarConsulta($consulta);
+		$resultado=$conexion->realizarConsulta($consultar);
 		$verificoEmail = $conexion->realizarConsulta($controlarEmail);
 		$verificoNombre=$conexion->realizarConsulta($consultoNombre);
-		$resultadoRol = $conexion->realizarConsulta($consultoRol);
 		
 		//pregunto si el resultado me devuelve una cierta cantidad de filas
-		$row = $resultado->num_rows;
 		$filas = $verificoEmail->num_rows;
 		$names = $verificoNombre->num_rows;
-		$rol = $resultadoRol->num_rows;
 		
 		
 	//Obtengo el nombre del email que ingreso por Login
 	if(($names)>0){
-    
+    //Para poder buscar en la parte de Nombres en base al nombre que buscamos
 	$columna = $verificoNombre->fetch_array(MYSQLI_ASSOC);
     
 	/* Asignamos A Sessión el valor de la columna Nombre*/
     $_SESSION['nombre']= $columna['Nombre'];	
 	}
-		else{
-				echo "NO HAY RESULTADOS";
-			}
 			
 			
 	//* Obtener rol	
-	if(($rol)>0){
-	$columna = $resultadoRol->fetch_array(MYSQLI_ASSOC);
+	if(($names)>0){
+	
+	$columna = $verificoNombre->fetch_array(MYSQLI_ASSOC);
 	/* Asignamos A una variable el valor de la columna rol*/
     $rol2= $columna['rol'];
 	}
-		else{
-				echo "NO HAY RESULTADOS";
-			}
 
 		//pregunto si la cantidad de filas es distinto a cero
-		if($filas<>0)
-		{
-			if($row<>0){
+		if($consultar<>0){
 			$_SESSION['username'] = $email;
 		echo '<script> alert("Ingresado")</script>';
 				
 			//pregunto si es un usuario o un admin
 			if($rol2=="usuario")
 			{
-				echo "<script>location.href='../Views/Cliente/paginaCliente.php'</script>";
-			}else
-				{
-					echo "<script>location.href='login.php'</script>";
-				}
-			
+				header("location:../Views/Cliente/paginaCliente.php");
+					exit();
 			}else{
-	//caso contrario regresa al archivo html donde esta el archivo login
-				echo '<script language= "javascript">alert("EMAIL O CONTRASEÑA INCORRECTO");</script>';
-				echo "<script>location.href='login.php'</script>";	
-		
-			}
-}else{
+					
+				header("location:login.php");
+					exit();
+					
+				}
+			//Busca si este email se encuentra al menos en la BD
+			}elseif($filas==0){
 	
 		echo '<script> alert("ESTE USUARIO NO EXISTE, POR FAVOR REGISTRESE PARA PODER INGRESAR")</script>';
-		echo "<script>location.href='login.php'</script>";
-	}
+			header("location:login.php");
+					exit();
+		
+	}else{
+	//caso contrario regresa al archivo html donde esta el archivo login
+				echo '<script language= "javascript">alert("EMAIL O CONTRASEÑA INCORRECTO");</script>';
+					header("location:login.php");
+					exit();
+				
+		
+			}
 
 }
 ?>
-
-
-
-
-
-<?php
-/*
-if(isset($_POST["email"])){ //Si completa una vez el campo usuario
-		require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
-		$email = $_POST["email"]; //Guardo el usuario
-		$password = $_POST["pass"]; //Guardo la contraseña
-		//print ("Email: $email <br>");//Muestro el usurio
-		//print ("Contraseña: $password<br>"); //Muestro la password
-		// crear consulta para comparar los datos recibidos con los datos de la BD
-		
-		
-		//Hecho con constructor
-		$conexion1 = new Conexion();
-		$conexion1->realizarConsulta();
-		
-		$consulta="select * from usuario where password = '$password'";
-		$controlarEmail = "select * from usuario where email = '$email'";
-		
-		
-		
-		//Query es un metodo de mysqli, como ahora tenemos en Conexion un atributo de este tipo, agregamos tmbn
-		//un metodko realizarConsulta q llama al metodo query del atributo mysqli
-		$resultado = $conexion1->realizarConsulta($consulta);
-		$verificoEmail = $conexion1->realizarConsulta($controlarEmail);
-		
-		//pregunto si el resultado me devuelve una cierta cantidad de filas
-		$row = $resultado->num_rows;
-		$filas = $verificoEmail->num_rows;
-		
-		//pregunto si la cantidad de filas es distinto a cero
-		if($filas<>0)
-		{
-			if($row<>0){
-				$_SESSION['username'] = $email;
-			echo "<script>location.href='../pagina.php'</script>";
-			
-			}else{
-	//caso contrario regresa al archivo html donde esta el archivo registrar
-				echo '<script language= "javascript">alert("EMAIL O CONTRASEÑA INCORRECTO");</script>';
-				echo "<script>location.href=index.php </script>";
-		
-			}
-}else{
-	
-		echo '<script> alert("ESTE USUARIO NO EXISTE, POR FAVOR REGISTRESE PARA PODER INGRESAR")</script>';
-		echo "<script>location.href=index.php</script>";
-	}
-
-}
-
-?>*/

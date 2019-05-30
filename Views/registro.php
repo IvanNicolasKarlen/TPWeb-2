@@ -17,42 +17,39 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
 	//Abrir conexion
 	$conexion = new Conexion();
  
- 
-		$consulta="select * from usuario where password = '$pass'";
-		$controlarEmail = "select * from usuario where email = '$email'";
+		//$consulta="select * from usuario where password = '$pass' and email = '$email'";
 		
-	
+		$consultar=$conexion->controlRegistrar($email);
+
 	// ejecutar la consulta
-		$resultado = $conexion->realizarConsulta($consulta);
-		$verificoEmail = $conexion->realizarConsulta($controlarEmail);
-		
-		//pregunto si el resultado me devuelve una cierta cantidad de filas
-		$row = $resultado->num_rows;
-		$filas = $verificoEmail->num_rows;
+		$resultado = $conexion->realizarConsulta($consultar);
+
 	
-		//pregunto si la cantidad de filas es distinto a cero
-		if($filas<>0)
+		//pregunto si la cantidad de filas es distinto a cero porque ya existe otro email igual
+		if($consultar<>0)
 		{
-			if($row<>0){
 			echo '<script language= "javascript"> alert("Atencion, ya existe el usuario ingresado");</script>';
-			echo "<script>location.href='registrarse.php';</script>";
-			
-			}else{
-				if($pass<>$repetir){
+			//echo "<script>location.href='registrarse.php';</script>";
+			header("location:registrarse.php");
+			exit();
+			if($pass<>$repetir)
+				{
 						//caso contrario regresa al archivo html donde esta el archivo registrar
 										echo '<script language= "javascript"> alert("Atencion, las contraseñas no coinciden");</script>';
-										echo "<script>location.href='registrarse.php';</script>";
-								}
-			}
-	}else {  
+										header("location:registrarse.php");
+										exit();
+			exit();
+				
+				} 
+		}elseif($consultar==0){  
 				$sql = "INSERT INTO usuario(email,password,Nombre,pais,latitud,longitud,rol)
 				values('$email','$pass','$nombre','$pais','$lat', '$long','$usuario')";
 				
 				if($conexion->realizarConsulta($sql)===true)
 			{
 					echo '<script language= "javascript">alert("Usuario registrado con exito");</script>';
-					
-					echo "<script>location.href='../Views/login.php';</script>";
+					header("location:../Views/login.php");
+					exit();
 			}else{
 						echo"error";
 				 }	 

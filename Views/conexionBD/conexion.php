@@ -56,10 +56,28 @@ class Conexion{
 	}
 	 
 	 public function controlLogin($email,$password){
-		$consulta=$this->msq->prepare("SELECT * FROM Usuario WHERE email=? AND password=?");
+		$consulta=$this->msq->prepare("SELECT email,password FROM usuario WHERE email=? AND password=?");
 		$consulta->bind_param("ss",$email,$password);
-		$r=$consulta->execute();
-		return $r;
+		$consulta->execute();
+		$consulta->store_result();
+		$em="";
+		$pass="";
+		$consulta->bind_result($em,$pass); //asignamos la variable donde guardar el resultado
+		$consulta->num_rows();
+		return $consulta->fetch(); //los trae y guarda en la variable asignada arriba ($id)
+		
+	 }
+	 
+	 public function controlRegistrar($email){
+		$consulta=$this->msq->prepare("SELECT email FROM usuario WHERE email=?");
+		$consulta->bind_param("s",$email);
+		$consulta->execute();
+		$consulta->store_result();
+		$em="";
+		$consulta->bind_result($em); //asignamos la variable donde guardar el resultado
+		$consulta->num_rows();
+		return $consulta->fetch(); //los trae y guarda en la variable asignada arriba ($id)
+		
 	 }
 
 	
