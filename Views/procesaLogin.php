@@ -4,6 +4,7 @@ session_start();
 
 if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
+		require_once ("conexionBD/direccion.php");
 		$email = $_POST["email"]; //Guardo el usuario
 		$password = $_POST["pass"]; //Guardo la contraseña
 		
@@ -12,25 +13,27 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		
 		//Traigo los datos buscados en un array
 		$consultar=$conexion->controlLogin($email,$password);
-		
+		$direccion= new Direccion();
 	switch($consultar['rol'])
 	{
 		case 'usuario': echo '<script> alert("Ingresado")</script>';
 				/* Asignamos A Sessión el valor de la columna Nombre*/
 				 $_SESSION['nombre']= $consultar['nom'];
 				 $_SESSION['username'] = $email;
-					header("location:../Views/Cliente/paginaCliente.php");
+				 $_SESSION['id'] = $consultar['id'];
+					header($direccion->carpRaiz("Index"));
 					exit();
 					break;
 		case 'administrador': echo '<script> alert("Ingresado")</script>';
 					/* Asignamos A Sessión el valor de la columna Nombre*/
 					 $_SESSION['nombre']= $consultar['nom'];
 					 $_SESSION['username'] = $email;
-					 header("location:../Views/Cliente/paginaAdmin.php");
+					$_SESSION['id'] = $consultar['id'];
+					 header($direccion->carpRaiz("paginaAdmin"));
 					 exit();
 						break;
-		case '': echo '<script> alert("USUARIO O CONTRASEÑA INCORRECTA, POR FAVOR REGISTRESE PARA PODER INGRESAR")</script>';	
-				header("location:login.php");
+		case '': $error="USUARIO O PASSWORD INCORRECTA, POR FAVOR REGISTRESE PARA PODER INGRESAR";
+				header($direccion->errorLogin($error));
 				exit();
 	}
 }

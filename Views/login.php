@@ -33,7 +33,9 @@
 	<!--===============================================================================================-->
 </head>
 <body style="background-color: #999999;">
-
+<?php
+$msj= isset($_GET["error"]) ? $_GET["error"] : "";
+?>
 <div class="limiter" method="post" action="">
 	<div class="container-login100">
 		<div class="login100-more" style="background-image: url('images/login.jpg');"></div>
@@ -43,6 +45,7 @@
 					<span class="login100-form-title p-b-59">
 						¡Bienvenido!
 					</span>
+                <span class="alert-warning"> <?php echo "$msj" ?></span>
 
 
 
@@ -84,7 +87,7 @@
 						<i class="fa fa-long-arrow-right m-l-5"></i>
 					</a>
 					
-					<a href="index.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10
+					<a href="Index.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10
 						p-l-30">
 							Regresar
 							<i class="fa fa-long-arrow-left m-l-5"></i>
