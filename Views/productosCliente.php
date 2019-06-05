@@ -15,20 +15,20 @@
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
 
 	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="Cliente/css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
 	<!-- Slick -->
-	<link type="text/css" rel="stylesheet" href="Cliente/css/slick.css" />
-	<link type="text/css" rel="stylesheet" href="Cliente/css/slick-theme.css" />
+	<link type="text/css" rel="stylesheet" href="css/slick.css" />
+	<link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
 
 	<!-- nouislider -->
-	<link type="text/css" rel="stylesheet" href="Cliente/css/nouislider.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
 
 	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="Cliente/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="Cliente/css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -146,7 +146,7 @@
 						<!-- widget product -->
 						<div class="product product-widget">
 							<div class="product-thumb">
-								<img src="Cliente/img/thumb-product01.jpg" alt="">
+								<img src="img/thumb-product01.jpg" alt="">
 							</div>
 							<div class="product-body">
 								<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
@@ -165,7 +165,7 @@
 						<!-- widget product -->
 						<div class="product product-widget">
 							<div class="product-thumb">
-								<img src="Cliente/img/thumb-product01.jpg" alt="">
+								<img src="img/thumb-product01.jpg" alt="">
 							</div>
 							<div class="product-body">
 								<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
@@ -237,7 +237,7 @@
 											<span class="sale">-20%</span>
 										</div>
 										<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-										<img src="Cliente/img/product01.jpg" alt="">
+										<img src="img/product01.jpg" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -264,7 +264,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">
 										<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-										<img src="Cliente/img/product02.jpg" alt="">
+										<img src="img/product02.jpg" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50</h3>
@@ -297,7 +297,7 @@
 											<span class="sale">-20%</span>
 										</div>
 										<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-										<img src="Cliente/img/product03.jpg" alt="">
+										<img src="img/product03.jpg" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -329,7 +329,7 @@
 											<span>New</span>
 										</div>
 										<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-										<img src="Cliente/img/product04.jpg" alt="">
+										<img src="img/product04.jpg" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50</h3>
@@ -361,7 +361,7 @@
 											<span>New</span>
 										</div>
 										<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-										<img src="Cliente/img/product05.jpg" alt="">
+										<img src="img/product05.jpg" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50</h3>
@@ -392,7 +392,7 @@
 											<span class="sale">-20%</span>
 										</div>
 										<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-										<img src="Cliente/img/product06.jpg" alt="">
+										<img src="img/product06.jpg" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -425,7 +425,7 @@
 											<span class="sale">-20%</span>
 										</div>
 										<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-										<img src="Cliente/img/product07.jpg" alt="">
+										<img src="img/product07.jpg" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -452,7 +452,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">
 										<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-										<img src="Cliente/img/product08.jpg" alt="">
+										<img src="img/product08.jpg" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50</h3>
@@ -484,7 +484,7 @@
 											<span class="sale">-20%</span>
 										</div>
 										<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-										<img src="Cliente/img/product01.jpg" alt="">
+										<img src="img/product01.jpg" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -567,7 +567,7 @@
 						<!-- footer logo -->
 						<div class="footer-logo">
 							<a class="logo" href="#">
-		            <img src="Cliente/img/logo.png" alt="">
+		            <img src="img/logo.png" alt="">
 		          </a>
 						</div>
 						<!-- /footer logo -->
@@ -654,12 +654,12 @@
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->
-	<script src="Cliente/js/jquery.min.js"></script>
-	<script src="Cliente/js/bootstrap.min.js"></script>
-	<script src="Cliente/js/slick.min.js"></script>
-	<script src="Cliente/js/nouislider.min.js"></script>
-	<script src="Cliente/js/jquery.zoom.min.js"></script>
-	<script src="Cliente/js/main2.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/jquery.zoom.min.js"></script>
+	<script src="js/main2.js"></script>
 
 </body>
 

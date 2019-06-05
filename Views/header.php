@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +81,7 @@
                 <!-- Logo -->
                 <div class="header-logo">
                     <a class="logo" href="Index.php">
-                        <img src="Cliente/img/logo.png" alt="">
+                        <img src="img/logo.png" alt="">
                     </a>
                 </div>
                 <!-- /Logo -->
@@ -160,7 +162,7 @@
                                 <div class="shopping-cart-list">
                                     <div class="product product-widget">
                                         <div class="product-thumb">
-                                            <img src="Cliente/img/thumb-product01.jpg" alt="">
+                                            <img src="img/thumb-product01.jpg" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
@@ -170,7 +172,7 @@
                                     </div>
                                     <div class="product product-widget">
                                         <div class="product-thumb">
-                                            <img src="Cliente/img/thumb-product01.jpg" alt="">
+                                            <img src="img/thumb-product01.jpg" alt="">
                                         </div>
                                         <div class="product-body">
                                             <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
@@ -255,7 +257,7 @@
                                 <div class="col-md-12">
                                     <hr>
                                     <a class="banner banner-1" href="productosCliente.php">
-                                        <img src="Cliente/img/banner05.jpg" alt="">
+                                        <img src="img/banner05.jpg" alt="">
                                         <div class="banner-caption text-center">
                                             <h2 class="white-color">NEW COLLECTION</h2>
                                             <h3 class="white-color font-weak">HOT DEAL</h3>
@@ -314,7 +316,7 @@
                                 </div>
                                 <div class="col-md-4 hidden-sm hidden-xs">
                                     <a class="banner banner-2" href="#">
-                                        <img src="Cliente/img/banner04.jpg" alt="">
+                                        <img src="img/banner04.jpg" alt="">
                                         <div class="banner-caption">
                                             <h3 class="white-color">NEW<br>COLLECTION</h3>
                                         </div>
@@ -407,8 +409,12 @@
             <div class="menu-nav">
                 <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
                 <ul class="menu-list">
-                    <li><a <?php if(!(isset($_SESSION['username']))){echo "style=display:none";}
-                    else{echo "style=display:block";} ?> href="SubirProducto.php">
+                    <li><a <?php if(!(isset($_SESSION['username'])))
+					{
+						echo "style=display:none";
+						}else{
+							echo "style=display:block";
+							} ?> href="SubirProducto.php">
                             Publicar</a></li>
                     <li><a href="productosCliente.php">Shop</a></li>
                     <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Women <i class="fa fa-caret-down"></i></a>
@@ -454,7 +460,7 @@
                                 <div class="col-md-12">
                                     <hr>
                                     <a class="banner banner-1" href="productosCliente.php">
-                                        <img src="Cliente/img/banner05.jpg" alt="">
+                                        <img src="img/banner05.jpg" alt="">
                                         <div class="banner-caption text-center">
                                             <h2 class="white-color">NEW COLLECTION</h2>
                                             <h3 class="white-color font-weak">HOT DEAL</h3>
@@ -470,7 +476,7 @@
                                 <div class="col-md-3">
                                     <div class="hidden-sm hidden-xs">
                                         <a class="banner banner-1" href="productosCliente.php">
-                                            <img src="Cliente/img/banner06.jpg" alt="">
+                                            <img src="img/banner06.jpg" alt="">
                                             <div class="banner-caption text-center">
                                                 <h3 class="white-color text-uppercase">Women’s</h3>
                                             </div>
@@ -490,7 +496,7 @@
                                 <div class="col-md-3">
                                     <div class="hidden-sm hidden-xs">
                                         <a class="banner banner-1" href="productosCliente.php">
-                                            <img src="Cliente/img/banner07.jpg" alt="">
+                                            <img src="img/banner07.jpg" alt="">
                                             <div class="banner-caption text-center">
                                                 <h3 class="white-color text-uppercase">Men’s</h3>
                                             </div>
@@ -510,7 +516,7 @@
                                 <div class="col-md-3">
                                     <div class="hidden-sm hidden-xs">
                                         <a class="banner banner-1" href="productosCliente.php">
-                                            <img src="Cliente/img/banner08.jpg" alt="">
+                                            <img src="img/banner08.jpg" alt="">
                                             <div class="banner-caption text-center">
                                                 <h3 class="white-color text-uppercase">Accessories</h3>
                                             </div>
@@ -530,7 +536,7 @@
                                 <div class="col-md-3">
                                     <div class="hidden-sm hidden-xs">
                                         <a class="banner banner-1" href="productosCliente.php">
-                                            <img src="Cliente/img/banner09.jpg" alt="">
+                                            <img src="img/banner09.jpg" alt="">
                                             <div class="banner-caption text-center">
                                                 <h3 class="white-color text-uppercase">Bags</h3>
                                             </div>

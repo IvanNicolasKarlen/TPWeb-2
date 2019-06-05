@@ -22,6 +22,7 @@ $imgprincipal = '';
  $envio = '';
  $descripcion = '';
  
+
 if(isset($_POST["publicar"])){
  
  $nombre = $_POST['nombre'];
@@ -39,19 +40,23 @@ if(isset($_POST["publicar"])){
  $idUsuario=$_SESSION['id'];
 	$lugar="imgPublicadas/";
 	$categoria=$_POST['categoria'];
-
+$errorI="";
  //sube la imagen a la carpeta imgPublicadas
 
 	if($_FILES["archivoA"]["error"] > 0)
 {
-echo "<script language='JavaScript'>alert('No se ha elegido ninguna imagen!');</script>";
+	$errorI="No se ha elegido ninguna imagen";
+	header("location:subirProducto.php?error=$errorI");
+	
+	
 }else 
 { 
 
 	if(@move_uploaded_file($_FILES["archivoA"]["tmp_name"],$lugar . $imgprincipal)){
 	
 	}else{
-		echo "<script language='JavaScript'>alert('No se guardo la imagen Principal!');</script>"; 
+		$errorI="Error al subir la imagen principal. Intente nuevamente.";
+		header("location:subirProducto.php?error=$errorI");
 		}
 		
  
@@ -90,7 +95,8 @@ echo "<script language='JavaScript'>alert('No se ha elegido ninguna imagen!');</
 					exit();
 	  
 			}else{
-						echo '<script language= "javascript">alert("Error");</script>';
+						$errorI="Error al subir el producto. Intente nuevamente";
+						header("location:subirProducto.php?error=$errorI");
 				 }	 
 				
 		 

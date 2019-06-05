@@ -17,25 +17,25 @@ require_once("verificacionSesion.php");
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
 
-    <link type="text/css" rel="stylesheet" href="Cliente/css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
 
     <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="Cliente/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
     <!-- Slick -->
-    <link type="text/css" rel="stylesheet" href="Cliente/css/slick.css" />
-    <link type="text/css" rel="stylesheet" href="Cliente/css/slick-theme.css" />
+    <link type="text/css" rel="stylesheet" href="css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
 
     <!-- nouislider -->
-    <link type="text/css" rel="stylesheet" href="Cliente/css/nouislider.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
 
     <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="Cliente/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!--Estilos-->
 
     <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="Cliente/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,13 +51,13 @@ require_once("verificacionSesion.php");
 	<?php include_once("header.php"); ?>
 
 	</header>
-
+<?php $error=isset($_GET["error"]) ? $_GET["error"] : ""; ?>
 <div class="section"> <!-- section -->
 
     <div class="container"> <!-- container -->
 
         <div class="row"> <!-- row -->
-
+			<h4 style="text-align:center; color:#9a2222; background-color:#d0be6547"> <?php echo"$error"; ?></h4>
             <form id="checkout-form" class="clearfix" action="procesaSubirProducto.php" method="post" enctype="multipart/form-data"> <!--form-->
 
                 <div class="col-12 col-md-4"> <!--div col-4 1er-->
