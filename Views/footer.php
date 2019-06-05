@@ -97,12 +97,12 @@
 <!-- /FOOTER -->
 
 <!-- jQuery Plugins -->
-<script src="Cliente/js/jquery.min.js"></script>
-<script src="Cliente/js/bootstrap.min.js"></script>
-<script src="Cliente/js/slick.min.js"></script>
-<script src="Cliente/js/nouislider.min.js"></script>
-<script src="Cliente/js/jquery.zoom.min.js"></script>
-<script src="Cliente/js/main2.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/main2.js"></script>
 </body>
 
 </html>
