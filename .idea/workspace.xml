@@ -2,231 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f96dc65-ba76-4360-bcfc-0685c0427f42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/CerrarSesion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/CerrarSesion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/SubirProducto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/SubirProducto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/css/estilosubir.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/css/nouislider.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/css/slick-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/css/slick.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/css/util.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/detalleProductoCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/detalleProductoCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/iconic/css/material-design-iconic-font.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/iconic/css/material-design-iconic-font.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-ExtraBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-SemiBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/Montserrat-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/montserrat/OFL.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-ExtraBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-ExtraBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-ExtraLightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-SemiBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-SemiBoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/poppins/Poppins-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/slick.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/slick.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/slick.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/fonts/slick.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/images/bg-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/images/bg-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/images/icons/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/images/icons/map-marker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/images/login.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/images/registrarse.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/banner15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/main-product01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/main-product02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/main-product03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/main-product04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/product01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/product02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/product03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/product04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/product05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/product06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/product07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/product08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/thumb-product01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/thumb-product02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/thumb-product03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/img/thumb-product04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/2015-12-11-15-50-21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/2015-12-11-15-50-21.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/2016-01-11-20-06-27.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/2016-01-11-20-06-27.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/2016-01-17-13-14-11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/2016-01-17-13-14-11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/2016-01-30-00-08-43.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/2016-01-30-00-08-43.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/2016-02-02-19-37-44.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/2016-02-02-19-37-44.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/2016-02-08-20-47-59.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/2016-02-08-20-47-59.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/2016-02-16-11-51-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/2016-02-16-11-51-03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/2016-03-01-15-47-11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/2016-03-01-15-47-11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/b.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/b.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/c.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/c.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/d.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/imagen2 - copia.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/imagen2 - copia.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/imagen3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/imagen3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/imgPublicadas/plantaeleo font.png" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/plantaeleo font.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/js/jquery.zoom.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/js/main2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/js/map-custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/js/nouislider.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/js/slick.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/listarPublicaciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/listarPublicaciones.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/paginaCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/procesaSubirProducto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/procesaSubirProducto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/producto-paginaCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/producto-paginaCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/productoCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/productoCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/productosCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/productosCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/animate/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/animsition/css/animsition.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/animsition/css/animsition.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/animsition/js/animsition.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/animsition/js/animsition.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/js/popper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/bootstrap/js/tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/countdowntime/countdowntime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/css-hamburgers/hamburgers.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/daterangepicker/daterangepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/daterangepicker/daterangepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/daterangepicker/moment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/daterangepicker/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/jquery/jquery-3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/select2/select2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/select2/select2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/select2/select2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/vendor/select2/select2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Cliente/verificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Cliente/verificar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/conexionBD/conexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/conexionBD/conexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/conexionBD/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Views/conexionBD/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/procesaLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/procesaLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/registrarse.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/registrarse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/vendor/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/Views/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Views/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/verificar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/verificar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/img/banner10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/img/banner10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/img/banner11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/img/banner11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/img/banner12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/img/banner12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2015-12-11-15-50-21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-01-11-20-06-27.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-01-17-13-14-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-01-30-00-08-43.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-02-02-19-37-44.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-02-08-20-47-59.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-02-16-11-51-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-03-01-15-47-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/446456.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/Bokura Ga Ita - 02.mp4_snapshot_14.04_[2013.01.21_22.46.19].jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/Bokura Ga Ita - 02.mp4_snapshot_14.09_[2013.01.21_22.46.31].jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/Ef13IcD.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/FB_IMG_14905934222810901.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/FB_IMG_14908482932528206.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/b.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/b.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/d.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/download-gaara-hd-wallpapers-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/fausto-8vo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/imagen2 - copia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/imagen3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/plantaeleo font.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logintp.sql" beforeDir="false" afterPath="$PROJECT_DIR$/logintp.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,82 +40,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/listarPublicaciones.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1365">
-              <caret line="1" column="37" lean-forward="true" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="39" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/verificacionSesion.php">
+        <entry file="file://$PROJECT_DIR$/Views/Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="156">
+              <caret line="112" column="50" selection-start-line="112" selection-start-column="50" selection-end-line="112" selection-end-column="50" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/productosCliente.php">
+        <entry file="file://$PROJECT_DIR$/../TPWeb-2 MIO/Views/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="3" selection-start-column="3" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/SubirProducto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/procesaLogin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/conexionBD/direccion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            <state relative-caret-position="154">
+              <caret line="138" selection-start-line="138" selection-end-line="481" selection-end-column="21" />
+              <folding>
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -332,6 +80,14 @@
       <find>me</find>
       <find>verificacionSesion</find>
       <find>required_once(&quot;verificacionSesion.php&quot;);</find>
+      <find>new co</find>
+      <find>NEW</find>
+      <find>COLLECTION</find>
+      <find>INMUE</find>
+      <find>$f</find>
+      <find>&quot;;</find>
+      <find>DEALS</find>
+      <find>deals</find>
     </findStrings>
     <replaceStrings>
       <replace>#6675df</replace>
@@ -345,6 +101,7 @@
       <replace>required_once(&quot;verificacion</replace>
       <replace>required_once(&quot;verificacionSesion.php&quot;);</replace>
       <replace>&lt;?php required_once(&quot;verificacionSesion.php&quot;); ?&gt;</replace>
+      <replace>'</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Cande\Documents\Cande\UnLaM\Materias en Curso\TPWeb-2\Views</dir>
@@ -372,7 +129,6 @@
         <option value="$PROJECT_DIR$/Views/Cliente/SubirProducto.php" />
         <option value="$PROJECT_DIR$/Views/conexionBD/config.ini" />
         <option value="$PROJECT_DIR$/Views/conexionBD/config.ini" />
-        <option value="$PROJECT_DIR$/Views/conexionBD/conexion.php" />
         <option value="$PROJECT_DIR$/Views/Cliente/footer.php" />
         <option value="$PROJECT_DIR$/Views/Cliente/CerrarSesion.php" />
         <option value="$PROJECT_DIR$/Views/Cliente/paginaCliente.php" />
@@ -391,6 +147,8 @@
         <option value="$PROJECT_DIR$/Views/vendor/bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/Views/vendor/bootstrap/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/Views/login.php" />
+        <option value="$PROJECT_DIR$/Views/conexionBD/conexion.php" />
+        <option value="$PROJECT_DIR$/Views/Index.php" />
       </list>
     </option>
   </component>
@@ -405,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -422,18 +179,13 @@
               <item name="tpweb-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpweb-2" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="conexionBD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tpweb-2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tpweb-2" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -483,16 +235,17 @@
       <workItem from="1559482364837" duration="70000" />
       <workItem from="1559526229341" duration="598000" />
       <workItem from="1559672666010" duration="7958000" />
+      <workItem from="1560059025847" duration="7723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23855000" />
+    <option name="totallyTimeSpent" value="31578000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28590605" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28993288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -544,13 +297,6 @@
     <entry file="file://$PROJECT_DIR$/Views/js/main.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
-          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/index.html" />
     <entry file="file://$PROJECT_DIR$/Views/blank.html" />
     <entry file="file://$PROJECT_DIR$/Views/product-page.html" />
@@ -559,13 +305,6 @@
     <entry file="file://$PROJECT_DIR$/Views/products.html" />
     <entry file="file://$PROJECT_DIR$/Views/productos.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/procesaSubirProducto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="63" column="2" lean-forward="true" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -591,48 +330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/conexionBD/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logintp.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1019">
-          <caret line="153" selection-start-line="153" selection-end-line="153" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/conexionBD/conexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1491">
-          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1524">
-          <caret line="235" column="38" selection-start-line="235" selection-start-column="38" selection-end-line="235" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/productoCliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -654,27 +351,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/SubirProducto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/productosCliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/conexionBD/direccion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/registroExitoso.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -682,32 +358,6 @@
           <folding>
             <element signature="e#77#116#0#HTML" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/listarPublicaciones.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1365">
-          <caret line="1" column="37" lean-forward="true" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/procesaLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -735,13 +385,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/login.php">
+    <entry file="file://$PROJECT_DIR$/Views/productosCliente.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/procesaLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/conexionBD/direccion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -749,6 +410,82 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2184">
+          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/conexionBD/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/listarPublicaciones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="85" column="46" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/conexionBD/conexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1318">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TPWeb-2 MIO/Views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="138" selection-start-line="138" selection-end-line="481" selection-end-column="21" />
+          <folding>
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/SubirProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-693">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logintp.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="89" column="2" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="112" column="50" selection-start-line="112" selection-start-column="50" selection-end-line="112" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
