@@ -209,7 +209,7 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 					<a class="banner banner-1" href="#">
 						<img src="img/banner11.jpg" alt="">
 						<div class="banner-caption text-center">
-							<h2 class="white-color">VEHICULOS</h2>
+							<h2 class="white-color">SERVICIOS</h2>
 						</div>
 					</a>
 				</div>
@@ -220,7 +220,7 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 					<a class="banner banner-1" href="#">
 						<img src="img/banner12.jpg" alt="">
 						<div class="banner-caption text-center">
-							<h2 class="white-color">SERVICIOS</h2>
+							<h2 class="white-color">VEHICULOS</h2>
 						</div>
 					</a>
 				</div>
