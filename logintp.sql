@@ -75,30 +75,15 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `envio`, `marca`, `stock`, `genero`, `categoria`, `palabrasClaves`, `descripcion`, `imgprincipal`, `idUsuario`) VALUES
-(1, 'Zapatillas Modernas', 'Nuevo', 1200, 'Efectivo', 'Gratis', 'Nike', 12, 'Masculino', 'Productos y otros', 'palabra\nclave', 'descrip', 'main-product01.jpg', 1),
-(2, 'Zapatillas Adidas', 'Usado', 1400, 'Efectivo', 'Gratis', 'Adidas', 1200, 'Masculino', 'Productos y otros', 'palabra\nclave', 'Zapatillas Adidas usadas pero impecables', '', 3),
-(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 'Masculino', 'Productos y otros', 'palabra\nclave', 'Soy una descripcion ', '15940444_1318220971550973_7681097437073195512_n.jpg', 3),
-(26, 'R', 'Nuevo', 66, 'Tarjeta', 'Domicilio', 'GF', 6, 'Mujer', 'Productos y otros', 'palabra\nclave', 'RF', 'imagen3.jpg', 3),
-(27, 'i', 'Usado', 7, 'Transferencia Bancaria', 'Domicilio', 'j', 7, 'Hombre', 'Productos y otros', 'palabra\nclave', 'j', 'imagen3.jpg', 3),
-(28, 'Ver', 'Usado', 1223, 'Cualquier forma de pago', 'Domicilio con cargo', 'Nie', 23, 'Mujer', 'Productos y otros', 'palabra\nclave', '', 'imagen3.jpg', 3),
-(29, 'Viendo', 'Nuevo', 2233, 'Mercado de Pago', 'Gratis', 'Nke', 2, 'Mujer', 'Productos y otros', 'palabra\nclave', 'dsssd', 'imagen3.jpg', 6),
-(30, 'Juamch', 'Nuevo', 2345, 'Cualquier forma de pago', 'Domicilio con cargo', 'Mokle', 3, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Hpla', 'imagen3.jpg', 7),
-(31, 'Juancho', 'Usado', 12345, 'Tarjeta', 'Domicilio', 'Nike', 32, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Juan', 'imagen3.jpg', 7),
-(32, 'Juancho2', 'Nuevo', 12345, 'Transferencia Bancaria', 'Domicilio', 'Mike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Bueno', 'imagen3.jpg', 7),
-(33, 'Juancho3', 'Nuevo', 12345, 'Transferencia Bancaria', 'Domicilio', 'Mike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Bueno', 'imagen3.jpg', 9),
-(34, 'Juancho4', 'Nuevo', 12345, 'Transferencia Bancaria', 'Domicilio', 'Mike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Bueno', 'imagen3.jpg', 14),
-(35, 'Juancho5', 'Nuevo', 12345, 'Transferencia Bancaria', 'Domicilio', 'Mike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Bueno', 'imagen3.jpg', 9),
-(36, 'Juancho6', 'Nuevo', 12345, 'Transferencia Bancaria', 'Domicilio', 'Mike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Bueno', 'imagen3.jpg', 3),
-(37, 'aaaaaaaaa', 'Nuevo', 2, 'Efectivo', 'Gratis', 'dddddddddd', 2, 'Hombre', 'Productos y otros', 'palabra\nclave', 'aaaaaa', 'imagen3.jpg', 1),
-(38, 'bbbbb', 'Nuevo', 99, 'Cualquier forma de pago', 'Gratis', 'nvbjh', 99, 'Hombre', 'Productos y otros', 'palabra\nclave', 'b', 'imagen2 - copia.jpg', 1),
-(39, 'pppp', 'Nuevo', 9, 'Efectivo', 'Gratis', 'pppp', 9, 'Hombre', 'Productos y otros', 'palabra\nclave', 'pppp', 'imagen3.jpg', 4),
-(40, 'sss', 'Nuevo', 22, 'Mercado de Pago', 'Domicilio', 'ss', 22, 'Hombre', 'Productos y otros', 'palabra\nclave', 'ss', 'imagen3.jpg', 4),
-(41, 'k', 'Usado', 77, 'Mercado de Pago', 'Gratis', 'k', 77, 'Hombre', 'Productos y otros', 'palabra\nclave', '7k', 'imagen2 - copia.jpg', 4),
-(42, 'ddddddd', 'Nuevo', 3, 'Efectivo', 'Gratis', 'd', 3, 'Mujer', 'Productos y otros', 'palabra\nclave', '3', 'imagen3.jpg', 9),
-(43, 'Zapatillas Modernas', 'Nuevo', 1200, 'Transferencia Bancaria', 'Gratis', 'Nike', 20, 'Infantil', 'Productos y otros', 'Zapatillas Dibujos Animados', '', 'a.jpg', 2),
+(1, 'Zapatillas Modernas', 'Nuevo', 1200, 'Efectivo', 'Gratis', 'Nike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'descrip', 'zm01.jpg', 1),
+(2, 'Zapatillas Adidas', 'Usado', 1400, 'Efectivo', 'Gratis', 'Adidas', 1200, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Zapatillas Adidas usadas pero impecables', 'adidaszz.jpg', 3),
+(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 'Unisex', 'Productos y otros', 'palabra\nclave', 'Soy una descripcion ', '15940444_1318220971550973_7681097437073195512_n.jpg', 3),
+
+
+(43, 'Vestido marinero PinUp', 'Nuevo', 3200, 'Transferencia Bancaria', 'Gratis', 'BrillaDark', 20, 'Mujer', 'Productos y otros', 'Vestido pinup', 'Hermoso vestido', 'pinup.jpg', 7),
 (44, 'Remeras para colegios', 'Nuevo', 300, 'Efectivo', 'Domicilio con cargo', 'Suavicer', 2000, 'Infantil', 'Productos y otros', 'Remeras Dibujos Colegios', 'Remeras para colegios primarios', 'b.jpg', 2),
-(45, 'Autos chocados', 'Usado', 40000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex', 'Vehiculos', 'Auto Chocado Usado Toyota', 'Auto Chocado Usado Toyota', 'd.jpg', 2),
-(46, 'Autos chocados', 'Usado', 40000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex', 'Vehiculos', 'Auto Chocado Usado Toyota', 'Auto Chocado Usado Toyota', 'd.jpg', 2);
+(45, 'Toyota Corola', 'Usado', 430000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex', 'Vehiculos', 'Auto Usado Toyota', 'Auto Usado Toyota', 'd.jpg', 2),
+(46, 'Depto. 2 ambientes', 'Usado', 2520000, 'Tarjeta', 'Entrega en local', 'Inmuebles Alfredo', 1, 'Unisex', 'Inmuebles', 'departamento', 'Departamento 2 ambientes capital', 'dpto2.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -124,7 +109,7 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`id`, `email`, `password`, `Nombre`, `pais`, `latitud`, `longitud`, `rol`) VALUES
 (1, 'ejemplo1@gmail.com', '1234', 'Ejemplo', '', '0', '0', 'usuario'),
 (2, 'Nicolas@gmail.com', '1234', 'Nicolas', '', '0', '0', 'usuario'),
-(3, 'Nicolas@gmail.com', '1234', 'Nicolas', '', '0', '0', 'usuario'),
+(3, 'Nicolas7@gmail.com', '1234', 'Nicolas', '', '0', '0', 'usuario'),
 (4, 'Viendo@gmail.com', '1234', 'Viendo', '', '0', '0', 'usuario'),
 (5, 'Gustavo@gmail.com', '1234', 'Gustavo', '', '0', '0', 'usuario'),
 (6, 'Ivan@hotmail.com', '1234', 'Ivan', '', '0', '0', 'usuario'),

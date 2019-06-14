@@ -35,7 +35,7 @@
 		echo "<script>location.href='Pagina.html'</script>";
 	 }else{
 		 echo '<script> alert("Contraseña Incorrecta")</script>';
-		 echo "<script>location.href=index.php</script>";
+		 echo "<script>location.href=Index.php</script>";
 	 }
   }else{
 	  echo '<script> alert("ESTE USUARIO NO EXISTE, PORFAVOR REGISTRESE PARA PODER INGRESAR")</script>';

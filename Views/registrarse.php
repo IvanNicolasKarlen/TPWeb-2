@@ -171,6 +171,12 @@ session_start();
 							Login
 							<i class="fa fa-long-arrow-right m-l-5"></i>
 						</a>
+						
+						<a href="Index.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10
+						p-l-30">
+							Regresar
+							<i class="fa fa-long-arrow-left m-l-5"></i>
+						</a>
 					</div>
 				</form>
 	

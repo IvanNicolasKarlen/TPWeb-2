@@ -38,36 +38,28 @@ class Conexion{
 	   }
  }
 
-	public function buscarUser($email){
-			/*Preparamos la consulta. El "(?)" es donde queremos poner nuestro parametro*/
-		$consultaID=$this->msq->prepare("SELECT id FROM usuario WHERE email=(?)");
-			/*Definimos los parametros, la "s" es por String y el $email Es lo q va a
-			reemplazarse en "(?)"*/
-		$consultaID->bind_param("s",$email);
-			/*ejecutamos la consulta*/
-		$consultaID->execute();
-			/*decimos q nos traiga los resultados de la ultima consulta*/
-		$consultaID->store_result();
-		$id=""; //variable pa guardar los resultados
-		$consultaID->bind_result($id); //asignamos la variable donde guardar el resultado
-		$consultaID->fetch(); //los trae y guarda en la variable asignada arriba ($id)
-		return $id; //retornamos
-
-	}
 	 
-	 public function controlLogin($email,$password){
-		$consulta=$this->msq->prepare("SELECT email,password FROM usuario WHERE email=? AND password=?");
+		 public function controlLogin($email,$password){
+		$consulta=$this->msq->prepare("SELECT email,password,rol,Nombre,id FROM usuario WHERE email=? AND password=?");
 		$consulta->bind_param("ss",$email,$password);
 		$consulta->execute();
 		$consulta->store_result();
 		$em="";
 		$pass="";
-		$consulta->bind_result($em,$pass); //asignamos la variable donde guardar el resultado
-		$consulta->num_rows();
-		return $consulta->fetch(); //los trae y guarda en la variable asignada arriba ($id)
-		
-	 }
-	 
+		$rol="";
+		$nom="";
+		$id="";
+		$consulta->bind_result($em,$pass,$rol,$nom,$id); //asignamos la variable donde guardar
+			 // el resultado
+	    	$consulta->fetch();//los trae y guarda en la variable asignada arriba
+		// guardo los resultados en un array
+		$array=array(
+				"rol" => $rol,
+				"nom" =>$nom,
+				"id" =>$id
+					);
+				 return $array;
+			 }
 	 public function controlRegistrar($email){
 		$consulta=$this->msq->prepare("SELECT email FROM usuario WHERE email=?");
 		$consulta->bind_param("s",$email);
@@ -79,6 +71,7 @@ class Conexion{
 		return $consulta->fetch(); //los trae y guarda en la variable asignada arriba ($id)
 		
 	 }
+
 
 	
 }
