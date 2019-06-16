@@ -20,7 +20,7 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 					<div class="banner banner-1">
 						<img src="img/banner01.jpg" alt="">
 						<div class="banner-caption text-center">
-							<h1>Bags sale</h1>
+							<h1 style="color:#6675df;">Bags sale</h1>
 							<h3 class="white-color font-weak">Up to 50% Discount</h3>
 							<a href="../Views/Cliente/productosCliente.php"><button class="primary-btn" >Shop Now</button></a>
 						</div>
@@ -62,36 +62,45 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 			<!-- row -->
 			<div class="row">
 				<!-- banner -->
+				<form method="post" action="ProductoBuscado.php">
 				<div class="col-md-4 col-sm-6">
-					<a class="banner banner-1" href="#">
+					<a class="banner banner-1" >
 						<img src="img/banner10.jpg" alt="">
 						<div class="banner-caption text-center">
 							<h2 class="white-color">VEHICULOS</h2>
+							<button type="submit" name="Vehiculos" class="primary-btn">Ver más</button>
 						</div>
 					</a>
 				</div>
+				</form>
 				<!-- /banner -->
 
 				<!-- banner -->
+				<form method="post" action="ProductoBuscado.php">
 				<div class="col-md-4 col-sm-6">
-					<a class="banner banner-1" href="#">
+					<a class="banner banner-1">
 						<img src="img/banner11.jpg" alt="">
 						<div class="banner-caption text-center">
 							<h2 class="white-color">SERVICIOS</h2>
+							<button type="submit" name="Servicios" class="primary-btn">Ver más</button>
 						</div>
 					</a>
 				</div>
+				</form>
 				<!-- /banner -->
 
 				<!-- banner -->
+				<form method="post" action="ProductoBuscado.php">
 				<div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
-					<a class="banner banner-1" href="#">
+					<a class="banner banner-1" >
 						<img src="img/banner12.jpg" alt="">
-						<div class="banner-caption text-center">
+						<div class="banner-caption text-center" >
 							<h2 class="white-color">INMUEBLES</h2>
+							<button type="submit" name="Inmuebles" class="primary-btn">Ver más</button>
 						</div>
 					</a>
 				</div>
+				</form>
 				<!-- /banner -->
 
 			</div>
@@ -119,15 +128,17 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
                 <!-- /section-title -->
 
                 <!-- banner -->
+				<form method="post" action="ProductoBuscado.php">
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="banner banner-2">
                         <img src="./img/banner14.jpg" alt="">
                         <div class="banner-caption">
                             <h2 class="white-color">PRODUCTOS</h2>
-                            <button class="primary-btn">Shop Now</button>
+                           <button type="submit" name="Productos" class="primary-btn">Ver más</button>
                         </div>
                     </div>
                 </div>
+				</form>
                 <!-- /banner -->
 
                 <!-- Product Slick -->
@@ -193,37 +204,45 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 			<!-- row -->
 			<div class="row">
 				<!-- banner -->
+				<form method="post" action="ProductoBuscado.php">
 				<div class="col-md-8">
 					<div class="banner banner-1">
 						<img src="img/banner13.jpg" alt="">
 						<div class="banner-caption text-center">
-							<h1 class="primary-color">HOT DEAL<br><span class="white-color font-weak">Up to 50% OFF</span></h1>
-							<button class="primary-btn">Shop Now</button>
+							<h1 class="primary-color">Ofertón<br><span class="white-color font-weak">Llevalo con un 50% OFF</span></h1>
+							<button type="submit" name="Productos" class="primary-btn">Ver más</button>
 						</div>
 					</div>
 				</div>
+				</form>
 				<!-- /banner -->
 
 				<!-- banner -->
+				<form method="post" action="ProductoBuscado.php">
 				<div class="col-md-4 col-sm-6">
-					<a class="banner banner-1" href="#">
+					<a class="banner banner-1">
 						<img src="img/banner11.jpg" alt="">
 						<div class="banner-caption text-center">
 							<h2 class="white-color">SERVICIOS</h2>
+							<button type="submit" name="Servicios" class="primary-btn">Ver más</button>
 						</div>
 					</a>
 				</div>
+				</form>
 				<!-- /banner -->
 
 				<!-- banner -->
+				<form method="post" action="ProductoBuscado.php">
 				<div class="col-md-4 col-sm-6">
-					<a class="banner banner-1" href="#">
+					<a class="banner banner-1">
 						<img src="img/banner12.jpg" alt="">
 						<div class="banner-caption text-center">
 							<h2 class="white-color">INMUEBLES</h2>
+							<button type="submit" name="Inmuebles" class="primary-btn">Ver más</button>
 						</div>
 					</a>
 				</div>
+				</form>
 				<!-- /banner -->
 			</div>
 			<!-- /row -->
