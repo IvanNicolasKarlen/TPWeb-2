@@ -38,12 +38,15 @@ $resultado = $conexion->realizarConsulta($busqueda);
 				<div class="col-md-3 col-sm-6 col-xs-6" >
 					<div class="product product-single">
 						<div class="product-thumb">
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Ver más</button>
+							<form method="post" action="detallesProducto.php">
+							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+							</form>
 							<img style="height:270px;width:247px;margin:auto;margin-left: auto;margin-right: auto;display: block;
 							"src="imgPublicadas/<?php echo $f["imgprincipal"];?>"  alt="">
 						</div>
 						<div class="product-body">
-							<h3 class="product-price"><?php echo "$".$f['precio'];?></h3>
+							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
 							
 							<div class="product-rating">
 								<i class="fa fa-star"></i>
@@ -57,7 +60,10 @@ $resultado = $conexion->realizarConsulta($busqueda);
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+								<form method="post" action="detallesProducto.php">
+						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							</div>
 						</div>
 					</div>

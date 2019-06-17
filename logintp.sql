@@ -3,12 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-05-2019 a las 20:37:19
+-- Tiempo de generación: 14-06-2019 a las 04:37:01
 -- Versión del servidor: 5.7.25-log
 -- Versión de PHP: 7.3.0
-drop database if exists logintp;
-create database logintp;
-use logintp; 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -78,12 +76,43 @@ INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `env
 (1, 'Zapatillas Modernas', 'Nuevo', 1200, 'Efectivo', 'Gratis', 'Nike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'descrip', 'zm01.jpg', 1),
 (2, 'Zapatillas Adidas', 'Usado', 1400, 'Efectivo', 'Gratis', 'Adidas', 1200, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Zapatillas Adidas usadas pero impecables', 'adidaszz.jpg', 3),
 (3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 'Unisex', 'Productos y otros', 'palabra\nclave', 'Soy una descripcion ', '15940444_1318220971550973_7681097437073195512_n.jpg', 3),
-
-
 (43, 'Vestido marinero PinUp', 'Nuevo', 3200, 'Transferencia Bancaria', 'Gratis', 'BrillaDark', 20, 'Mujer', 'Productos y otros', 'Vestido pinup', 'Hermoso vestido', 'pinup.jpg', 7),
 (44, 'Remeras para colegios', 'Nuevo', 300, 'Efectivo', 'Domicilio con cargo', 'Suavicer', 2000, 'Infantil', 'Productos y otros', 'Remeras Dibujos Colegios', 'Remeras para colegios primarios', 'b.jpg', 2),
 (45, 'Toyota Corola', 'Usado', 430000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex', 'Vehiculos', 'Auto Usado Toyota', 'Auto Usado Toyota', 'd.jpg', 2),
 (46, 'Depto. 2 ambientes', 'Usado', 2520000, 'Tarjeta', 'Entrega en local', 'Inmuebles Alfredo', 1, 'Unisex', 'Inmuebles', 'departamento', 'Departamento 2 ambientes capital', 'dpto2.jpg', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `productocarrito`
+--
+
+CREATE TABLE `productocarrito` (
+  `id` int(11) NOT NULL,
+  `idUsuario` int(11) NOT NULL,
+  `idProducto` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `productocarrito`
+--
+
+INSERT INTO `productocarrito` (`id`, `idUsuario`, `idProducto`, `cantidad`) VALUES
+(1, 2, 44, 1),
+(2, 2, 46, 1),
+(3, 2, 46, 1),
+(4, 2, 45, 1),
+(5, 2, 1, 1),
+(6, 2, 1, 1),
+(7, 2, 2, 1),
+(8, 2, 2, 1),
+(9, 2, 3, 7),
+(10, 2, 3, 7),
+(11, 2, 44, 9),
+(12, 2, 46, 2),
+(13, 2, 46, 2),
+(14, 2, 46, 2);
 
 -- --------------------------------------------------------
 
@@ -143,6 +172,14 @@ INSERT INTO `usuario` (`id`, `email`, `password`, `Nombre`, `pais`, `latitud`, `
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idUsuario` (`idUsuario`);
+ALTER TABLE `producto` ADD FULLTEXT KEY `imgprincipal` (`imgprincipal`,`nombre`,`formasdepago`,`envio`);
+ALTER TABLE `producto` ADD FULLTEXT KEY `nombre` (`nombre`,`estado`,`marca`,`genero`,`palabrasClaves`,`descripcion`,`envio`);
+
+--
+-- Indices de la tabla `productocarrito`
+--
+ALTER TABLE `productocarrito`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `usuario`
@@ -159,6 +196,12 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `producto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+
+--
+-- AUTO_INCREMENT de la tabla `productocarrito`
+--
+ALTER TABLE `productocarrito`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

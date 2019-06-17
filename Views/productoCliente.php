@@ -1,4 +1,5 @@
-<?php required_once("verificacionSesion.php");
+<?php 
+include_once("verificacionSesion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

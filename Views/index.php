@@ -5,7 +5,7 @@ session_start();
 include_once("header.php");
 include_once ("conexionBD/conexion.php");
 $conect = new Conexion();
-$resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM producto WHERE categoria='Productos y otros' LIMIT 5");
+$resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Productos y otros' LIMIT 5");
 ?>
 	<!-- HOME -->
 
@@ -146,17 +146,20 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
                     <div class="row">
                         <div id="product-slick-1" class="product-slick">
                             <!-- Product Single -->
-                           <?php while($f=mysqli_fetch_array($resultado)){
+                         <?php while($f=mysqli_fetch_array($resultado)){
+							?>
 
-
-                            echo "<div class='product product-single'>
+                            <div class='product product-single'>
                                 <div class='product-thumb'>
                                    
-                                    <button class='main-btn quick-view'><i class='fa fa-search-plus'></i> Quick view</button>
-                                    <img src='./imgPublicadas/$f[imgprincipal]' style='height: 400px;'>
+                                    <form method="post" action="detallesProducto.php">
+							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+								</form>
+                                    <img src="imgPublicadas/<?php echo $f["imgprincipal"];?>" style='height: 400px;'>
                                 </div>
                                 <div class='product-body'>
-                                    <h3 class='product-price'>$$f[precio]</h3>
+                                    <h3 class='product-price'><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
                                     <div class='product-rating'>
                                         <i class='fa fa-star'></i>
                                         <i class='fa fa-star'></i>
@@ -164,15 +167,21 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
                                         <i class='fa fa-star'></i>
                                         <i class='fa fa-star-o empty'></i>
                                     </div>
-                                    <h2 class='product-name'><a href='#'>$f[nombre]</a></h2>
+									<p>Articulo: <?php echo $f["id"];?></p>
+                                    <h2 class='product-name'><a href='#'><?php echo $f["nombre"];?></a></h2>
                                     <div class='product-btns'>
                                         <button class='main-btn icon-btn'><i class='fa fa-heart'></i></button>
                                         <button class='main-btn icon-btn'><i class='fa fa-exchange'></i></button>
-                                        <button class='primary-btn add-to-cart'><i class='fa fa-shopping-cart'></i> Añadir al carrito</button>
+                                       <form method="post" action="detallesProducto.php">
+										<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+										<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+										</form>
                                     </div>
                                 </div>
-                            </div>";
-                             } ?>
+                            </div>
+                             <?php
+							 }
+?>							 
                             <!-- /Product Single -->
 
                         </div>
@@ -277,7 +286,10 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 				<div class="col-md-3 col-sm-6 col-xs-6">
 					<div class="product product-single">
 						<div class="product-thumb">
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
+						<form method="post" action="detallesProducto.php">
+							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							<img src="img/product04.jpg" alt="">
 						</div>
 						<div class="product-body">
@@ -293,7 +305,10 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+								<form method="post" action="detallesProducto.php">
+						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							</div>
 						</div>
 					</div>
@@ -307,7 +322,10 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 							<div class="product-label">
 								<span>New</span>
 							</div>
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
+							<form method="post" action="detallesProducto.php">
+							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							<img src="img/product03.jpg" alt="">
 						</div>
 						<div class="product-body">
@@ -323,7 +341,10 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+								<form method="post" action="detallesProducto.php">
+						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							</div>
 						</div>
 					</div>
@@ -337,7 +358,10 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 							<div class="product-label">
 								<span class="sale">-20%</span>
 							</div>
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
+							<form method="post" action="detallesProducto.php">
+							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							<img src="img/product02.jpg" alt="">
 						</div>
 						<div class="product-body">
@@ -353,7 +377,10 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+								<form method="post" action="detallesProducto.php">
+						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							</div>
 						</div>
 					</div>
@@ -368,7 +395,10 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 								<span>New</span>
 								<span class="sale">-20%</span>
 							</div>
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
+							<form method="post" action="detallesProducto.php">
+							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							<img src="img/product01.jpg" alt="">
 						</div>
 						<div class="product-body">
@@ -384,7 +414,10 @@ $resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM p
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+								<form method="post" action="detallesProducto.php">
+						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							</div>
 						</div>
 					</div>

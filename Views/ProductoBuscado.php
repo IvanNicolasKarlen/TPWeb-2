@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -347,10 +351,21 @@ $busca = $_GET['buscar'];
 require_once("conexionBD/conexion.php");
 
 $conexion = new Conexion;
-	
-$busqueda=("SELECT * FROM producto WHERE nombre LIKE '%".$busca."%' OR estado LIKE '%".$busca."%' OR marca LIKE '%".$busca."%' OR genero LIKE '%".$busca."%' OR palabrasClaves LIKE '%".$busca."%' OR descripcion LIKE '%".$busca."%' OR envio LIKE '%".$busca."%' ");
+
+$array = explode(' ', $busca);
+
+foreach ($array as $var) {
+ 
+$busqueda=("SELECT * FROM producto WHERE id = '".$var."' OR nombre LIKE '%".$var."%' OR estado LIKE '%".$var."%' OR marca LIKE '%".$var."%' OR genero LIKE '%".$var."%' OR palabrasClaves LIKE '%".$var."%' OR descripcion LIKE '%".$var."%' OR envio LIKE '%".$var."%' ");
+
+
+}
+//$busqueda=("SELECT * FROM producto WHERE CONCAT_WS(' ',nombre,genero) LIKE '%".$busca."%'  ");
 
 $resultado = $conexion->realizarConsulta($busqueda);
+
+									 
+
 	
 	if((mysqli_num_rows($resultado)<=0))
 	{?>
@@ -384,12 +399,16 @@ $resultado = $conexion->realizarConsulta($busqueda);
 				<div class="col-md-3 col-sm-6 col-xs-6" >
 					<div class="product product-single">
 						<div class="product-thumb">
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Ver más</button>
-							<img style="height:270px;width:247px;margin:auto;margin-left: auto;margin-right: auto;display: block;
+						<form method="post" action="detallesProducto.php">
+							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+							</form>
+							
+							<img style="height:270px;width:227px;margin:auto;margin-left: auto;margin-right: auto;display: block;
 							"src="imgPublicadas/<?php echo $f["imgprincipal"];?>"  alt="">
 						</div>
 						<div class="product-body">
-							<h3 class="product-price"><?php echo "$".$f['precio'];?></h3>
+							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
 							
 							<div class="product-rating">
 								<i class="fa fa-star"></i>
@@ -403,7 +422,10 @@ $resultado = $conexion->realizarConsulta($busqueda);
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+						<form method="post" action="detallesProducto.php">
+						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						</form>
 							</div>
 						</div>
 					</div>

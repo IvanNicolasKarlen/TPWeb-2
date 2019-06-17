@@ -82,18 +82,26 @@ include_once("header.php");
                     <tr>
                         <td  > <div style="height:100%;width:100%;"><img style="height:50px;width:50px;"  src="imgPublicadas/<?php echo $f["imgprincipal"];?>" alt=""> </div></td>
                         <th scope="row"><?php echo $f['id'];?></th>
-                        <!--<td style="height:2%;width:2%;"><?php// echo $f['nombre'];?></td>-->
+                       
                         <td><div><?php echo $f['nombre'];?></div></td>
                         <td><?php echo $f['formasdepago'];?></td>
                         <td><?php echo $f['stock'];?></td>
                         <td><?php echo $f['envio'];?></td>
-                        <td><?php echo "$".$f['precio'];?></td>
-                    </tr>
-                    </tbody>
-
-                    <?php
+                        <td><?php echo "$".number_format($f['precio'],0,'.','.');?></td>
+						
+		
+                   
+ 
+				   </tbody>
+				   
+				   
+<?php
                     }//fin while
                     ?>
+
+					
+                    </tr>			
+                   
 
                 </table>
             </div>

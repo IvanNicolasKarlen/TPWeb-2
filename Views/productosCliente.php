@@ -1,4 +1,5 @@
-<? phprequired_once("verificacionSesion.php");
+<?php
+Session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
