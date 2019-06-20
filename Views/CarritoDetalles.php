@@ -1,5 +1,6 @@
 <?php
 require_once("verificacionSesion.php");
+$mostrar=0;
 ?>
 
 <?php include_once("header.php"); 
@@ -14,19 +15,7 @@ require_once("conexionBD/conexion.php");// incluir la configuracion de conexion 
 				FROM producto as prod 
 				inner join productocarrito as car on prod.id=car.idProducto
 				WHERE car.idUsuario = '".$id_Usuario."'";
-
-				//CONTADOR DEL CARRITO
-				$buscoCant="SELECT count(cantidad)
-				FROM productocarrito 
-				WHERE idUsuario = '".$id_Usuario."'";
-				
-				$cantidad= $conexion->realizarConsulta($buscoCant);
-				
-                    //Comienzo a rellenar los campos con los datos obtenidos con el select
-                    while($r=mysqli_fetch_array($cantidad)){
-                   
-				echo ($r);
-					}
+	
 	
 	$productosComprados= $conexion->realizarConsulta($consulta);
 	
@@ -79,10 +68,11 @@ require_once("conexionBD/conexion.php");// incluir la configuracion de conexion 
                         <th scope="col">Imagen</th>
                         <th scope="col">Código</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Formas de pago</th>
-                        <th scope="col">Cantidad</th>
                         <th scope="col">Envío</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Formas de pago</th>
                         <th scope="col">Precio</th>
+						<th scope="col">Subtotal</th>
                     </tr>
                     <?php
                     //Comienzo a rellenar los campos con los datos obtenidos con el select
@@ -96,19 +86,25 @@ require_once("conexionBD/conexion.php");// incluir la configuracion de conexion 
                         <th scope="row"><?php echo $f['idProducto'];?></th>
                        
                         <td><div><?php echo $f['nombre'];?></div></td>
-                        <td><?php echo $f['formasdepago'];?></td>
-                        <td><?php echo $f['cantidad'];?></td>
                         <td><?php echo $f['envio'];?></td>
-                        <td><?php echo "$".number_format($f['precio'],0,'.','.');?></td>
+                       
+                        
+						<td><?php echo $f['cantidad'];?></td>
+                        <td><?php echo $f['formasdepago'];?></td>
+						<td><?php echo "$".number_format($f['precio'],0,'.','.');?></td>
+						  <td><?php $subtotal= $f['precio']*$f['cantidad'];echo "$".number_format($subtotal,0,'.','.');?></td>
 						  </tbody>
 <?php
 //Suma todos los precios
-$mostrar = $mostrar+$f['precio'];
+$mostrar = $mostrar+$subtotal;
+
 
  }//fin while
- 
 
 ?>						
+<form action="header.php" method="post">
+<input type="hidden" name="<?php echo $mostrar = $mostrar+$f['precio']; ?>"/>
+</form>
                     </tr>			
                   
                 </table>
@@ -116,12 +112,14 @@ $mostrar = $mostrar+$f['precio'];
 			<div>
 <h2 class="title" style="float:right;"><?php echo "Total: $".number_format($mostrar,0,'.','.');?></h2>
 
-<form method="post" action="Pagar.php" >
+		
+		</div>
+		
+		<form method="post" action="Pagar.php" >
 <button type="submit" name="AddCarrito" class="primary-btn add-to-cart" style="float:right;"><i class="fa fa-shopping-cart"></i> Continuar</button>
 								<input type="hidden" name="Add" value="<?php echo $mostrar;?>">
 								<input type="hidden" name="id_Usuario" value="$_Session['id']">
-</form>		
-		</div>
+</form>
 		</div>
 		
 </body>

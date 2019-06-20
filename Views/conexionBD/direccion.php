@@ -13,4 +13,8 @@ class Direccion
     public function errorLogin($error){
         return "location:login.php?error=$error";
     }
+	public function errorAgregarCarrito($error)
+	{
+		return "location:detallesProducto.php?error=$error";
+	}
 }

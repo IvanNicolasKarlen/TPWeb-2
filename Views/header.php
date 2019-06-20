@@ -138,13 +138,24 @@
 
                     <!-- /Account -->
 
+<?php					
+					
+			
+	require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
+		//Abrir conexion
+		$conexion = new Conexion;
+	
+	$id_Usuario = $_SESSION['id'];
+				//CONTADOR DEL CARRITO
+				$buscoCant="SELECT count(idProducto)
+				FROM productocarrito 
+				WHERE idUsuario = '".$id_Usuario."'";
+				
+				$cantidad= $conexion->realizarConsulta($buscoCant);
+				$count = mysqli_fetch_array($cantidad);
 					
 					
-					
-
-					
-					
-
+?>
 	
 				
                     <!-- CARRITO -->
@@ -155,19 +166,19 @@
 							  <i class="fa fa-shopping-cart" href="CarritoDetalles.php"></i>
 		
 							  
-							  <a class="qty" href="CarritoDetalles.php">3</a>
+							  <a class="qty" href="CarritoDetalles.php"><?php echo "$count[0]";?></a>
 							</div>
 							
 							  					
 							<a class="text-uppercase" href="CarritoDetalles.php"><b>Mi Carrito</b></a>
 							<br>
-                            <a href="CarritoDetalles.php">35.20$</a>
+                            <!--<a href="CarritoDetalles.php"><?php echo $mostrar; ?></a>-->
 							
 							
 							</a>
 
 				   </li>
-				   
+							
                     <!-- /Cart -->
 			
                     <!-- Mobile nav toggle-->

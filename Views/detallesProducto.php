@@ -70,6 +70,7 @@ if(isset($_POST["detalles"]))
 <?PHP
  //Comienzo a rellenar los campos con los datos obtenidos con el select
 while($f=mysqli_fetch_array($resultado)){
+	
 ?>
 	<!-- section -->
 	<div class="section">
@@ -163,6 +164,10 @@ while($f=mysqli_fetch_array($resultado)){
 								
 								<input type="hidden" name="id_Usuario" value="$_Session['id']">
 								</form>
+								
+								<?php
+								$msj= isset($_GET["error"]) ? $_GET["error"] : "";
+								?>
 								<div class="pull-right">
 									<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 									<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>

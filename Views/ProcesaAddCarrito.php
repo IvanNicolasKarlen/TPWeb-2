@@ -24,11 +24,13 @@ if(isset($_POST["AddCarrito"]))
 		if($resultado===true)
 			{
 					echo '<script language= "javascript">alert("Agregado al Carrito");</script>';
-					header($direccion->carpRaiz("detallesProducto"));
+					header("location:CarritoDetalles.php");
 					 exit();
 					
 			}else{
-						echo"error";
+						$error="No se ha podido añadir al carrito. Intentelo de nuevo o más tarde";
+				header($direccion->errorAgregarCarrito($error));
+				exit();
 				 }	 
 		}
 		
