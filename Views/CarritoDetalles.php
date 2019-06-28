@@ -102,9 +102,7 @@ $mostrar = $mostrar+$subtotal;
  }//fin while
 
 ?>						
-<form action="header.php" method="post">
-<input type="hidden" name="<?php echo $mostrar = $mostrar+$f['precio']; ?>"/>
-</form>
+
                     </tr>			
                   
                 </table>
