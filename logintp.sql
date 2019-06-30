@@ -6,6 +6,9 @@
 -- Tiempo de generación: 14-06-2019 a las 04:37:01
 -- Versión del servidor: 5.7.25-log
 -- Versión de PHP: 7.3.0
+drop database if exists logintp;
+create database logintp;
+use logintp;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;

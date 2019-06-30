@@ -2,34 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f96dc65-ba76-4360-bcfc-0685c0427f42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/conexionBD/conexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/conexionBD/conexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/img/banner10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/img/banner10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/img/banner11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/img/banner11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/img/banner12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/img/banner12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2015-12-11-15-50-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-01-11-20-06-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-01-17-13-14-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-01-30-00-08-43.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-02-02-19-37-44.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-02-08-20-47-59.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-02-16-11-51-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/2016-03-01-15-47-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/446456.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/Bokura Ga Ita - 02.mp4_snapshot_14.04_[2013.01.21_22.46.19].jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/Bokura Ga Ita - 02.mp4_snapshot_14.09_[2013.01.21_22.46.31].jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/Ef13IcD.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/FB_IMG_14905934222810901.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/FB_IMG_14908482932528206.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/b.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/b.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Views/imgPublicadas/d.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/download-gaara-hd-wallpapers-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/fausto-8vo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/imagen2 - copia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/imagen3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/imgPublicadas/plantaeleo font.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/SubirProducto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/SubirProducto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/conexionBD/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Views/conexionBD/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Views/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/img/photothumb.db" beforeDir="false" afterPath="$PROJECT_DIR$/Views/img/photothumb.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/registrarse.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/registrarse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logintp.sql" beforeDir="false" afterPath="$PROJECT_DIR$/logintp.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,31 +19,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/Index.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="112" column="50" selection-start-line="112" selection-start-column="50" selection-end-line="112" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-693">
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TPWeb-2 MIO/Views/index.php">
+        <entry file="file://$PROJECT_DIR$/Views/SubirProducto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="138" selection-start-line="138" selection-end-line="481" selection-end-column="21" />
+            <state relative-caret-position="1122">
+              <caret line="157" column="7" lean-forward="true" selection-start-line="157" selection-start-column="7" selection-end-line="157" selection-end-column="7" />
               <folding>
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Views/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="49">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/js/localizacion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -116,7 +118,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Views/index.php" />
-        <option value="$PROJECT_DIR$/Views/registrarse.php" />
         <option value="$PROJECT_DIR$/Views/index.html" />
         <option value="$PROJECT_DIR$/Views/blank.html" />
         <option value="$PROJECT_DIR$/Views/checkout.html" />
@@ -127,8 +128,6 @@
         <option value="$PROJECT_DIR$/logintp.sql" />
         <option value="$PROJECT_DIR$/Views/pagina.html" />
         <option value="$PROJECT_DIR$/Views/Cliente/SubirProducto.php" />
-        <option value="$PROJECT_DIR$/Views/conexionBD/config.ini" />
-        <option value="$PROJECT_DIR$/Views/conexionBD/config.ini" />
         <option value="$PROJECT_DIR$/Views/Cliente/footer.php" />
         <option value="$PROJECT_DIR$/Views/Cliente/CerrarSesion.php" />
         <option value="$PROJECT_DIR$/Views/Cliente/paginaCliente.php" />
@@ -137,7 +136,6 @@
         <option value="$PROJECT_DIR$/Views/Cliente/registroExitoso.php" />
         <option value="$PROJECT_DIR$/Views/procesaSubirProducto.php" />
         <option value="$PROJECT_DIR$/Views/listarPublicaciones.php" />
-        <option value="$PROJECT_DIR$/Views/SubirProducto.php" />
         <option value="$PROJECT_DIR$/Views/productoCliente.php" />
         <option value="$PROJECT_DIR$/Views/registroExitoso.php" />
         <option value="$PROJECT_DIR$/Views/verificacionSesion.php" />
@@ -149,6 +147,13 @@
         <option value="$PROJECT_DIR$/Views/login.php" />
         <option value="$PROJECT_DIR$/Views/conexionBD/conexion.php" />
         <option value="$PROJECT_DIR$/Views/Index.php" />
+        <option value="$PROJECT_DIR$/Views/conexionBD/config.ini" />
+        <option value="$PROJECT_DIR$/Views/conexionBD/config.ini" />
+        <option value="$PROJECT_DIR$/Views/css/main.css" />
+        <option value="$PROJECT_DIR$/Views/registrarse.php" />
+        <option value="$PROJECT_DIR$/Views/SubirProducto.php" />
+        <option value="$PROJECT_DIR$/Views/js/localizacion.js" />
+        <option value="$PROJECT_DIR$/Views/js/maps.js" />
       </list>
     </option>
   </component>
@@ -179,7 +184,19 @@
               <item name="tpweb-2" type="b2602c69:ProjectViewProjectNode" />
               <item name="tpweb-2" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+              <item name="conexionBD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpweb-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpweb-2" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tpweb-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tpweb-2" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,16 +253,21 @@
       <workItem from="1559526229341" duration="598000" />
       <workItem from="1559672666010" duration="7958000" />
       <workItem from="1560059025847" duration="7723000" />
+      <workItem from="1560217266349" duration="11000" />
+      <workItem from="1560834555800" duration="405000" />
+      <workItem from="1561445772458" duration="5000" />
+      <workItem from="1561849167630" duration="6521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31578000" />
+    <option name="totallyTimeSpent" value="38520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28993288" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30604026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -294,9 +316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/js/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/index.html" />
     <entry file="file://$PROJECT_DIR$/Views/blank.html" />
     <entry file="file://$PROJECT_DIR$/Views/product-page.html" />
@@ -305,23 +324,6 @@
     <entry file="file://$PROJECT_DIR$/Views/products.html" />
     <entry file="file://$PROJECT_DIR$/Views/productos.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/registrarse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="107" column="20" lean-forward="true" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/registro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -420,27 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2184">
-          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/conexionBD/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/listarPublicaciones.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -455,23 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TPWeb-2 MIO/Views/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="138" selection-start-line="138" selection-end-line="481" selection-end-column="21" />
-          <folding>
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/SubirProducto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-693">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logintp.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="579">
@@ -479,13 +443,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Index.php">
+    <entry file="file://$PROJECT_DIR$/../TPWeb-2 MIO/Views/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="112" column="50" selection-start-line="112" selection-start-column="50" selection-end-line="112" selection-end-column="50" />
+        <state relative-caret-position="154">
+          <caret line="138" selection-start-line="138" selection-end-line="481" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/conexionBD/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="177" column="47" selection-start-line="177" selection-start-column="47" selection-end-line="177" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/detalleProductoCliente.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/css/nouislider.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-693">
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/js/main2.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/js/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/registro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/registrarse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="207" selection-start-line="207" selection-end-line="207" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/SubirProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="157" column="7" lean-forward="true" selection-start-line="157" selection-start-column="7" selection-end-line="157" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/js/producto.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/js/localizacion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/js/maps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>

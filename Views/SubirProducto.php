@@ -1,56 +1,8 @@
 <?php
 require_once("verificacionSesion.php");
-?>
+include_once("header.php"); ?>
 
 
-
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <title>E-SHOP HTML Template</title>
-
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
-
-    <link type="text/css" rel="stylesheet" href="css/main.css" />
-
-    <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-
-    <!-- Slick -->
-    <link type="text/css" rel="stylesheet" href="css/slick.css" />
-    <link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
-
-    <!-- nouislider -->
-    <link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
-
-    <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <!--Estilos-->
-
-    <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-<header>
-	<?php include_once("header.php"); ?>
-
-	</header>
 <?php $error=isset($_GET["error"]) ? $_GET["error"] : ""; ?>
 <div class="section"> <!-- section -->
 
@@ -163,16 +115,22 @@ require_once("verificacionSesion.php");
                 </div> <!-- /div col-4 3ro-->
                       
                         <div class="form-group">
-                            <div class="col-md-3"><label> Imagen principal</label>
-                                <input class="input col-md-3" type="file"
+                            <div class=" col-12 col-md-3"><label> Imagen principal</label>
+                                <input class="input" type="file"
                                        name="archivoA"
                                        id="importData" accept=".jpg,
                                     .png" required />
                             </div>
-
-
                         </div>
 
+                <div class="form-group">
+                    <div class="col-12 col-md-3">
+                        <label>Ubicación del producto: </label>
+                        <input class="input" type="text" id="direccion">
+                    </div>
+                </div>
+                <div id="map" class="col-12 col-md-6" style="width: 100%; height:
+                200px"></div>
                 <div class="col-md-12" style="text-align: center; padding: 15px" >
                     <button class="primary-btn" type="submit" value="PUBLICAR"
                             name="publicar">Publicar</button>
@@ -191,8 +149,10 @@ require_once("verificacionSesion.php");
 
 
 <?php include_once("footer.php"); ?>
-
-
-
+<script src="js/localizacion.js"></script>
+<script src="js/maps.js"></script>
+<script src="https://maps.googleapis
+.com/maps/api/js?key=AIzaSyAiq3xISXSZYgkd9GDAOdajy4NK2d3L7dY&callback=iniciarMap"></script>
+<!--callback=iniciarMap-->
 </body>
 </html>
