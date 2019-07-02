@@ -129,7 +129,11 @@ include_once("header.php"); ?>
                     </div>
                 </div>
                 <div id="map" class="col-12 col-md-6" style="width: 100%; height:
-                200px"></div>
+                200px; margin-top: 20px"></div>
+
+                <input style="display: none" name="latitud" id="latitud">
+                <input style="display: none" name="longitud" id="longitud">
+
                 <div class="col-md-12" style="text-align: center; padding: 15px" >
                     <button class="primary-btn" type="submit" value="PUBLICAR"
                             name="publicar">Publicar</button>
@@ -150,15 +154,18 @@ include_once("header.php"); ?>
 
 <?php include_once("footer.php"); ?>
 
-<script src="https://maps.google.com/maps/api/js?key=AIzaSyADJAN_9Ejl46ySsS34yUpaatxaYF66TKw&libraries=places"></script>
-
 <script src="js/localizacion.js"></script>
 <script src="js/maps.js"></script>
-
-
-
-
-<!--callback=iniciarMap-->
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiq3xISXSZYgkd9GDAOdajy4NK2d3L7dY&libraries=places&callback=iniciarMap"></script>
 </body>
+
+
+
+
+
+
+
+
+
+
 </html>

@@ -40,6 +40,8 @@ if(isset($_POST["publicar"])){
  $idUsuario=$_SESSION['id'];
 	$lugar="imgPublicadas/";
 	$categoria=$_POST['categoria'];
+	$latitud = $_POST['latitud'];
+	$longitud = $_POST['longitud'];
 $errorI="";
  //sube la imagen a la carpeta imgPublicadas
 
@@ -86,8 +88,8 @@ $errorI="";
 
 
 				$direc= new Direccion();
-				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,genero,categoria,palabrasClaves,descripcion,imgprincipal,idUsuario)
-				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$genero','$categoria','$palabras','$descripcion','$imgprincipal','$idUsuario')";
+				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,genero,categoria,palabrasClaves,descripcion,imgprincipal,idUsuario,latitud,longitud)
+				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$genero','$categoria','$palabras','$descripcion','$imgprincipal','$idUsuario','$latitud','$longitud')";
 				
 				if($conexion->realizarConsulta($sql)===true)
 			{

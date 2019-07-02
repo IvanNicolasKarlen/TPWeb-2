@@ -68,7 +68,9 @@ CREATE TABLE `producto` (
   `palabrasClaves` varchar(110) NOT NULL,
   `descripcion` varchar(600) NOT NULL,
   `imgprincipal` varchar(80) NOT NULL,
-  `idUsuario` int(11) NOT NULL
+  `idUsuario` int(11) NOT NULL,
+  `latitud`   varchar(120),
+  `longitud`   varchar(120)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

@@ -1,22 +1,42 @@
-google.maps.event.addDomListener(window, 'load', function(){
-    const ubicacion = new Localizacion(()=>{
+function iniciarMap(){
+    var loc = new Localizacion();
+    if(loc.latitude === undefined){
+        var coord = {lat:-34.5956145 ,lng: -58.4431949};
+    }else{
+        var coord = {lat: loc.latitude,lng:loc.longitude};
+    }
 
-        const options = {
-            center : {
-                lat: -34.6705129,
-                lng: -58.5650539
-            }, //fin del center
-            zoom: 15
-        } //fin del options
 
-        var mapita = document.getElementById('map');
+    var map = new google.maps.Map(document.getElementById('map'),{
+        zoom: 15,
+        center: coord
+    });
+    var marker = new google.maps.Marker({
+        position: coord,
+        map: map
+    });
 
-        map = new google.maps.Map(mapita, options);
+    const search = new google.maps.places.Autocomplete(document.getElementById('direccion'));
+    search.bindTo('bounds', map);
+    search.addListener('place_changed',function () {
+        marker.setVisible(false);
 
-    }); //fin del () new Localizacion
+        var place = search.getPlace();
 
-    var autocompletar = document.getElementById('direccion');
+        if(!place.geometry.viewport){
+            window.alert("Error al mostrar el lugar");
+            return;
+        }
 
-    var buscar = new google.maps.places.Autocomplete(autocompletar);
-    buscar.bindTo('bounds', map);
-});
+        if(place.geometry.viewport){
+            map.fitBounds(place.geometry.viewport);
+        }else{
+            map.setCenter(place.geometry.location);
+            map.setZoom(20);
+        }
+        marker.setPosition(place.geometry.location);
+        marker.setVisible(true);
+        document.getElementById('latitud').value = place.geometry.location.lat();
+        document.getElementById('longitud').value =place.geometry.location.lng();
+    });
+}
