@@ -82,18 +82,18 @@ session_start();
 					<!--campo pais-->
 					<div class="wrap-input100 validate-input" data-validate="Ej: Pais">
 						<span class="label-input100">Pais</span>
-						<select name="pais" <!--onchange="muestraLocalidad(this.value)"--> 
+						<select class="input100" name="pais"
 
 						<?php
 						 
 						 require_once("conexionBD/conexion.php");
 						 
-						// $connect = mysqli_connect("localhost", "root",11021998, "logintp");
+
 							$connect = new Conexion();
 							$output = array();
 							$query = "SELECT nombre FROM pais";
 							$resultado = $connect->realizarConsulta($query);
-						//$result = mysqli_query($connect, $query);
+
 							while($fila = mysqli_fetch_array($resultado))
 							{
 								echo "<option value='" . $fila["nombre"] . "'>" . $fila["nombre"] . "</option>";
@@ -102,47 +102,11 @@ session_start();
 							?>
 						</select>
 					</div>
-					
-			
-					
-				<!--
-					<div class="flex-m w-full p-b-33">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
-								<span class="txt1">
-									Acepto los
-									<a href="#" class="txt2 hov1">
-										Terminos de Usuario
-									</a>
-								</span>
-							</label>
-						</div>
 
 						
-					</div>	
-				-->
-
-					
-						
-					<div class="flex-m w-full p-b-33">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="location"  onclick="getLocation()" required>
-							<label class="label-checkbox100" for="ckb1" >
-								<span class="txt1">
-									Permitir compartir mi ubicacion
-								</span>
-							</label>
-						</div>
-
-						
-					</div>
-						
-						<!--inputs invisibles para guardar lat y long
-						<input type="text"  class="form-control" name="latitud" id="latitud" value= <?php// echo '<script>latitud.document.getElementById("latitud")</script>'?>>
-						<input type="text"  class="form-control" name="latitud" id="latitud" value=id="latitud" ><p id="latitud"></p>-->
-						<input type="text"  class="form-control" name="longitud" id="longitud" value=""> 
-						<input type="text"  class="form-control" name="latitud" id="latitud" value="">
+						<!--inputs invisibles para guardar lat y long-->
+						<input type="text"  style="display: none" name="latitud" id="latitud">
+						<input type="text" style="display: none" name="longitud" id="longitud">
 						
 						
 						
@@ -179,9 +143,6 @@ session_start();
 						</a>
 					</div>
 				</form>
-	
-				
-				
 			</div>
 		</div>
 	</div>
@@ -203,9 +164,14 @@ session_start();
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
-    <!-- Script para obtener geolocalizacion		-->
+
+    <!-- Script para obtener geolocalizacion-->
     <script src="js/localizacion.js"></script>
+    <script>
+        var loc = new Localizacion();
+        loc.enviarLocalizacionr();
+    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 

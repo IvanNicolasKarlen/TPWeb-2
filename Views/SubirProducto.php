@@ -122,7 +122,6 @@ include_once("header.php"); ?>
                                     .png" required />
                             </div>
                         </div>
-
                 <div class="form-group">
                     <div class="col-12 col-md-3">
                         <label>Ubicación del producto: </label>
@@ -140,6 +139,7 @@ include_once("header.php"); ?>
 
             </form> <!-- /form-->
 
+
         </div> <!-- /row -->
 
     </div> <!-- /container -->
@@ -149,10 +149,16 @@ include_once("header.php"); ?>
 
 
 <?php include_once("footer.php"); ?>
+
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyADJAN_9Ejl46ySsS34yUpaatxaYF66TKw&libraries=places"></script>
+
 <script src="js/localizacion.js"></script>
 <script src="js/maps.js"></script>
-<script src="https://maps.googleapis
-.com/maps/api/js?key=AIzaSyAiq3xISXSZYgkd9GDAOdajy4NK2d3L7dY&callback=iniciarMap"></script>
+
+
+
+
 <!--callback=iniciarMap-->
+
 </body>
 </html>
