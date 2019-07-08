@@ -62,13 +62,19 @@ if(isset($_POST["detalles"]))
 		$idProducto = $_POST["Productoid"];
 		$NombreProducto = $_POST["ProductoNombre"];
 		
+	//Traer el articulo que presiono ver más	
 	$consulta="SELECT * FROM producto WHERE id = '".$idProducto."'";
+	//Para mostrar los articulos relacionados a la busqueda hecha con un nombre parecido al producto que esta viendo
 	$consultaExtra="SELECT * FROM producto WHERE nombre like '%".$NombreProducto."%'";
 	
 	$resultado= $conexion->realizarConsulta($consulta);
 	$extra= $conexion->realizarConsulta($consultaExtra);
 	
 	
+	
+		//Contiene los metodos de la categoria mas buscada
+		require_once("CategoriasMasVisitadas.php");
+		include_once("ProductoMasVisitado.php");
 }
 	?>
 	

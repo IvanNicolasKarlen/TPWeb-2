@@ -38,7 +38,7 @@ include_once("header.php"); ?>
                     <div class="form-group">
                         <label>Precio: </label>
                         <input class="input" type="number" name="precio"
-                               placeholder="$1799" required> <!--required-->
+                               placeholder="$1799" min="1" pattern="^[0-9]+" required> <!--required-->
                     </div>
 
 
@@ -48,7 +48,7 @@ include_once("header.php"); ?>
                     <div class="form-group">
                         <label>Stock: </label>
                         <input class="input" type="number" name="stock"
-                               placeholder="999" required> <!--required-->
+                               placeholder="999" min="1" pattern="^[0-9]+" required> <!--required-->
                     </div>
 
                     <div class="form-group">

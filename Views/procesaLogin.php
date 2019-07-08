@@ -29,7 +29,8 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 					 $_SESSION['nombre']= $consultar['nom'];
 					 $_SESSION['username'] = $email;
 					$_SESSION['id'] = $consultar['id'];
-					 header($direccion->carpRaiz("paginaAdmin"));
+					$_SESSION['rol'] = $consultar['rol'];
+					header("location: Administrador/HTML/Administrador.php");
 					 exit();
 						break;
 		case '': $error="USUARIO O PASSWORD INCORRECTA, POR FAVOR REGISTRESE PARA PODER INGRESAR";

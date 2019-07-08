@@ -108,11 +108,17 @@
 
                         <ul class="custom-menu">
                             <li><a href="CerrarSesion.php"><i class="fa fa-unlock-alt"></i> Cerrar Sesion</a></li>
-                            <li><a href="#"><i class="fa fa-user-o"></i> Mis Datos</a></li>
-                            <li><a href="#"><i class="fa fa-heart-o"></i> Favoritos</a></li>
+                            <?php if(($_SESSION['rol'] = "administrador" )) { ?>
+							<li><a href="Administrador/HTML/Administrador.php"><i class="fa fa-user-o"></i>Administrador</a></li>
+							<li><a href="#"><i class="fa fa-heart-o"></i> Favoritos</a></li>
                             <li><a href="#"><i class="fa fa-check"></i> Ventas</a></li>
                             <li><a href="listarPublicaciones.php"><i class="fa fa-list"></i> Publicaciones</a></li>
-
+							<?php }else{ ?>
+							<li><a href="#"><i class="fa fa-user-o"></i> Mis Datos</a></li>
+							<li><a href="#"><i class="fa fa-heart-o"></i> Favoritos</a></li>
+                            <li><a href="#"><i class="fa fa-check"></i> Ventas</a></li>
+                            <li><a href="listarPublicaciones.php"><i class="fa fa-list"></i> Publicaciones</a></li>
+							<?php } ?>
                         </ul>
                     </li>
                     <?php }else{ ?>

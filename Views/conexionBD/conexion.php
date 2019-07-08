@@ -72,6 +72,11 @@ class Conexion{
 		
 	 }
 
+	  public function cantidadDeFilas($resultado)
+	 {
+		 return $resultado->num_rows;
+		 
+	 }
 
 	
 }

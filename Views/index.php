@@ -155,6 +155,8 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
                                     <form method="post" action="detallesProducto.php">
 							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
 							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+							<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
+							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 								</form>
                                     <img src="imgPublicadas/<?php echo $f["imgprincipal"];?>" style='height: 400px;'>
                                 </div>
@@ -175,6 +177,8 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
                                        <form method="post" action="detallesProducto.php">
 										<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
 										<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+										<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
+							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 										</form>
                                     </div>
                                 </div>

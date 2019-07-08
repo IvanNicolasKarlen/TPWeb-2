@@ -332,19 +332,6 @@ require_once("FiltroCategorias.php");
 				
 		
 
-
-
-		
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
 				
 				
 				
@@ -411,6 +398,7 @@ $resultado = $conexion->realizarConsulta($busqueda);
 							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
 							<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
 							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 							</form>
 							
 							<img style="height:270px;width:227px;margin:auto;margin-left: auto;margin-right: auto;display: block;
@@ -435,6 +423,7 @@ $resultado = $conexion->realizarConsulta($busqueda);
 						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
 						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
 						<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
+						<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 						</form>
 							</div>
 						</div>
