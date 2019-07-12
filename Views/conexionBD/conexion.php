@@ -33,7 +33,7 @@ class Conexion{
  }else{
 	 
 	 return $resultado; //muestra las filas afectadas
-	 //return $this->msq->query($consulta);
+
 
 	   }
  }
@@ -77,6 +77,32 @@ class Conexion{
 		 return $resultado->num_rows;
 		 
 	 }
+
+	public function consultarIdUser($idP){
+	$consulta=$this->msq->prepare("SELECT idUsuario FROM Producto WHERE id=?");
+	$consulta->bind_param("i",$idP);
+	$consulta->execute();
+	$consulta->store_result();
+	$user="";
+	$consulta->bind_result($user);
+	$consulta->fetch();
+	return $user;
+}
+	public function consultarTipoUser($user){
+		$consulta2=$this->msq->prepare("SELECT tipo FROM tipoUser WHERE id=?");
+		$consulta2->bind_param("i",$user);
+		$consulta2->execute();
+		$consulta2->store_result();
+		$tipo="";
+		$consulta2->bind_result($tipo);
+		$consulta2->fetch();
+		return $tipo;
+	}
+
+	public function traerValoraciones($idU){
+		$consulta=$this->msq->prepare("SELECT ")
+	}
+
 
 	
 }

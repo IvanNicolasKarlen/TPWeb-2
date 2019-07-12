@@ -81,131 +81,132 @@ if(isset($_POST["detalles"]))
 <?PHP
  //Comienzo a rellenar los campos con los datos obtenidos con el select
 while($f=mysqli_fetch_array($resultado)){
-	
+
 ?>
-	<!-- section -->
-	<div class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<!--  Product Details -->
-				<div class="product product-details clearfix">
-					<div class="col-md-6">
-						<div id="product-main-view">
-							<div class="product-view">
-								<img style="height:560px;width:450px;"  src="imgPublicadas/<?php echo $f["imgprincipal"];?>" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/<?php echo $f["imagen2"];?>" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/<?php echo $f["imagen3"];?>" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/<?php echo $f["imagen4"];?>" alt="">
-							</div>
-						</div>
-						<div id="product-view">
-							<div class="product-view">
-								<img src="imgPublicadas/<?php echo $f["imgprincipal"];?>" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/thumb-product02.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/thumb-product03.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/thumb-product04.jpg" alt="">
-							</div>
-						</div>
-					</div>
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!--  Product Details -->
+                <div class="product product-details clearfix">
+                    <div class="col-md-6">
+                        <div id="product-main-view">
+                            <div class="product-view">
+                                <img style="height:560px;width:450px;"
+                                     src="imgPublicadas/<?php echo $f["imgprincipal"]; ?>"
+                                     alt="">
+                            </div>
+                            <div class="product-view">
+                                <img src="./img/<?php echo $f["imagen2"]; ?>" alt="">
+                            </div>
+                            <div class="product-view">
+                                <img src="./img/<?php echo $f["imagen3"]; ?>" alt="">
+                            </div>
+                            <div class="product-view">
+                                <img src="./img/<?php echo $f["imagen4"]; ?>" alt="">
+                            </div>
+                        </div>
+                        <div id="product-view">
+                            <div class="product-view">
+                                <img src="imgPublicadas/<?php echo $f["imgprincipal"]; ?>"
+                                     alt="">
+                            </div>
+                            <div class="product-view">
+                                <img src="./img/<?php echo $f["imagen2"]; ?>" alt="">
+                            </div>
+                            <div class="product-view">
+                                <img src="./img/<?php echo $f["imagen3"]; ?>" alt="">
+                            </div>
+                            <div class="product-view">
+                                <img src="./img/<?php echo $f["imagen4"]; ?>" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <form method="post" action="ProcesaAddCarrito.php">
+                        <div class="col-md-6">
+                            <div class="product-body">
+                                <div class="product-label">
+                                    <span>New</span>
+                                    <span class="sale">-20%</span>
+                                </div>
+                                <h2 class="product-name"><?php echo $f["nombre"]; ?></h2>
+                                <h3 class="product-price"><?php echo "$" . number_format($f['precio'], 0, '.', '.'); ?> </h3>
+                                <div>
+                                    <div class="product-rating">
+                                        <?php
+                                        $idU=$conexion->consultarIdUser($f['id']);
+                                        $tipoU=$conexion->consultarTipoUser($idU);
+                                        echo "<h4 class='text-primary'>$tipoU</h4>"
+                                        ; ?>
+                                    </div>
+                                </div>
+                                <p><strong>Cantidad:</strong> <?php if ($f["stock"] > 0) {
+                                        echo "$f[stock]";
+                                    } else {
+                                        echo "No hay stock";
+                                    } ?></p>
+                                <p><strong>Marca:</strong> <?php echo $f["marca"]; ?></p>
+                                <p><?php echo $f["descripcion"]; ?></p>
+
+                                <div class="product-btns">
+                                    <div class="qty-input">
+                                        <span class="text-uppercase">Cantidad: </span>
+                                        <input id="numero" name="cantidad" class="input"
+                                               type="number" min="1"
+                                               <?php echo "max='$f[stock]'";
+                                               ?>pattern="^[0-9]+"
+                                               required>
+                                    </div>
+                                    <br><br><br><br><br>
+
+                                    <button type="submit" name="AddCarrito"
+                                            class="primary-btn add-to-cart"><i
+                                                class="fa fa-shopping-cart"></i> Añadir al
+                                        carrito
+                                    </button>
+                                    <input type="hidden" name="Add"
+                                           value="<?php echo $f['id']; ?>">
+                                    <input type="hidden" name="id_Usuario"
+                                           value="$_Session['id']">
+
+                                    <input type="hidden" name="id_Usuario"
+                                           value="$_Session['id']">
+                    </form>
+
+                    <?php
+                    $msj = isset($_GET["error"]) ? $_GET["error"] : "";
+                    ?>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="product-tab">
+                <ul class="tab-nav">
+                    <li class="active"><a data-toggle="tab" href="#tab1">Descripcion</a></li>
+                    <li><a data-toggle="tab" href="#tab2">Details</a></li>
+                    <li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab1" class="tab-pane fade in active">
+                        <p><?php echo $f["descripcion"]; ?></p>
+                    </div>
+                    <div id="tab2" class="tab-pane fade in active">
+                        <p><?php echo "Envio: " . $f["envio"]; ?></p>
+                    </div>
+                    <div id="tab3" class="tab-pane fade in">
+ <?php
+
+ } //fin del while de producto
 
 
 
-
-					<form method="post" action="ProcesaAddCarrito.php">
-					<div class="col-md-6">
-						<div class="product-body">
-							<div class="product-label">
-								<span>New</span>
-								<span class="sale">-20%</span>
-							</div>
-							<h2 class="product-name"><?php echo $f["nombre"];?></h2>
-							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?> <del class="product-old-price" value="precio"><?php if($f["precio"]>1000){echo "$".$mostrar= number_format($f['precio']+ 1650,0,'.','.') ;}elseif($f["precio"]>10000){echo "$".$mostrar= number_format($f["precio"] + 5200,0,'.','.');}?></del></h3>
-							<div>
-								<div class="product-rating">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-o empty"></i>
-								</div>
-								<a href="#">3 Review(s) / Add Review</a>
-							</div>
-							<p><strong>Cantidad:</strong> <?php if($f["stock"]>0){echo "Dispone de Stock";}else{echo "Se ha vendido todo";}?></p>
-							<p><strong>Marca:</strong> <?php echo $f["marca"];?></p>
-							<p><?php echo $f["descripcion"];?></p>
-							<div class="product-options">
-								<ul class="size-option">
-									<li><span class="text-uppercase">Size:</span></li>
-									<li class="active"><a href="#">S</a></li>
-									<li><a href="#">XL</a></li>
-									<li><a href="#">SL</a></li>
-								</ul>
-								<ul class="color-option">
-									<li><span class="text-uppercase">Color:</span></li>
-									<li class="active"><a href="#" style="background-color:#475984;"></a></li>
-									<li><a href="#" style="background-color:#8A2454;"></a></li>
-									<li><a href="#" style="background-color:#BF6989;"></a></li>
-									<li><a href="#" style="background-color:#9A54D8;"></a></li>
-								</ul>
-							</div>
-
-							<div class="product-btns">
-								<div class="qty-input">
-									<span class="text-uppercase">Cantidad: </span>
-									<input id="numero" name="cantidad" class="input" type="number" min="1" pattern="^[0-9]+" required>
-								</div><br><br><br><br><br>
-								
-								<button type="submit" name="AddCarrito" class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Añadir al carrito</button>
-								<input type="hidden" name="Add" value="<?php echo $f['id'];?>">
-								<input type="hidden" name="id_Usuario" value="$_Session['id']">
-								
-								<input type="hidden" name="id_Usuario" value="$_Session['id']">
-								</form>
-								
-								<?php
-								$msj= isset($_GET["error"]) ? $_GET["error"] : "";
-								?>
-								<div class="pull-right">
-									<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-									<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-									<button class="main-btn icon-btn"><i class="fa fa-share-alt"></i></button>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					
-					
-					<div class="col-md-12">
-						<div class="product-tab">
-							<ul class="tab-nav">
-								<li class="active"><a data-toggle="tab" href="#tab1">Descripcion</a></li>
-								<li><a data-toggle="tab" href="#tab2">Details</a></li>
-								<li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
-							</ul>
-							<div class="tab-content">
-								<div id="tab1" class="tab-pane fade in active">
-									<p><?php echo $f["descripcion"];?></p>
-								</div>
-								<div id="tab2" class="tab-pane fade in active">
-									<p><?php echo "Envio: ".$f["envio"];?></p>
-								</div>
-								<div id="tab3" class="tab-pane fade in">
-
+?>
 									<div class="row">
 										<div class="col-md-6">
 											<div class="product-reviews">
@@ -214,11 +215,7 @@ while($f=mysqli_fetch_array($resultado)){
 														<div><a href="#"><i class="fa fa-user-o"></i> John</a></div>
 														<div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>
 														<div class="review-rating pull-right">
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star-o empty"></i>
+                                                            <?php echo "<h2>$</h2>" ?>
 														</div>
 													</div>
 													<div class="review-body">
@@ -231,11 +228,13 @@ while($f=mysqli_fetch_array($resultado)){
 														<div><a href="#"><i class="fa fa-user-o"></i> John</a></div>
 														<div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>
 														<div class="review-rating pull-right">
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star"></i>
-															<i class="fa fa-star-o empty"></i>
+                                                            <?php for($x=0;$x<$cv['puntaje'];$x++){
+                                                                echo "<i class='fa fa-star'></i>";
+                                                            }
+                                                            for($y=0;$y<5-$cv['puntaje'];$y++){
+                                                                echo "<i class='fa fa-star-o empty'></i>";
+                                                            }
+                                                            ?>
 														</div>
 													</div>
 													<div class="review-body">
@@ -301,9 +300,6 @@ while($f=mysqli_fetch_array($resultado)){
 										</div>
 									</div>
 
-<?php
-	}// Fin del while
-?>
 
 								</div>
 							</div>
@@ -319,7 +315,8 @@ while($f=mysqli_fetch_array($resultado)){
 		<!-- /container -->
 	</div>
 	<!-- /section -->
-
+    <?php  } //fin valoracion
+?>
 	
 	
 	<!-- section -->

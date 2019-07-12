@@ -6,7 +6,9 @@
 -- Tiempo de generación: 08-07-2019 a las 05:18:41
 -- Versión del servidor: 5.7.25-log
 -- Versión de PHP: 7.3.0
-
+drop database if exists logintp;
+create database logintp;
+use logintp;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -148,7 +150,11 @@ INSERT INTO `productocarrito` (`id`, `idUsuario`, `idProducto`, `cantidad`) VALU
 (20, 2, 44, 1);
 
 -- --------------------------------------------------------
-
+CREATE TABLE tipoUser(
+	id int(11) NOT NULL,
+    tipo varchar(50) NOT NULL,
+    primary key (id)
+);
 --
 -- Estructura de tabla para la tabla `usuario`
 --
@@ -161,39 +167,45 @@ CREATE TABLE `usuario` (
   `pais` varchar(100) NOT NULL,
   `latitud` varchar(100) NOT NULL,
   `longitud` varchar(100) NOT NULL,
-  `rol` varchar(100) NOT NULL
+  `rol` varchar(100) NOT NULL,
+  `idTipoUser` int(11),
+  FOREIGN KEY (idTipoUser) references tipoUser(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO tipoUser (id,tipo)
+VALUES		(1,"Usuario Top"),
+			(2,"Usuario Medio Pelo"),
+            (3,"Usuario Pa'tras");
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `email`, `password`, `Nombre`, `pais`, `latitud`, `longitud`, `rol`) VALUES
-(1, 'ejemplo1@gmail.com', '1234', 'Ejemplo', '', '0', '0', 'usuario'),
-(2, 'Nicolas@gmail.com', '1234', 'Nicolas', '', '0', '0', 'usuario'),
-(3, 'Nicolas7@gmail.com', '1234', 'Nicolas', '', '0', '0', 'usuario'),
-(4, 'Viendo@gmail.com', '1234', 'Viendo', '', '0', '0', 'usuario'),
-(5, 'Gustavo@gmail.com', '1234', 'Gustavo', '', '0', '0', 'usuario'),
-(6, 'Ivan@hotmail.com', '1234', 'Ivan', '', '0', '0', 'administrador'),
-(7, 'user@gmail.com', '12', 'Usuario', '', '0', '0', 'usuario'),
-(8, 'Roberto@hotmail.com', '12', 'Roberto', '', '0', '0', 'usuario'),
-(9, 'UserNew@gmail.com', '1234', 'UsuarioNuevo', '', '0', '0', 'usuario'),
-(10, 'Esteban@gmail.com', '12345', 'Esteban', '', '0', '0', 'usuario'),
-(11, 'Ismael@gmail.com', '145', 'Ismael', '', '0', '0', 'usuario'),
-(12, 'Diegote@gmail.com', '1234', 'Diego', '', '0', '0', 'usuario'),
-(13, 'Maicol@gmail.com', '1234', 'Maicol', '', '0', '0', 'usuario'),
-(14, 'Luis@gmail.com', 'abcd', 'Luis', '', '0', '0', 'usuario'),
-(15, 'ejemplo5@gmail.com', '123', 'ejemplo5', 'Colombia', '0', '0', 'usuario'),
-(16, 'ejemplo6@gmail.com', '123', 'ejemplo6', 'Bolivia', '0', '0', 'usuario'),
-(17, 'ejemplo7@gmail.com', '123', 'ejemplo7', 'Brasil', '0', '0', 'usuario'),
-(18, 'ejemplo8@gmail.com', '123', 'ejemplo8', 'Ecuador', '0', '0', 'usuario'),
-(19, 'ejemplo9@gmail.com', '123', 'ejemplo9', 'Chile', '0', '0', 'administrador'),
-(20, 'ejemplo99@gmail.com', '123', 'ejemplo99', 'Argentina', '0', '0', 'usuario'),
-(21, 'Domi@gmail.com', '1234', 'Dominio', 'Argentina', '-34.717815099999996', '-58.4841618', 'administrador'),
-(22, 'men@gmail.com', '1234', 'Men', 'Argentina', '-34.7178069', '-58.4841452', 'usuario'),
-(23, 'z@gmail.com', '1234', 'z', '', 'Null', 'Usuario nego la solicitud de Geolocalizacion.', 'usuario'),
-(24, 'zz@gmail.com', '1234', 'zz', 'Brasil', 'Null', 'Usuario nego la solicitud de Geolocalizacion.', 'usuario'),
-(25, 'DiegoteEEEE@gmail.com', '1234', 'Diegote', 'Argentina', '-34.7177995', '-58.4841682', 'usuario');
+INSERT INTO `usuario` (`id`, `email`, `password`, `Nombre`, `pais`, `latitud`, `longitud`, `rol`,`idTipoUser`) VALUES
+(1, 'ejemplo1@gmail.com', '1234', 'Ejemplo', '', '0', '0', 'usuario',2),
+(2, 'Nicolas@gmail.com', '1234', 'Nicolas', '', '0', '0', 'usuario',1),
+(3, 'Nicolas7@gmail.com', '1234', 'Nicolas', '', '0', '0', 'usuario',1),
+(4, 'Viendo@gmail.com', '1234', 'Viendo', '', '0', '0', 'usuario',2),
+(5, 'Gustavo@gmail.com', '1234', 'Gustavo', '', '0', '0', 'usuario',3),
+(6, 'Ivan@hotmail.com', '1234', 'Ivan', '', '0', '0', 'administrador',1),
+(7, 'user@gmail.com', '12', 'Usuario', '', '0', '0', 'usuario',1),
+(8, 'Roberto@hotmail.com', '12', 'Roberto', '', '0', '0', 'usuario',3),
+(9, 'UserNew@gmail.com', '1234', 'UsuarioNuevo', '', '0', '0', 'usuario',2),
+(10, 'Esteban@gmail.com', '12345', 'Esteban', '', '0', '0', 'usuario',3),
+(11, 'Ismael@gmail.com', '145', 'Ismael', '', '0', '0', 'usuario',1),
+(12, 'Diegote@gmail.com', '1234', 'Diego', '', '0', '0', 'usuario',3),
+(13, 'Maicol@gmail.com', '1234', 'Maicol', '', '0', '0', 'usuario',1),
+(14, 'Luis@gmail.com', 'abcd', 'Luis', '', '0', '0', 'usuario',2),
+(15, 'ejemplo5@gmail.com', '123', 'ejemplo5', 'Colombia', '0', '0', 'usuario',1),
+(16, 'ejemplo6@gmail.com', '123', 'ejemplo6', 'Bolivia', '0', '0', 'usuario',2),
+(17, 'ejemplo7@gmail.com', '123', 'ejemplo7', 'Brasil', '0', '0', 'usuario',2),
+(18, 'ejemplo8@gmail.com', '123', 'ejemplo8', 'Ecuador', '0', '0', 'usuario',1),
+(19, 'ejemplo9@gmail.com', '123', 'ejemplo9', 'Chile', '0', '0', 'administrador',1),
+(20, 'ejemplo99@gmail.com', '123', 'ejemplo99', 'Argentina', '0', '0', 'usuario',3),
+(21, 'Domi@gmail.com', '1234', 'Dominio', 'Argentina', '-34.717815099999996', '-58.4841618', 'administrador',1),
+(22, 'men@gmail.com', '1234', 'Men', 'Argentina', '-34.7178069', '-58.4841452', 'usuario',2),
+(23, 'z@gmail.com', '1234', 'z', '', 'Null', 'Usuario nego la solicitud de Geolocalizacion.', 'usuario',2),
+(24, 'zz@gmail.com', '1234', 'zz', 'Brasil', 'Null', 'Usuario nego la solicitud de Geolocalizacion.', 'usuario',3),
+(25, 'DiegoteEEEE@gmail.com', '1234', 'Diegote', 'Argentina', '-34.7177995', '-58.4841682', 'usuario',1);
 
 --
 -- Índices para tablas volcadas
@@ -226,6 +238,24 @@ ALTER TABLE `productocarrito`
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
 
+
+CREATE TABLE valoracion(
+	id int(11) NOT NULL auto_increment,
+    comentario varchar(600),
+    puntaje int NOT NULL,
+    idUsuario int(11),
+    idVendedor int(11),
+    primary key (id),
+    foreign key (idUsuario) references usuario(id),
+    foreign key (idVendedor) references usuario(id)
+);
+
+
+
+INSERT INTO valoracion(comentario, puntaje, idUsuario,idVendedor)
+VALUES  ('muy amable',5,6,2),
+		('tuve un problema con la compra y me lo solucionó rápidamente',4,3,2),
+        ('genial',5,10,2);
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
