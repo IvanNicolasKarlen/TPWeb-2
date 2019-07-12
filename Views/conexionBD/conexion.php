@@ -100,9 +100,29 @@ class Conexion{
 	}
 
 	public function traerValoraciones($idU){
-		$consulta=$this->msq->prepare("SELECT ")
+		$consulta=$this->msq->prepare("SELECT id, comentario, puntaje, idUsuario FROM valoracion WHERE idVendedor=?");
+		$consulta->bind_param("i",$idU);
+		$consulta->execute();
+		$consulta->store_result();
+		$comentario="";$puntaje="";$idusuario="";$id="";
+		$consulta->bind_result($id,$comentario,$puntaje,$idusuario);
+		$array=array(
+			"id" => $id,
+			"comentario" => $comentario,
+			"puntaje" =>$puntaje,
+			"idUsuario" =>$idusuario
+		);
+		return $array;
 	}
+	public function traerUsuarioQueValora($idUser){
+		$consulta=$this->msq->prepare("SELECT nombre FROM usuario WHERE id=?");
+		$consulta->bind_param("i",$idUser);
+		$consulta->execute();
+		$nombreu="";
+		$consulta->bind_result($nombreu);
+		return $nombreu;
 
+	}
 
 	
 }
