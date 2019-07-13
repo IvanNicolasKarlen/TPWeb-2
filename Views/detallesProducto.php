@@ -60,21 +60,10 @@ if(isset($_POST["detalles"]))
 		$conexion = new Conexion;
 
 		$idProducto = $_POST["Productoid"];
-		$NombreProducto = $_POST["ProductoNombre"];
-		
-	//Traer el articulo que presiono ver más	
+	
 	$consulta="SELECT * FROM producto WHERE id = '".$idProducto."'";
-	//Para mostrar los articulos relacionados a la busqueda hecha con un nombre parecido al producto que esta viendo
-	$consultaExtra="SELECT * FROM producto WHERE nombre like '%".$NombreProducto."%'";
 	
 	$resultado= $conexion->realizarConsulta($consulta);
-	$extra= $conexion->realizarConsulta($consultaExtra);
-	
-	
-	
-		//Contiene los metodos de la categoria mas buscada
-		require_once("CategoriasMasVisitadas.php");
-		include_once("ProductoMasVisitado.php");
 }
 	?>
 	
@@ -82,48 +71,128 @@ if(isset($_POST["detalles"]))
  //Comienzo a rellenar los campos con los datos obtenidos con el select
 while($f=mysqli_fetch_array($resultado)){
 	
+	//busco img principal
+	$consulta2="SELECT * FROM imgprincipal WHERE idProducto= '".$f['id']."'";
+	$resultado2 = $conexion->realizarConsulta($consulta2);
+	
+	//busco img secundarias
+	$consulta3="SELECT * FROM imgproducto WHERE idProducto= '".$f['id']."'";
+	$resultado3 = $conexion->realizarConsulta($consulta3);
+	
+	
+	//busco img principal para slider en detalles de producto
+	$consulta4="SELECT * FROM imgprincipal WHERE idProducto= '".$f['id']."'";
+	$resultado4 = $conexion->realizarConsulta($consulta4);
+	
+	//busco img secundarias para slider en detalles de producto
+	$consulta5="SELECT * FROM imgproducto WHERE idProducto= '".$f['id']."'";
+	$resultado5 = $conexion->realizarConsulta($consulta5);
+	
 ?>
+
+	
 	<!-- section -->
 	<div class="section">
 		<!-- container -->
 		<div class="container">
 			<!-- row -->
 			<div class="row">
+			
+			
 				<!--  Product Details -->
 				<div class="product product-details clearfix">
-					<div class="col-md-6">
-						<div id="product-main-view">
-							<div class="product-view">
-								<img style="height:560px;width:450px;"  src="imgPublicadas/<?php echo $f["imgprincipal"];?>" alt="">
+				
+						<div class="col-md-6">
+					
+					<div id="product-main-view">
+					
+					
+						<!-- mostrar img principal -->
+							<?php
+								while($i=mysqli_fetch_array($resultado2)){
+							?>
+					
+						
+						
+						<div class="product-view">
+								<img src="imgPublicadas/<?php echo $i["nombre"];?>" alt="">
 							</div>
+						<?php
+								}//fin while mostrar img principal
+							?>
+							
+						
+						<!-- mostrar img secundarias -->
+										
+						<?php
+							while($j=mysqli_fetch_array($resultado3)){
+						?>
+	
 							<div class="product-view">
-								<img src="./img/<?php echo $f["imagen2"];?>" alt="">
+								<img src="imgPublicadas/<?php echo $j["nombre"];?>" alt="">
 							</div>
-							<div class="product-view">
-								<img src="./img/<?php echo $f["imagen3"];?>" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/<?php echo $f["imagen4"];?>" alt="">
-							</div>
+						
+									
+							
+							
+							<?php
+								}//fin while mostrar img secundarias
+							?>
+							
+							
 						</div>
-						<div id="product-view">
-							<div class="product-view">
-								<img src="imgPublicadas/<?php echo $f["imgprincipal"];?>" alt="">
+					
+					
+					<!--	slider en detalles de producto -->
+					<div id="product-view">
+						
+							<!-- mostrar img principal -->
+							<?php
+								while($i=mysqli_fetch_array($resultado4)){
+							?>
+					
+						
+						
+						<div class="product-view">
+								<img src="imgPublicadas/<?php echo $i["nombre"];?>" alt="">
 							</div>
+						<?php
+								}//fin while mostrar img principal
+							?>
+							
+						
+						<!-- mostrar img secundarias -->
+										
+						<?php
+							while($j=mysqli_fetch_array($resultado5)){
+						?>
+	
 							<div class="product-view">
-								<img src="./img/thumb-product02.jpg" alt="">
+								<img src="imgPublicadas/<?php echo $j["nombre"];?>" alt="">
 							</div>
-							<div class="product-view">
-								<img src="./img/thumb-product03.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/thumb-product04.jpg" alt="">
-							</div>
+						
+									
+							
+							
+							<?php
+								}//fin while mostrar img secundarias
+							?>
+							
+							
 						</div>
+					
+					
+					
+					
+					
+					
+						
 					</div>
-
-
-
+					
+							
+						
+							
+					
 
 					<form method="post" action="ProcesaAddCarrito.php">
 					<div class="col-md-6">
@@ -302,7 +371,7 @@ while($f=mysqli_fetch_array($resultado)){
 									</div>
 
 <?php
-	}// Fin del while
+	}// Fin del while producto
 ?>
 
 								</div>
@@ -322,6 +391,13 @@ while($f=mysqli_fetch_array($resultado)){
 
 	
 	
+			
+							
+					
+				
+	
+	
+	
 	<!-- section -->
 	<div class="section">
 		<!-- container -->
@@ -335,24 +411,23 @@ while($f=mysqli_fetch_array($resultado)){
 					</div>
 				</div>
 				<!-- section title -->
-
-<?php
-	while($f=mysqli_fetch_array($extra)){			
-?>				
 				
+
 				<!-- Product Single -->
 				<div class="col-md-3 col-sm-6 col-xs-6">
 					<div class="product product-single">
 						<div class="product-thumb">
-							<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-							<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
-							</form>
-							<img src="./imgPublicadas/<?php echo $f["imgprincipal"];?>" alt="">
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
+							
+							
+								
+	
+								<img src="./img/product04.jpg" alt="">
+							
+						
 						</div>
 						<div class="product-body">
-							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
+							<h3 class="product-price">$32.50</h3>
 							<div class="product-rating">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -360,24 +435,107 @@ while($f=mysqli_fetch_array($resultado)){
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star-o empty"></i>
 							</div>
-							<h2 class="product-name"><a href="#"><?php echo $f["nombre"];?></a></h2>
+							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
-						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
-						</form>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- /Product Single -->
-<?php
-	}
-	?>
-				
+
+				<!-- Product Single -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="product product-single">
+						<div class="product-thumb">
+							<div class="product-label">
+								<span>New</span>
+							</div>
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
+							<img src="./img/product03.jpg" alt="">
+						</div>
+						<div class="product-body">
+							<h3 class="product-price">$32.50</h3>
+							<div class="product-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-o empty"></i>
+							</div>
+							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+							<div class="product-btns">
+								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Product Single -->
+
+				<!-- Product Single -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="product product-single">
+						<div class="product-thumb">
+							<div class="product-label">
+								<span class="sale">-20%</span>
+							</div>
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
+							<img src="./img/product02.jpg" alt="">
+						</div>
+						<div class="product-body">
+							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+							<div class="product-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-o empty"></i>
+							</div>
+							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+							<div class="product-btns">
+								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Product Single -->
+
+				<!-- Product Single -->
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="product product-single">
+						<div class="product-thumb">
+							<div class="product-label">
+								<span>New</span>
+								<span class="sale">-20%</span>
+							</div>
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
+							<img src="./img/product01.jpg" alt="">
+						</div>
+						<div class="product-body">
+							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+							<div class="product-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-o empty"></i>
+							</div>
+							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+							<div class="product-btns">
+								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Product Single -->
 			</div>
 			<!-- /row -->
 		</div>

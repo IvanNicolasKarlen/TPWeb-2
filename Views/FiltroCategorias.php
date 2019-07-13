@@ -28,7 +28,20 @@ $resultado = $conexion->realizarConsulta($busqueda);
                     //Comienzo a rellenar los campos con los datos obtenidos con el select
                     while($f=mysqli_fetch_array($resultado))
 					{
+						
+						
+						//buscar img principal del producto
+						 $consulta2="SELECT * FROM imgprincipal WHERE idProducto= '".$f['id']."'";
+						 $resultado2 = $conexion->realizarConsulta($consulta2);
+						
                     ?>
+					
+					
+					
+					<!-- mostrar img principales -->
+							 <?php
+								while($g=mysqli_fetch_array($resultado2)){
+							  ?>
 
                     </thead>
                     <tbody>
@@ -45,7 +58,11 @@ $resultado = $conexion->realizarConsulta($busqueda);
 							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 							</form>
 							<img style="height:270px;width:247px;margin:auto;margin-left: auto;margin-right: auto;display: block;
-							"src="imgPublicadas/<?php echo $f["imgprincipal"];?>"  alt="">
+							"src="imgPublicadas/<?php echo $g["nombre"];?>"  alt="" />
+							
+							<?php
+								}//fin while para mostrar img principal
+							 ?>
 						</div>
 						<div class="product-body">
 							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>

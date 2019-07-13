@@ -7,6 +7,11 @@ include_once ("conexionBD/conexion.php");
 $conect = new Conexion();
 $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Productos y otros' LIMIT 5");
 ?>
+
+
+
+
+
 	<!-- HOME -->
 
 	<div id="home">
@@ -14,6 +19,10 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 		<div class="container">
 			<!-- home wrap -->
 			<div class="home-wrap">
+			
+			
+			
+			
 				<!-- home slick -->
 				<div id="home-slick">
 					<!-- banner -->
@@ -89,9 +98,10 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 				</form>
 				<!-- /banner -->
 
+					
 				<!-- banner -->
 				<form method="post" action="ProductoBuscado.php">
-				<div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
+				<div class="col-md-4 col-sm-6">
 					<a class="banner banner-1" >
 						<img src="img/banner12.jpg" alt="">
 						<div class="banner-caption text-center" >
@@ -147,7 +157,14 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
                         <div id="product-slick-1" class="product-slick">
                             <!-- Product Single -->
                          <?php while($f=mysqli_fetch_array($resultado)){
+							 
+							 
+							 
+								$consulta2="SELECT * FROM imgprincipal WHERE idProducto= '".$f['id']."'";
+								$resultado2 = $conexion->realizarConsulta($consulta2);
+								
 							?>
+							 
 
                             <div class='product product-single'>
                                 <div class='product-thumb'>
@@ -158,8 +175,23 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 							<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
 							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 								</form>
-                                    <img src="imgPublicadas/<?php echo $f["imgprincipal"];?>" style='height: 400px;'>
+								
+								
+								<?php
+							while($g=mysqli_fetch_array($resultado2)){
+							 ?>
+								
+                                    <img src="imgPublicadas/<?php echo $g["nombre"];?>" style='height: 400px;'>
+									
+								<?php
+								}
+								 ?>	
+									
                                 </div>
+								
+								
+									
+								
                                 <div class='product-body'>
                                     <h3 class='product-price'><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
                                     <div class='product-rating'>

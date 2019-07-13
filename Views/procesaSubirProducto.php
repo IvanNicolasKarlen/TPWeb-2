@@ -21,7 +21,8 @@ $imgprincipal = '';
  $formas = '';
  $envio = '';
  $descripcion = '';
- 
+ $latitud =null;
+ $longitud =null;
 
 if(isset($_POST["publicar"])){
  
@@ -88,16 +89,27 @@ $errorI="";
 
 
 				$direc= new Direccion();
-				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,genero,categoria,palabrasClaves,descripcion,visitas,imgprincipal,idUsuario,latitud,longitud)
-				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$genero','$categoria','$palabras','$descripcion',0,'$imgprincipal','$idUsuario','$latitud','$longitud')";
+				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,genero,categoria,palabrasClaves,descripcion,visitas,idUsuario,latitud,longitud)
+				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$genero','$categoria','$palabras','$descripcion','$idUsuario',0,'$latitud','$longitud')";
 				
-				if($conexion->realizarConsulta($sql)===true)
+				
+				if($conexion->realizarConsulta($sql))
 			{
+				
+				$ultimo_id = $conexion->obtenerIdGenerado(); 
+					
+					$sql2="INSERT INTO imgprincipaL(idProducto,nombre)
+					VALUES ($ultimo_id,'$imgprincipal')";
+					
+					$conexion->realizarConsulta($sql2);
+				
+				
+				
 					header($direc->carpRaiz("registroExitoso"));
 					exit();
 	  
 			}else{
-						$errorI="Error al subir el producto. Intente nuevamente";
+						$errorI="Error al subir el producto. Intente nuevamenteee";
 						header("location:subirProducto.php?error=$errorI");
 				 }	 
 				

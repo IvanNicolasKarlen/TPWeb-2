@@ -9,21 +9,26 @@ require_once("conexionBD/conexion.php");// incluir la configuracion de conexion 
 		//Abrir conexion
 		$conexion = new Conexion;
 
-		$id_Usuario = $_SESSION['id'];
+	$id_Usuario = $_SESSION['id'];
 	$email = $_SESSION['username'];
+	
 	$consulta="SELECT *
 				FROM producto as prod 
 				inner join productocarrito as car on prod.id=car.idProducto
 				WHERE car.idUsuario = '".$id_Usuario."'";
-	
-	
-	$productosComprados= $conexion->realizarConsulta($consulta);
+	$productosComprados= $conexion->realizarConsulta($consulta);			
+				
 	
 	$compras = $productosComprados->num_rows;
+	
 ?>
 
 
 <body>
+
+<?php $error=isset($_GET["error"]) ? $_GET["error"] : ""; ?>
+<h4 style="text-align:center; color:#9a2222; background-color:#d0be6547"> <?php echo"$error"; ?></h4>
+
 	<!-- section -->
 	<div class="section">
 		<!-- container -->
@@ -74,49 +79,126 @@ require_once("conexionBD/conexion.php");// incluir la configuracion de conexion 
                         <th scope="col">Precio</th>
 						<th scope="col">Subtotal</th>
                     </tr>
-                    <?php
+ 
+                    </thead>
+					
+					
+					
+					<?php
                     //Comienzo a rellenar los campos con los datos obtenidos con el select
                     while($f=mysqli_fetch_array($productosComprados)){
+					
+						$consulta2="SELECT * FROM imgprincipal WHERE idProducto= '".$f['idProducto']."'";
+						$resultado2 = $conexion->realizarConsulta($consulta2);
+						
                     ?>
 
-                    </thead>
+					
+					 <?php
+					while($g=mysqli_fetch_array($resultado2)){
+					 ?>
+
+					
+		
                     <tbody>
+					
+							
+					
                     <tr>
-                        <td  > <div style="height:100%;width:100%;"><img style="height:50px;width:50px;"  src="imgPublicadas/<?php echo $f["imgprincipal"];?>" alt=""> </div></td>
-                        <th scope="row"><?php echo $f['idProducto'];?></th>
+					
+					
+					
+                        <td> <div style="height:100%;width:100%;"><img style="height:50px;width:50px;"  src="imgPublicadas/<?php echo $g["nombre"];?>" alt=""> </div></td>
+                        
+						
+						 <?php
+					}
+					 ?>
+						
+						
+						<th scope="row"><?php echo $f['idProducto'];?></th>
                        
+					 
                         <td><div><?php echo $f['nombre'];?></div></td>
+					
+					  
+						
+						
                         <td><?php echo $f['envio'];?></td>
                        
-                        
+                        	
+					
 						<td><?php echo $f['cantidad'];?></td>
                         <td><?php echo $f['formasdepago'];?></td>
+						
+					
+						
 						<td><?php echo "$".number_format($f['precio'],0,'.','.');?></td>
-						  <td><?php $subtotal= $f['precio']*$f['cantidad'];echo "$".number_format($subtotal,0,'.','.');?></td>
-						  </tbody>
-<?php
+						
+						
+						
+						<td><?php $subtotal= $f['precio']*$f['cantidad'];echo "$".number_format($subtotal,0,'.','.');?></td>
+					
+						
+					
+		
+				
+						<td><a href="EditarCarrito.php?cod=<?php echo $f['id'];?>
+						&cant=<?php echo $f['cantidad'];?>&prod=<?php echo $f['idProducto'];?>">
+							<i class="fa fa-edit"></i></a></td>
+						
+						
+					
+						
+						
+						<td><a href="listarPublicaciones.php?cod=<?php echo $f['id'];?>">
+
+							
+							<i class="fa fa-trash"></i>
+				
+							</a></td>
+					 
+					 </tr>	 
+						  
+					  
+	<?php
 //Suma todos los precios
 $mostrar = $mostrar+$subtotal;
 
 
  }//fin while
 
-?>						
+?>	
+					
 
-                    </tr>			
+                   		 </tbody>
+						  						
+
+
+
                   
-                </table>
+                </table>		
+				
             </div>
+			
+		
+			
 			<div>
+	
+	
+	
+	
+	
 <h2 class="title" style="float:right;"><?php echo "Total: $".number_format($mostrar,0,'.','.');?></h2>
 
 		
 		</div>
 		
 		<form method="post" action="Pagar.php" >
-<button type="submit" name="AddCarrito" class="primary-btn add-to-cart" style="float:right;"><i class="fa fa-shopping-cart"></i> Continuar</button>
+<button type="submit" name="ComprarTodo" class="primary-btn add-to-cart" style="float:right;"><i class="fa fa-shopping-cart"></i> Comprar todo</button>
 								<input type="hidden" name="Add" value="<?php echo $mostrar;?>">
 								<input type="hidden" name="id_Usuario" value="$_Session['id']">
+								<input type="hidden" name="total" value="<?php echo "Total: $".number_format($mostrar,0,'.','.');?>">
 </form>
 		</div>
 		

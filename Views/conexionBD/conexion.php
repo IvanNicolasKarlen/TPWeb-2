@@ -77,6 +77,13 @@ class Conexion{
 		 return $resultado->num_rows;
 		 
 	 }
+	 
+	 
+	  public function obtenerIdGenerado(){
+
+	$ultimoID=$this->msq->insert_id;
+	return $ultimoID;
+		 }
 
 	
 }

@@ -8,9 +8,14 @@ require_once("verificacionSesion.php");
 
 
  		$consulta="SELECT * FROM producto WHERE idUsuario='$id'";
+		
 
 		//ejecutar la consulta
 		$resultado = $conexion->realizarConsulta($consulta);
+		
+		
+		
+		$modificado=isset($_GET["mensaje"]) ? $_GET["mensaje"] : "";
 
 include_once("header.php");
 
@@ -25,6 +30,8 @@ include_once("header.php");
 		<div class="container">
 			<!-- row -->
 			<div class="row">
+			<h4 style="text-align:center; color:green; "> <?php echo"$modificado"; ?></h4>
+			
 			<div class="col-md-12">
 					<div class="section-title">
 						<h2 class="title">Mis publicaciones &nbsp</h2> 
@@ -71,35 +78,50 @@ include_once("header.php");
                         <th scope="col">Cantidad</th>
                         <th scope="col">Envío</th>
                         <th scope="col">Precio</th>
+						<th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
                     </tr>
                     <?php
                     //Comienzo a rellenar los campos con los datos obtenidos con el select
                     while($f=mysqli_fetch_array($resultado)){
+						
+						$consulta2="SELECT * FROM imgprincipal WHERE idProducto= '".$f['id']."'";
+						$resultado2 = $conexion->realizarConsulta($consulta2);
+						
                     ?>
+					 <?php
+					while($g=mysqli_fetch_array($resultado2)){
+					 ?>
 
                     </thead>
                     <tbody>
                     <tr>
-                        <td  > <div style="height:100%;width:100%;"><img style="height:50px;width:50px;"  src="imgPublicadas/<?php echo $f["imgprincipal"];?>" alt=""> </div></td>
-                        <th scope="row"><?php echo $f['id'];?></th>
+                        <td > <div style="height:100%;width:100%;"><img style="height:50px;width:50px;"  src="imgPublicadas/<?php echo $g["nombre"];?>" alt=""> </div></td>
+                        
+						
+						<?php
+					}
+					 ?>
+						
+						<th scope="row"><?php echo $f['id'];?> </th>
                        
-                        <td><div><?php echo $f['nombre'];?></div></td>
+                        <td><?php echo $f['nombre'];?></td>
                         <td><?php echo $f['formasdepago'];?></td>
                         <td><?php echo $f['stock'];?></td>
                         <td><?php echo $f['envio'];?></td>
-                        <td><?php echo "$".number_format($f['precio'],0,'.','.');?></td>
-						
-		
-                   
+                        <td><?php echo "$".number_format($f['precio'],0,'.','.');?> </td>
+						<td><a href="modificarProducto.php?cod=<?php echo $f['id'];?>"><i class="fa fa-edit"></i></a> </td>
+						<td><a href="listarPublicaciones.php"><i class="fa fa-trash"></i></a></td>
+		        
  
-				   </tbody>
+				  
 				   
 				   
-<?php
+					<?php
                     }//fin while
                     ?>
 
-					
+					 </tbody>
                     </tr>			
                    
 
@@ -109,4 +131,3 @@ include_once("header.php");
 
 
 <?php require_once("footer.php")?>
-

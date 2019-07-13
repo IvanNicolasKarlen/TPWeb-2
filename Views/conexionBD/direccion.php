@@ -17,4 +17,11 @@ class Direccion
 	{
 		return "location:detallesProducto.php?error=$error";
 	}
+	public function errorProductoRepetido($error)
+	{
+		return "location:CarritoDetalles.php?error=$error";
+	}
+	
+	
+	
 }
