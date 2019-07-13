@@ -103,16 +103,6 @@ class Conexion{
 		$consulta=$this->msq->prepare("SELECT id, comentario, puntaje, idUsuario FROM valoracion WHERE idVendedor=?");
 		$consulta->bind_param("i",$idU);
 		$consulta->execute();
-		/* $consulta->store_result();
-		 $comentario="";$puntaje="";$idusuario="";$id="";
-		$consulta->bind_result($id,$comentario,$puntaje,$idusuario);
-		$consulta->fetch();
-		 $array=array(
-			"id" => $id,
-			"comentario" => $comentario,
-			"puntaje" =>$puntaje,
-			"idUsuario" =>$idusuario
-		); */
 		$r = $consulta->get_result();
 		return $r;
 	}
@@ -127,7 +117,41 @@ class Conexion{
 
 	}
 
-	
+	public function insertarValoracion($idu,$idv,$comentario,$puntaje){
+		$insert=$this->msq->prepare("INSERT INTO valoracion(comentario, puntaje, idUsuario,idVendedor)
+											VALUES  (?,?,?,?)");
+		$insert->bind_param("siii",$comentario,$puntaje,$idu,$idv);
+		//$insert->execute();
+		if($insert->execute()){
+			return "Valoración realizada con éxito";
+		}else{
+			return "Ha ocurrido un error al realizar tu comentario";
+		}
+	}
+
+	public function cambiarTipoUser($idV){
+		$consulta=$this->msq->prepare("SELECT puntaje FROM valoracion WHERE idVendedor=?");
+		$consulta->bind_param("i",$idV);
+		$consulta->execute();
+		$resu=$consulta->get_result();
+		$total = 0;
+		$cantidad=1;
+		while($puntaje=$resu->fetch_assoc()){
+			$total=$total+$puntaje['puntaje'];
+			$cantidad++;
+		}
+		$tipo=0;
+		$tipo=$total/$cantidad;
+		$tipo=round($tipo);
+		if($tipo>=4){
+			$this->msq->query("UPDATE usuario SET idTipoUser=1 WHERE id=$idV");
+		}elseif ($tipo==3){
+			$this->msq->query("UPDATE usuario SET idTipoUser=2 WHERE id=$idV");
+		}else{
+			$this->msq->query("UPDATE usuario SET idTipoUser=3 WHERE id=$idV");
+		}
+		return $tipo;
+	}
 }
 
 

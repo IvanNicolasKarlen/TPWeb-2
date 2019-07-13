@@ -6,9 +6,10 @@ include_once("header.php");
 include_once ("conexionBD/conexion.php");
 $conect = new Conexion();
 $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Productos y otros' LIMIT 5");
+$info=isset($_GET["info"])?$_GET["info"]:"";
 ?>
 	<!-- HOME -->
-
+    <div class="alert-info text-center"><?php echo"$info"; ?></div>
 	<div id="home">
 		<!-- container -->
 		<div class="container">

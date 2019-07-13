@@ -149,7 +149,7 @@
 		//Abrir conexion
 		$conexion = new Conexion;
 	
-	$id_Usuario = $_SESSION['id'];
+	$id_Usuario = isset($_SESSION['id'])?$_SESSION['id']:null;
 				//CONTADOR DEL CARRITO
 				$buscoCant="SELECT count(idProducto)
 				FROM productocarrito 
