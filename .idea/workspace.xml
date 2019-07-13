@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f96dc65-ba76-4360-bcfc-0685c0427f42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/conexionBD/conexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/conexionBD/conexion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/detallesProducto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/detallesProducto.php" afterDir="false" />
@@ -17,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/conexionBD/conexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+            <state relative-caret-position="472">
+              <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -26,11 +27,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="212" column="49" selection-start-line="212" selection-start-column="49" selection-end-line="212" selection-end-column="49" />
-              <folding>
-                <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="472">
+              <caret line="231" column="98" selection-start-line="231" selection-start-column="98" selection-end-line="231" selection-end-column="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logintp.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3257">
+              <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -110,7 +117,6 @@
         <option value="$PROJECT_DIR$/Views/Cliente/header.php" />
         <option value="$PROJECT_DIR$/Views/Cliente/procesaSubirProducto.php" />
         <option value="$PROJECT_DIR$/Views/Cliente/registroExitoso.php" />
-        <option value="$PROJECT_DIR$/Views/listarPublicaciones.php" />
         <option value="$PROJECT_DIR$/Views/productoCliente.php" />
         <option value="$PROJECT_DIR$/Views/registroExitoso.php" />
         <option value="$PROJECT_DIR$/Views/verificacionSesion.php" />
@@ -131,14 +137,15 @@
         <option value="$PROJECT_DIR$/logintp.sql" />
         <option value="$PROJECT_DIR$/Views/procesaSubirProducto.php" />
         <option value="$PROJECT_DIR$/Views/SubirProducto.php" />
+        <option value="$PROJECT_DIR$/Views/listarPublicaciones.php" />
         <option value="$PROJECT_DIR$/Views/conexionBD/conexion.php" />
         <option value="$PROJECT_DIR$/Views/detallesProducto.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="width" value="1377" />
-    <option name="height" value="1033" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1378" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -235,18 +242,19 @@
       <workItem from="1561849167630" duration="6935000" />
       <workItem from="1562020300140" duration="14078000" />
       <workItem from="1562097519929" duration="6471000" />
-      <workItem from="1562956503156" duration="7120000" />
+      <workItem from="1562956503156" duration="7229000" />
+      <workItem from="1563039961803" duration="4722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66603000" />
+    <option name="totallyTimeSpent" value="71434000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1101" height="826" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13832854" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22214764" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -394,13 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/listarPublicaciones.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="85" column="46" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TPWeb-2 MIO/Views/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -415,9 +416,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/detalleProductoCliente.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/detalleProductoCliente.php" />
     <entry file="file://$PROJECT_DIR$/Views/css/nouislider.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -502,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logintp.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/conexionBD/config.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -516,20 +508,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logintp.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3257">
+          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/listarPublicaciones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="76" column="42" lean-forward="true" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Views/conexionBD/conexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="122" column="24" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+        <state relative-caret-position="472">
+          <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="212" column="49" selection-start-line="212" selection-start-column="49" selection-end-line="212" selection-end-column="49" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="472">
+          <caret line="231" column="98" selection-start-line="231" selection-start-column="98" selection-end-line="231" selection-end-column="98" />
         </state>
       </provider>
     </entry>
