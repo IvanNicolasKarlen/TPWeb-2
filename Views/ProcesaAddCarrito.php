@@ -24,7 +24,7 @@ if(isset($_POST["AddCarrito"]))
 		
 		
 		
-		$consultaCarrito="SELECT * FROM productocarrito WHERE idProducto=$id_producto";
+		$consultaCarrito="SELECT * FROM productocarrito WHERE idProducto=$id_producto and idUsuario=$id_usuario" ;
 		$resultadoCarrito = $conexion->realizarConsulta($consultaCarrito);
 		$numFilas=$conexion->cantidadDeFilas($resultadoCarrito);
 	
