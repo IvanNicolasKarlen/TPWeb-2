@@ -1,3 +1,26 @@
+<?php
+
+
+if( isset($_SESSION['id']))
+{
+
+$id_Usuario = $_SESSION['id'];
+
+$sql = "Select * from usuario where id = $id_Usuario";
+require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
+		//Abrir conexion
+		$conexion = new Conexion;
+
+$resultado = $conexion->realizarConsulta($sql);
+while($n = mysqli_fetch_array($resultado))
+{
+	$estado = $n['rol'];
+	
+}
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +50,7 @@
 
     <!-- Custom stlylesheet -->
     <link type="text/css" rel="stylesheet" href="css/style.css" />
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -108,7 +132,7 @@
 
                         <ul class="custom-menu">
                             <li><a href="CerrarSesion.php"><i class="fa fa-unlock-alt"></i> Cerrar Sesion</a></li>
-                            <?php if(($_SESSION['rol'] = "administrador" )) { ?>
+                            <?php if(($estado == "administrador" )) { ?>
 							<li><a href="Administrador/HTML/Administrador.php"><i class="fa fa-user-o"></i>Administrador</a></li>
 							<li><a href="#"><i class="fa fa-heart-o"></i> Favoritos</a></li>
                             <li><a href="#"><i class="fa fa-check"></i> Ventas</a></li>

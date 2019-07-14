@@ -1,16 +1,11 @@
 <?php
-
 session_start();
-
 include_once ("../../conexionBD/conexion.php");
 $conexion = new Conexion();
-
-
 require_once ("ConsultasPromedios.php");
 require_once ("EstadisticasGenerales.php");
 require_once ("ProductosPromedios.php");
 require_once ("MontosInvolucrados.php");
-
 ?>
 
 
@@ -45,10 +40,8 @@ require_once ("MontosInvolucrados.php");
 // Grafico linea 521
       // Load the Visualization API and the corechart package.
       google.charts.load('current', {'packages':['corechart']});
-
       // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawChart);
-
 	  
 	  
       // Callback that creates and populates a data table,
@@ -67,12 +60,10 @@ require_once ("MontosInvolucrados.php");
           ['Productos y Otros', productos],
           
         ]);
-
         // Set chart options
         var options = {'title':'Categorias más buscadas:',
                        'width':400,
                        'height':300};
-
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
@@ -91,18 +82,14 @@ require_once ("MontosInvolucrados.php");
 // Grafico linea 521
       // Load the Visualization API and the corechart package.
       google.charts.load('current', {'packages':['corechart']});
-
       // Set a callback to run when the Google Visualization API is loaded.
       google.charts.setOnLoadCallback(drawChart);
-
 	  
 	  
       // Callback that creates and populates a data table,
       // instantiates the pie chart, passes in the data and
       // draws it.
       function drawChart() {
-
-
 	
         // Create the data table.
         var data = new google.visualization.DataTable();
@@ -114,24 +101,18 @@ require_once ("MontosInvolucrados.php");
 while($m = mysqli_fetch_array($RankingProductos))
 {
 ?>	  
-
-
 		
           [<?php echo "'".$m['nombre']."'";?>, <?php echo $m['visitas'];?>],
-
 <?php
 }
 ?>
-
           
           
         ]);
-
         // Set chart options
         var options = {'title':'Categorias más buscadas:',
                        'width':400,
                        'height':300};
-
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart2_div'));
         chart.draw(data, options);
@@ -146,27 +127,7 @@ while($m = mysqli_fetch_array($RankingProductos))
    
   </head>
   <body class="h-100">
-    <div class="color-switcher animated">
-      <div class="actions mb-4">
-        <a class="mb-2 btn btn-sm btn-primary w-100 d-table mx-auto extra-action" href="https://designrevision.com/downloads/shards-dashboard-lite/">
-          <i class="material-icons"></i> Descargar Todo</a>
-        <a class="mb-2 btn btn-sm btn-white w-100 d-table mx-auto extra-action" href="https://designrevision.com/docs/shards-dashboard-lite">
-          <i class="material-icons"></i> Liquidación</a>
-      </div>
-      <div class="social-wrapper">
-        <div class="social-actions">
-          <h5>
-		  Pasar a PDF
-          </h5>
-        </div>
-       <div class="loading-overlay">
-          <div class="spinner"></div>
-        </div>
-      </div>
-      <div class="close">
-        <i class="material-icons"><b>X</b></i>
-      </div>
-    </div>
+   
     <div class="color-switcher-toggle animated pulse infinite">
       <i class="material-icons"></i>
     </div>
@@ -208,7 +169,6 @@ while($m = mysqli_fetch_array($RankingProductos))
 			 </form>
               <ul class="navbar-nav border-left flex-row ">
                 <li class="nav-item border-right dropdown notifications">
-
                   <div class="dropdown-menu dropdown-menu-small" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="#">
                       <div class="notification__icon-wrapper">
@@ -353,7 +313,7 @@ while($m = mysqli_fetch_array($RankingProductos))
                     <div class="d-flex flex-column m-auto">
                       <div class="stats-small__data text-center">
                         <span class="stats-small__label text-uppercase">Ventas</span>
-                        <h6 class="stats-small__value count my-3">17,281</h6>
+                        <h6 class="stats-small__value count my-3"><?php echo $Compras?></h6>
                       </div>
                       <div class="stats-small__data">
                         <span class="stats-small__percentage stats-small__percentage--decrease">2.4%</span>
@@ -396,137 +356,77 @@ while($m = mysqli_fetch_array($RankingProductos))
 			  -->
               <!-- End Users Stats -->
               <!-- Users By Device Stats -->
-              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-              <!--  <div class="card card-small h-100">
-                  <div class="card-header border-bottom">
-                    <h6 class="m-0">Users by device</h6>
-                  </div>
-                
-                    <canvas height="220" class="blog-users-by-device"></canvas>
-                 
-                  <div class="card-footer border-top">
-                    <div class="row">
-                      <div class="col">
-                        <select class="custom-select custom-select-sm" style="max-width: 130px;">
-                          <option selected>Last Week</option>
-                          <option value="1">Today</option>
-                          <option value="2">Last Month</option>
-                          <option value="3">Last Year</option>
-                        </select>
-                      </div>
-                      <div class="col text-right view-report">
-                        <a href="#">Full report &rarr;</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>-->
-              </div>
+              
               <!-- End Users By Device Stats -->
               
               <!-- Discussions Component -->
-              <div class="col-lg-5 col-md-12 col-sm-12 mb-4">
+              <div class="col-lg-9 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small blog-comments">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Discussions</h6>
+                    <h6 class="m-0">Comentarios</h6>
                   </div>
                   <div class="card-body p-0">
                     <div class="blog-comments__item d-flex p-3">
                       <div class="blog-comments__avatar mr-3">
                         <img src="images/avatars/1.jpg" alt="User avatar" /> </div>
                       <div class="blog-comments__content">
+<?php while($U = mysqli_fetch_array($Consultausuario))
+				{
+?>
                         <div class="blog-comments__meta text-muted">
-                          <a class="text-secondary" href="#">James Johnson</a> on
-                          <a class="text-secondary" href="#">Hello World!</a>
+                          <a class="text-secondary" href="#"><?php echo $U['Nombre'];?></a>
+                          
                           <span class="text-muted">– 3 days ago</span>
+						    <span class="text-muted">- Estado: <?php echo $U['estado']?></span>
                         </div>
                         <p class="m-0 my-1 mb-2 text-muted">Well, the way they make shows is, they make one show ...</p>
-                        <div class="blog-comments__actions">
+                        
+
+						
+						<div class="blog-comments__actions">
                           <div class="btn-group btn-group-sm">
-                            <button type="button" class="btn btn-white">
+ <?php if($U['estado']=="Bloqueado")
+{ ?>              
+
+						   <button type="button" class="btn btn-white">
                               <span class="text-success">
                                 <i class="material-icons">check</i>
-                              </span> Approve </button>
+                              </span> Desbloquear </button>
+							  
+<?php	}if($U['estado']=="ok"){ ?>
+							  
+							  
                             <button type="button" class="btn btn-white">
                               <span class="text-danger">
                                 <i class="material-icons">clear</i>
-                              </span> Reject </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-light">
-                                <i class="material-icons">more_vert</i>
-                              </span> Edit </button>
+                              </span> Bloquear </button>
+<?php 
+	}
+?>	                      
                           </div>
-                        </div>
+                        </div>	
+						
                       </div>
                     </div>
-                    <div class="blog-comments__item d-flex p-3">
-                      <div class="blog-comments__avatar mr-3">
-                        <img src="images/avatars/2.jpg" alt="User avatar" /> </div>
-                      <div class="blog-comments__content">
-                        <div class="blog-comments__meta text-muted">
-                          <a class="text-secondary" href="#">James Johnson</a> on
-                          <a class="text-secondary" href="#">Hello World!</a>
-                          <span class="text-muted">– 4 days ago</span>
-                        </div>
-                        <p class="m-0 my-1 mb-2 text-muted">After the avalanche, it took us a week to climb out. Now...</p>
-                        <div class="blog-comments__actions">
-                          <div class="btn-group btn-group-sm">
-                            <button type="button" class="btn btn-white">
-                              <span class="text-success">
-                                <i class="material-icons">check</i>
-                              </span> Approve </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-danger">
-                                <i class="material-icons">clear</i>
-                              </span> Reject </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-light">
-                                <i class="material-icons">more_vert</i>
-                              </span> Edit </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog-comments__item d-flex p-3">
-                      <div class="blog-comments__avatar mr-3">
-                        <img src="images/avatars/3.jpg" alt="User avatar" /> </div>
-                      <div class="blog-comments__content">
-                        <div class="blog-comments__meta text-muted">
-                          <a class="text-secondary" href="#">James Johnson</a> on
-                          <a class="text-secondary" href="#">Hello World!</a>
-                          <span class="text-muted">– 5 days ago</span>
-                        </div>
-                        <p class="m-0 my-1 mb-2 text-muted">My money's in that office, right? If she start giving me...</p>
-                        <div class="blog-comments__actions">
-                          <div class="btn-group btn-group-sm">
-                            <button type="button" class="btn btn-white">
-                              <span class="text-success">
-                                <i class="material-icons">check</i>
-                              </span> Approve </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-danger">
-                                <i class="material-icons">clear</i>
-                              </span> Reject </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-light">
-                                <i class="material-icons">more_vert</i>
-                              </span> Edit </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
+					  <?php 
+				}
+					?>	
+                    
                   </div>
+				  <form method="post" action="ComentariosGenerales.php">
                   <div class="card-footer border-top">
                     <div class="row">
                       <div class="col text-center view-report">
-                        <button type="submit" class="btn btn-white">View All Comments</button>
+					
+                        <button type="submit" class="btn btn-white">Ver todos los comentarios</button>
                       </div>
                     </div>
                   </div>
+				  </form>
                 </div>
               </div>
               <!-- End Discussions Component -->
-
-
               <!-- Top Referrals Component -->
               <div class="col-lg-3 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small">
@@ -546,21 +446,13 @@ while($m = mysqli_fetch_array($RankingProductos))
 					  <?php
 }
 ?>
-                      
                     </ul>
                   </div>
                   <div class="card-footer border-top">
                     <div class="row">
-                      <div class="col">
-                        <select class="custom-select custom-select-sm">
-                          <option selected>Last Week</option>
-                          <option value="1">Today</option>
-                          <option value="2">Last Month</option>
-                          <option value="3">Last Year</option>
-                        </select>
-                      </div>
+                      
                       <div class="col text-right view-report">
-                        <a href="#">Full report &rarr;</a>
+                       <a href="Liquidaciones.php">Ver todos &rarr;</a>
                       </div>
                     </div>
                   </div>
@@ -574,24 +466,7 @@ while($m = mysqli_fetch_array($RankingProductos))
 			  <!--GRAFICO-->
     <div id="chart_div"></div>
 	<div id="chart2_div"></div>
-			<!--  <div class="col-lg col-md-6 col-sm-6 mb-4">
-                <div class="stats-small stats-small--1 card card-small">
-                  <div class="card-body p-0 d-flex">
-                    <div class="d-flex flex-column m-auto">
-                      <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Productos más buscados</span>
-						<h5> Zapatillas</h5>
-                        <h6 class="stats-small__value count my-3">2,390</h6>
-                      </div>
-                      <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
-                      </div>
-                    </div>
-                    <canvas height="120" class="blog-overview-stats-small-1"></canvas>
-                  </div>
-                </div>
-              </div>
-			  -->
+			
 			  
 			  
             </div>
@@ -621,6 +496,38 @@ while($m = mysqli_fetch_array($RankingProductos))
         </main>
       </div>
     </div>
+	
+	<div class="color-switcher animated" >
+      <div class="actions mb-4">
+	  
+	  <form action="ImprimirEstadisticas.php" method="post" id="make_pdf" >
+	  <input type="hidden" name="hidden_html" id="hidden_html"/>
+        <button type="submit" class="mb-2 btn btn-sm btn-primary w-100 d-table mx-auto extra-action" name="CrearPdf" id="CrearPdf">
+          <i class="material-icons"></i> Descargar Todo</a></button>
+        </form>
+		  <form action="ImprimirLiquidacion.php" method="post" id="make_pdf" >
+		<button type="submit" class="mb-2 btn btn-sm btn-white w-100 d-table mx-auto extra-action" name="CrearPdf" id="CrearPdf" >
+          <i class="material-icons"></i> Liquidación</a></button>
+      </div>
+	  </form>
+	  
+	 
+	  
+	 
+      <div class="social-wrapper">
+        <div class="social-actions">
+          <h5>
+		  Pasar a PDF
+          </h5>
+        </div>
+       <div class="loading-overlay">
+          <div class="spinner"></div>
+        </div>
+      </div>
+      <div class="close">
+        <i class="material-icons"><b>X</b></i>
+      </div>
+    </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -633,3 +540,15 @@ while($m = mysqli_fetch_array($RankingProductos))
     <script src="scripts/app/app-blog-overview.1.1.0.js"></script>
   </body>
 </html>
+
+<script>
+	  $(document).ready(function(){
+
+		$('#CrearPdf').click(function(){
+											$('#hidden_html').val($('#testing').html());
+											$('#make_pdf').submit();
+										});
+		 
+	  });
+	  
+	  </script>

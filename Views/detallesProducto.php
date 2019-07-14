@@ -60,10 +60,70 @@ if(isset($_POST["detalles"]))
 		$conexion = new Conexion;
 
 		$idProducto = $_POST["Productoid"];
+		$NombreProducto = $_POST["ProductoNombre"];
+
 	
+	
+	//Traer el articulo que presiono ver más	
 	$consulta="SELECT * FROM producto WHERE id = '".$idProducto."'";
 	
+	
+	//Para mostrar los articulos relacionados a la busqueda hecha con un nombre parecido al producto que esta viendo
+	$consultaExtra="SELECT * FROM producto WHERE nombre like '%".$NombreProducto."%'";
+	
+	
+	//Saber si se hizo la compra, si el usuario esta en la tabla compra
+	//Si está, traer toda esa fila.
+	//Mostrar el chat
+	
+		//Id del usuario que esta usando
+		$id_Usuario = $_SESSION['id'];
+		
+		
+//Traigo el id del Vendedor		
+$productos ="SELECT * FROM producto WHERE id = '".$idProducto."'";	
+$listaProductos= $conexion->realizarConsulta($productos);
+while($dato = mysqli_fetch_array($listaProductos))
+{
+	$idVendedor = $dato['idUsuario'];
+}
+
+//Traigo nombre del Vendedor
+$vendedor = "SELECT * FROM USUARIO WHERE id = '".$idVendedor."'";
+$resultadoVendedor= $conexion->realizarConsulta($vendedor);
+while($dato = mysqli_fetch_array($resultadoVendedor))
+{
+	$nombreVendedor = $dato['Nombre'];
+}
+
+
+		$chatprivado ="SELECT * FROM comentarios WHERE  idUsuario='".$id_Usuario."' and idProducto = '".$idProducto."' and idVendedor = '".$idVendedor."' or idVendedor = '".$id_Usuario."' and idProducto = '".$idProducto."' limit 1";
+	
+	
+	$estado ="SELECT * 
+				FROM compra as c
+				inner join producto as p on c.idProducto = p.id 
+				WHERE c.idUsuario = '".$id_Usuario."' and c.idProducto =  '".$idProducto."'
+				or p.idUsuario = '".$id_Usuario."' and	c.idProducto =  '".$idProducto."'" ;
+	
 	$resultado= $conexion->realizarConsulta($consulta);
+	$extra= $conexion->realizarConsulta($consultaExtra);
+	$consultaEstado= $conexion->realizarConsulta($estado);
+	
+	$privado= $conexion->realizarConsulta($chatprivado);
+	$EstadoDePrivado= $conexion->cantidadDeFilas($consultaEstado);
+	
+
+	
+	//$publico= $conexion->realizarConsulta($chatpublico);
+	
+	
+	
+	
+		//Contiene los metodos de la categoria mas buscada
+		require_once("CategoriasMasVisitadas.php");
+		include_once("ProductoMasVisitado.php");
+
 }
 	?>
 	
@@ -264,7 +324,17 @@ while($f=mysqli_fetch_array($resultado)){
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Descripcion</a></li>
 								<li><a data-toggle="tab" href="#tab2">Details</a></li>
-								<li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
+								<li><a data-toggle="tab" href="#tab3">Comentarios</a></li>
+								
+<?php
+				if($EstadoDePrivado!=0)
+					{
+?>	
+								<li><a data-toggle="tab" href="#tab4">Privado</a></li>
+
+<?php
+					}
+?>	
 							</ul>
 							<div class="tab-content">
 								<div id="tab1" class="tab-pane fade in active">
@@ -375,6 +445,45 @@ while($f=mysqli_fetch_array($resultado)){
 ?>
 
 								</div>
+								
+									<div id="tab4" class="tab-pane fade in">
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="product-reviews">
+											
+											<div class="single-review">
+
+												<div class="review-heading">
+
+														
+													</div>
+													<div class="review-body">
+													<form method="post" action="Mensajeria.php">
+													<button type="submit" class="btn-link text-center"> Ver todos los mensajes </button>
+													<input type="hidden" name="Vendedor" value="<?php echo $idVendedor;?>">
+													<input type="hidden" name="Usuario" value="<?php echo $id_Usuario;?>">
+													<input type="hidden" name="Producto" value="<?php echo $idProducto;?>">
+													</form>
+													
+													</div>
+												</div>
+
+											</div>
+										</div>
+										
+									</div>
+
+
+
+								</div>
+								
+								
+								
+								
+								
+								
+								
 							</div>
 						</div>
 					</div>
@@ -398,7 +507,7 @@ while($f=mysqli_fetch_array($resultado)){
 	
 	
 	
-	<!-- section -->
+<!-- section -->
 	<div class="section">
 		<!-- container -->
 		<div class="container">
@@ -411,23 +520,25 @@ while($f=mysqli_fetch_array($resultado)){
 					</div>
 				</div>
 				<!-- section title -->
+
+<?php
+	while($f=mysqli_fetch_array($extra)){			
+?>				
 				
-
 				<!-- Product Single -->
 				<div class="col-md-3 col-sm-6 col-xs-6">
 					<div class="product product-single">
 						<div class="product-thumb">
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-							
-							
-								
-	
-								<img src="./img/product04.jpg" alt="">
-							
-						
+							<form method="post" action="detallesProducto.php">
+							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+							<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
+							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
+							</form>
+							<img src="./imgPublicadas/<?php echo $f["imgprincipal"];?>" alt="">
 						</div>
 						<div class="product-body">
-							<h3 class="product-price">$32.50</h3>
+							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
 							<div class="product-rating">
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star"></i>
@@ -435,107 +546,25 @@ while($f=mysqli_fetch_array($resultado)){
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star-o empty"></i>
 							</div>
-							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+							<h2 class="product-name"><a href="#"><?php echo $f["nombre"];?></a></h2>
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+								<form method="post" action="detallesProducto.php">
+						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
+						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
+						<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
+						</form>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- /Product Single -->
-
-				<!-- Product Single -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="product product-single">
-						<div class="product-thumb">
-							<div class="product-label">
-								<span>New</span>
-							</div>
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-							<img src="./img/product03.jpg" alt="">
-						</div>
-						<div class="product-body">
-							<h3 class="product-price">$32.50</h3>
-							<div class="product-rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-o empty"></i>
-							</div>
-							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-							<div class="product-btns">
-								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Product Single -->
-
-				<!-- Product Single -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="product product-single">
-						<div class="product-thumb">
-							<div class="product-label">
-								<span class="sale">-20%</span>
-							</div>
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-							<img src="./img/product02.jpg" alt="">
-						</div>
-						<div class="product-body">
-							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-							<div class="product-rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-o empty"></i>
-							</div>
-							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-							<div class="product-btns">
-								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Product Single -->
-
-				<!-- Product Single -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="product product-single">
-						<div class="product-thumb">
-							<div class="product-label">
-								<span>New</span>
-								<span class="sale">-20%</span>
-							</div>
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-							<img src="./img/product01.jpg" alt="">
-						</div>
-						<div class="product-body">
-							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-							<div class="product-rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-o empty"></i>
-							</div>
-							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-							<div class="product-btns">
-								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Product Single -->
+<?php
+	}
+	?>
+				
 			</div>
 			<!-- /row -->
 		</div>
