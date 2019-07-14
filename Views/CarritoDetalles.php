@@ -151,7 +151,7 @@ require_once("conexionBD/conexion.php");// incluir la configuracion de conexion 
 					
 						
 						
-						<td><a href="listarPublicaciones.php?cod=<?php echo $f['id'];?>">
+						<td><a href="eliminarProductoCarrito.php?cod=<?php echo $f['id'];?>">
 
 							
 							<i class="fa fa-trash"></i>
