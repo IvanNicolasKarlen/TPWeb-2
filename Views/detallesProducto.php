@@ -202,10 +202,21 @@ while($f=mysqli_fetch_array($resultado)){
                 </ul>
                 <div class="tab-content">
                     <div id="tab1" class="tab-pane fade in active">
-                        <p><?php echo $f["descripcion"]; ?></p>
-                    </div>
-                    <div id="tab2" class="tab-pane fade in active">
+                        <p><?php echo "Descripción: " . $f["descripcion"]; ?></p>
                         <p><?php echo "Envio: " . $f["envio"]; ?></p>
+                    </div>
+                    <div id="tab2" class="tab-pane fade in">
+                        <?php
+                        if($f["latitud"]=="undefined"||$f["latitud"]==null){
+                            echo "<p>El vendedor no ha definido la ubicación del producto.</p>";
+                        }else{
+                           echo  "<div id='map' style='width: 100%; height:200px'></div>
+                                <input style='display: none' name='lat' type='number' id='lat' value='$f[latitud]'>
+                            <input style='display: none' name='lng' type='number' id='lng' value='$f[longitud]'>";
+                        }
+
+
+                        ?>
                     </div>
                     <div id="tab3" class="tab-pane fade in">
  <?php
@@ -373,6 +384,9 @@ $valoraciones=$conexion->traerValoraciones($idU);
     <?php
     include_once("footer.php");
     ?>
+    <script src="js/maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiq3xISXSZYgkd9GDAOdajy4NK2d3L7dY&callback=iniciarMap2"></script>
+
 </body>
 
 </html>
