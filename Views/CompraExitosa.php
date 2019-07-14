@@ -27,6 +27,9 @@ $compras = $productosComprados->num_rows;
 				$resul=$conexion->realizarConsulta($insertar);
   }
  
+   //Vaciar CARRITO
+  $eliminar = "DELETE FROM productocarrito WHERE idUsuario=$id_Usuario";
+  $conexion->realizarConsulta($eliminar);
  
 			
 			
