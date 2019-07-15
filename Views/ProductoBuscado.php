@@ -188,7 +188,18 @@ session_start();
 				<!-- /ASIDE -->
 
 				
-															
+															<!--INMUEBLES-->
+<?php
+if(isset($_POST['Inmuebles']))
+{
+require_once("conexionBD/conexion.php");
+
+$busca= "Inmuebles";
+require_once("FiltroCategorias.php");
+}
+?>						
+				
+				
 
 															<!--AUTOS-->
 <?php
@@ -205,13 +216,15 @@ require_once("FiltroCategorias.php");
 				
 				
 				
-															<!--Inmuebles->
+				
+				
+															<!--SERVICIOS-->
 <?php
-if(isset($_POST['Inmuebles']))
+if(isset($_POST['Servicios']))
 {
 require_once("conexionBD/conexion.php");
 
-$busca= "Inmuebles";
+$busca= "Servicios";
 
 require_once("FiltroCategorias.php");
 }
@@ -230,7 +243,8 @@ require_once("FiltroCategorias.php");
 ?>
 				
 		
-				
+
+
 				
 				
 															<!--TODOS LOS PRODUCTOS-->
@@ -253,6 +267,7 @@ $busqueda=("SELECT * FROM producto WHERE id = '".$var."' OR nombre LIKE '%".$var
 
 
 }
+//$busqueda=("SELECT * FROM producto WHERE CONCAT_WS(' ',nombre,genero) LIKE '%".$busca."%'  ");
 
 $resultado = $conexion->realizarConsulta($busqueda);
 
@@ -281,15 +296,7 @@ $resultado = $conexion->realizarConsulta($busqueda);
                     //Comienzo a rellenar los campos con los datos obtenidos con el select
                     while($f=mysqli_fetch_array($resultado))
 					{
-						//buscar img principal del producto
-						 $consulta2="SELECT * FROM imgprincipal WHERE idProducto= '".$f['id']."'";
-						 $resultado2 = $conexion->realizarConsulta($consulta2);
                     ?>
-					
-					<!-- mostrar img principales -->
-						<?php
-							while($g=mysqli_fetch_array($resultado2)){
-						?>
 
                     </thead>
                     <tbody>
@@ -301,16 +308,13 @@ $resultado = $conexion->realizarConsulta($busqueda);
 						<div class="product-thumb">
 						<form method="post" action="detallesProducto.php">
 							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
 							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 							</form>
 							
 							<img style="height:270px;width:227px;margin:auto;margin-left: auto;margin-right: auto;display: block;
-							"src="imgPublicadas/<?php echo $g["nombre"];?>"  alt="">
-							
-							
-							<?php
-								}//fin while para mostrar img principal
-							?>
+							"src="imgPublicadas/<?php echo $f["imgprincipal"];?>"  alt="">
 						</div>
 						<div class="product-body">
 							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
@@ -330,6 +334,8 @@ $resultado = $conexion->realizarConsulta($busqueda);
 						<form method="post" action="detallesProducto.php">
 						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
 						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
+						<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
+						<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 						</form>
 							</div>
 						</div>
