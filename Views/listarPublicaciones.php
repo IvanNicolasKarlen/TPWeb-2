@@ -1,11 +1,12 @@
 <?php
 require_once("verificacionSesion.php");
 
+include_once("header.php");
 		//Consultamos los productos a listar
 		require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
 		//Abrir conexion
 		$conexion = new Conexion;
-
+$id = $_SESSION['id'];
 
  		$consulta="SELECT * FROM producto WHERE idUsuario='$id'";
 		
@@ -17,7 +18,6 @@ require_once("verificacionSesion.php");
 		
 		$modificado=isset($_GET["mensaje"]) ? $_GET["mensaje"] : "";
 
-include_once("header.php");
 
 ?>
 

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f96dc65-ba76-4360-bcfc-0685c0427f42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Views/conexionBD/conexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/conexionBD/conexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/conexionBD/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Views/conexionBD/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/detallesProducto.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/detallesProducto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/listarPublicaciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/listarPublicaciones.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,27 +14,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/SubirProducto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2615">
-              <caret line="130" column="19" lean-forward="true" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
-              <folding>
-                <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-918">
-              <caret line="177" column="30" lean-forward="true" selection-start-line="177" selection-start-column="30" selection-end-line="177" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/conexionBD/conexion.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -46,14 +23,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="140" column="56" selection-start-line="140" selection-start-column="56" selection-end-line="140" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Views/listarPublicaciones.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/verificacionSesion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
+            <state relative-caret-position="9030">
               <caret line="430" column="77" selection-start-line="430" selection-start-column="77" selection-end-line="430" selection-end-column="77" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -61,7 +61,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
+            <state relative-caret-position="28749">
               <caret line="1372" column="20" selection-start-line="1372" selection-start-column="20" selection-end-line="1372" selection-end-column="20" />
             </state>
           </provider>
@@ -178,7 +178,6 @@
         <option value="$PROJECT_DIR$/Views/Cliente/header.php" />
         <option value="$PROJECT_DIR$/Views/Cliente/procesaSubirProducto.php" />
         <option value="$PROJECT_DIR$/Views/Cliente/registroExitoso.php" />
-        <option value="$PROJECT_DIR$/Views/listarPublicaciones.php" />
         <option value="$PROJECT_DIR$/Views/productoCliente.php" />
         <option value="$PROJECT_DIR$/Views/registroExitoso.php" />
         <option value="$PROJECT_DIR$/Views/verificacionSesion.php" />
@@ -193,7 +192,6 @@
         <option value="$PROJECT_DIR$/Views/conexionBD/config.ini" />
         <option value="$PROJECT_DIR$/Views/css/main.css" />
         <option value="$PROJECT_DIR$/Views/registrarse.php" />
-        <option value="$PROJECT_DIR$/Views/header.php" />
         <option value="$PROJECT_DIR$/Views/js/localizacion.js" />
         <option value="$PROJECT_DIR$/Views/js/maps.js" />
         <option value="$PROJECT_DIR$/logintp.sql" />
@@ -201,6 +199,8 @@
         <option value="$PROJECT_DIR$/Views/SubirProducto.php" />
         <option value="$PROJECT_DIR$/Views/detallesProducto.php" />
         <option value="$PROJECT_DIR$/Views/conexionBD/conexion.php" />
+        <option value="$PROJECT_DIR$/Views/header.php" />
+        <option value="$PROJECT_DIR$/Views/listarPublicaciones.php" />
       </list>
     </option>
   </component>
@@ -306,16 +306,18 @@
       <workItem from="1562020300140" duration="14078000" />
       <workItem from="1562097519929" duration="6471000" />
       <workItem from="1563155707190" duration="2108000" />
+      <workItem from="1563158397025" duration="352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61591000" />
+    <option name="totallyTimeSpent" value="61943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.147651" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14966443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -442,24 +444,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/verificacionSesion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
           <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/listarPublicaciones.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="85" column="46" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -524,20 +512,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/header.php">
+    <entry file="file://$PROJECT_DIR$/Views/SubirProducto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        <state relative-caret-position="2730">
+          <caret line="130" column="19" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/SubirProducto.php">
+    <entry file="file://$PROJECT_DIR$/Views/Index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2615">
-          <caret line="130" column="19" lean-forward="true" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#div#5;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="3717">
+          <caret line="177" column="30" selection-start-line="177" selection-start-column="30" selection-end-line="177" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9030">
+          <caret line="430" column="77" selection-start-line="430" selection-start-column="77" selection-end-line="430" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28749">
+          <caret line="1372" column="20" selection-start-line="1372" selection-start-column="20" selection-end-line="1372" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -569,35 +568,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
-          <caret line="177" column="30" lean-forward="true" selection-start-line="177" selection-start-column="30" selection-end-line="177" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="1372" column="20" selection-start-line="1372" selection-start-column="20" selection-end-line="1372" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/detallesProducto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="430" column="77" selection-start-line="430" selection-start-column="77" selection-end-line="430" selection-end-column="77" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/conexionBD/conexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="160" column="121" selection-start-line="160" selection-start-column="121" selection-end-line="160" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="140" column="56" selection-start-line="140" selection-start-column="56" selection-end-line="140" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/verificacionSesion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/listarPublicaciones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
