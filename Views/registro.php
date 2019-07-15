@@ -16,8 +16,7 @@ if(isset($_POST["botonRegistrar"])){ //Si completa una vez el campo usuario
  
 	//Abrir conexion
 	$conexion = new Conexion();
- 
-		//$consulta="select * from usuario where password = '$pass' and email = '$email'";
+
 		
 		$consultar=$conexion->controlRegistrar($email);
 

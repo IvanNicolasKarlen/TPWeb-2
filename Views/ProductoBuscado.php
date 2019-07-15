@@ -312,9 +312,11 @@ $resultado = $conexion->realizarConsulta($busqueda);
 							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
 							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 							</form>
-							
+                            <?php
+                            $img=$conexion->traerImgPrincipal($f['id']);
+                            ?>
 							<img style="height:270px;width:227px;margin:auto;margin-left: auto;margin-right: auto;display: block;
-							"src="imgPublicadas/<?php echo $f["imgprincipal"];?>"  alt="">
+							"src="imgPublicadas/<?php echo $img;?>"  alt="">
 						</div>
 						<div class="product-body">
 							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>

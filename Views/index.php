@@ -158,7 +158,12 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 								<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
 							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 								</form>
-                                    <img src="imgPublicadas/<?php echo $f["imgprincipal"];?>" style='height: 400px;'>
+                                    <?php
+                                    $img=$conect->traerImgPrincipal($f['id']);
+                                    ?>
+                                    <img src="imgPublicadas/<?php echo $img;?>" style='height:
+                                     400px;'>
+
                                 </div>
                                 <div class='product-body'>
                                     <h3 class='product-price'><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>

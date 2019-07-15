@@ -108,7 +108,7 @@ $errorI="";
 					exit();
 	  
 			}else{
-						$errorI="Error al subir el producto. Intente nuevamenteee";
+						$errorI="Error al subir el producto. Intente nuevamente";
 						header("location:subirProducto.php?error=$errorI");
 				 }	 
 				

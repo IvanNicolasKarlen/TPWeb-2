@@ -190,11 +190,19 @@ class Conexion{
 		}
 		$c->close();
 		$array=$this->traerTransaccion($idU);
+		if($array["total"]==null){
+			$this->realizarConsulta("INSERT INTO transaccion(idPorcentaje,idUsuario,total)
+												VALUES(1,$idU,0)");
+			$array=$this->traerTransaccion($idU);
+
+		};
 		$valorp=$this->traerPorcentaje($array["idPorcentaje"]);
 		$final=$monto*$valorp;
-		$c->prepare("UPDATE transaccion SET total=? WHERE idUsuario=?");
-		$c->bind_param("di",$final,$idU);
-		return $c->execute();
+		$mod=$this->msq->prepare("UPDATE transaccion SET total=? WHERE idUsuario=?");
+		$mod->bind_param("di",$final,$idU);
+		$mod->execute();
+	
+
 	}
 
 	public function traerPorcentaje($idP){
@@ -210,7 +218,21 @@ class Conexion{
 	}
 
 	public function ventasTotales($idU){
-		$c = $this->msq->prepare("SELECT ventas FROM ")
+		$c = $this->realizarConsulta("SELECT ventas from producto where idUsuario=$idU");
+		$total=0;
+		while($v=mysqli_fetch_array($c)){
+			$total = $total+$v["ventas"];
+		}
+		return $total;
+	}
+	public function traerImgPrincipal($idP){
+		$consulta=$this->msq->prepare("SELECT nombre FROM imgprincipal WHERE idProducto=?");
+		$consulta->bind_param("i",$idP);
+		$consulta->execute();
+		$nombrep="";
+		$consulta->bind_result($nombrep);
+		$consulta->fetch();
+		return $nombrep;
 	}
 }
 

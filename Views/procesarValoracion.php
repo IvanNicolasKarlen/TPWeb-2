@@ -12,5 +12,6 @@ $mensaje=$conexion->insertarValoracion($idUsuario,$idVendedor,$comentario,$punta
 
 $loc = new Direccion();
 header($loc->index($mensaje));
+exit();
 ?>
 

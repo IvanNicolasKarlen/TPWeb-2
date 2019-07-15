@@ -19,10 +19,10 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		case 'usuario': echo '<script> alert("Ingresado")</script>';
 				/* Asignamos A Sessión el valor de la columna Nombre*/
 				 $_SESSION['nombre']= $consultar['nom'];
+					$_SESSION['id'] = $consultar['id'];
+			$conexion->modificarTransaccion($_SESSION['id']);
 				 $_SESSION['username'] = $email;
-				 $_SESSION['id'] = $consultar['id'];
 					header($direccion->carpRaiz("Index"));
-					$conexion->modificarTransaccion($consultar['id']);
 					exit();
 					break;
 		case 'administrador': echo '<script> alert("Ingresado")</script>';
