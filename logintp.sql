@@ -6,7 +6,9 @@
 -- Tiempo de generación: 15-07-2019 a las 06:07:22
 -- Versión del servidor: 5.7.25-log
 -- Versión de PHP: 7.3.2
-
+drop database if exists logintp;
+create database logintp;
+use logintp; 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -310,6 +312,7 @@ INSERT INTO `usuario` (`id`, `email`, `password`, `Nombre`, `estado`, `pais`, `l
 -- Estructura de tabla para la tabla `valoracion`
 --
 
+
 CREATE TABLE `valoracion` (
   `id` int(11) NOT NULL,
   `comentario` varchar(600) DEFAULT NULL,
@@ -389,7 +392,26 @@ ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idTipoUser` (`idTipoUser`);
 
---
+CREATE TABLE porcentaje(
+	id int(11) NOT NULL,
+    valor double,
+    primary key (id)
+);
+CREATE TABLE transaccion(
+	id int(11) NOT NULL,
+    idPorcentaje int(11),
+    idUsuario int(11),
+    total int,
+    primary key(id),
+    foreign key(idPorcentaje) references porcentaje(id),
+    foreign key(idUsuario) references usuario(id)
+);
+
+INSERT INTO porcentaje(id,valor)
+VALUES(1,0.4);
+
+INSERT INTO transaccion(idPorcentaje,idUsuario,total)
+VALUES(1,7,105);
 -- Indices de la tabla `valoracion`
 --
 ALTER TABLE `valoracion`
