@@ -1,54 +1,13 @@
 <?php
 session_start();
 
-
+include_once("header.php");
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>E-SHOP HTML Template</title>
 
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
-
-	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
-
-	<!-- Slick -->
-	<link type="text/css" rel="stylesheet" href="css/slick.css" />
-	<link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
-
-	<!-- nouislider -->
-	<link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
-
-	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
-</head>
-
-<body>
-	<header>
-	<?php include_once("header.php"); ?>
-
-	</header>
 
 						
 <?php
@@ -69,7 +28,23 @@ if(isset($_POST["detalles"]))
 	
 	
 	//Para mostrar los articulos relacionados a la busqueda hecha con un nombre parecido al producto que esta viendo
-	$consultaExtra="SELECT * FROM producto WHERE nombre like '%".$NombreProducto."%'";
+	//$consultaExtra="SELECT * FROM producto WHERE nombre like '%".$NombreProducto."%'";
+	
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	//Saber si se hizo la compra, si el usuario esta en la tabla compra
@@ -107,7 +82,7 @@ while($dato = mysqli_fetch_array($resultadoVendedor))
 				or p.idUsuario = '".$id_Usuario."' and	c.idProducto =  '".$idProducto."'" ;
 	
 	$resultado= $conexion->realizarConsulta($consulta);
-	$extra= $conexion->realizarConsulta($consultaExtra);
+//	$extra= $conexion->realizarConsulta($consultaExtra);
 	$consultaEstado= $conexion->realizarConsulta($estado);
 	
 	$privado= $conexion->realizarConsulta($chatprivado);
@@ -503,14 +478,6 @@ $valoraciones=$conexion->traerValoraciones($idU);
 	<!-- /section -->
 
 	
-	
-			
-							
-					
-				
-	
-	
-	
 <!-- section -->
 	<div class="section">
 		<!-- container -->
@@ -525,9 +492,64 @@ $valoraciones=$conexion->traerValoraciones($idU);
 				</div>
 				<!-- section title -->
 
+			
+				
 <?php
-	while($f=mysqli_fetch_array($extra)){			
-?>				
+
+$prod = array();
+
+$array = explode(' ', $NombreProducto);
+
+foreach ($array as $var) {
+ 
+$busquedaaa=("SELECT DISTINCT * FROM producto WHERE nombre LIKE '%".$var."%' OR estado LIKE '%".$var."%' OR precio LIKE '%".$var."%' OR marca LIKE '%".$var."%' OR genero LIKE '%".$var."%' OR palabrasClaves LIKE '%".$var."%' OR descripcion LIKE '%".$var."%'");
+
+$resultadooo = $conexion->realizarConsulta($busquedaaa);
+
+
+		
+while($f=mysqli_fetch_array($resultadooo)){
+
+	
+	
+	$prod[] = $f['id'];
+	
+
+	
+	}//fin while
+	
+	
+	
+	
+	}//fin for
+	
+	?>
+	
+<?php	
+	
+	$ProductoSinRepetidos=array_unique($prod);
+		
+		foreach ($ProductoSinRepetidos as $var) 
+		{
+			
+			
+			$select="SELECT * FROM producto WHERE id=$var";
+			$resultado = $conexion->realizarConsulta($select);
+		
+while($f=mysqli_fetch_array($resultado )){
+	
+
+
+$consulta2="SELECT * FROM imgprincipal WHERE idProducto= '".$f['id']."'";
+$resultado2 = $conexion->realizarConsulta($consulta2);
+
+	
+?>
+
+					<?php
+					while($g=mysqli_fetch_array($resultado2)){
+					 ?>
+			
 				
 				<!-- Product Single -->
 				<div class="col-md-3 col-sm-6 col-xs-6">
@@ -539,7 +561,14 @@ $valoraciones=$conexion->traerValoraciones($idU);
 							<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
 							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
 							</form>
-							<img src="./imgPublicadas/<?php echo $f["imgprincipal"];?>" alt="">
+							<img src="./imgPublicadas/<?php echo $g["nombre"];?>" alt="">
+							<?php
+								}
+							 ?>
+									
+							
+							
+							
 						</div>
 						<div class="product-body">
 							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
@@ -566,9 +595,13 @@ $valoraciones=$conexion->traerValoraciones($idU);
 				</div>
 				<!-- /Product Single -->
 <?php
-	}
+	
+
+	}//fin while
+		}
 	?>
-				
+
+		
 			</div>
 			<!-- /row -->
 		</div>
@@ -584,6 +617,4 @@ $valoraciones=$conexion->traerValoraciones($idU);
     <script src="js/maps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiq3xISXSZYgkd9GDAOdajy4NK2d3L7dY&callback=iniciarMap2"></script>
 
-</body>
 
-</html>
