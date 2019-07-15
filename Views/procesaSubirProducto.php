@@ -91,6 +91,7 @@ $errorI="";
 				$direc= new Direccion();
 				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,genero,categoria,palabrasClaves,descripcion,visitas,idUsuario,latitud,longitud,ventas)
 				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$genero','$categoria','$palabras','$descripcion',0,'$idUsuario','$latitud','$longitud',0)";
+				
 				if($conexion->realizarConsulta($sql))
 			{
 				

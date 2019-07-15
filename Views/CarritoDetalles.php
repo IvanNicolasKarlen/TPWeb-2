@@ -1,9 +1,10 @@
 <?php
 require_once("verificacionSesion.php");
+include_once("header.php"); 
 $mostrar=0;
 ?>
 
-<?php include_once("header.php"); 
+<?php 
 
 require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
 		//Abrir conexion

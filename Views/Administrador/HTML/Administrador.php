@@ -281,7 +281,7 @@ while($m = mysqli_fetch_array($RankingProductos))
                     <div class="d-flex flex-column m-auto">
                       <div class="stats-small__data text-center">
                         <span class="stats-small__label text-uppercase">Comentarios</span>
-                        <h6 class="stats-small__value count my-3">8,147</h6>
+                        <h6 class="stats-small__value count my-3"><?php echo $Comentarios?> </h6>
                       </div>
                       <div class="stats-small__data">
                         <span class="stats-small__percentage stats-small__percentage--decrease">3.8%</span>
@@ -297,7 +297,7 @@ while($m = mysqli_fetch_array($RankingProductos))
                     <div class="d-flex flex-column m-auto">
                       <div class="stats-small__data text-center">
                         <span class="stats-small__label text-uppercase">Ingresos</span>
-                        <h6 class="stats-small__value count my-3">2,413</h6>
+                        <h6 class="stats-small__value count my-3"><?php echo "$".$transaccion?></h6>
                       </div>
                       <div class="stats-small__data">
                         <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
@@ -313,7 +313,7 @@ while($m = mysqli_fetch_array($RankingProductos))
                     <div class="d-flex flex-column m-auto">
                       <div class="stats-small__data text-center">
                         <span class="stats-small__label text-uppercase">Ventas</span>
-                        <h6 class="stats-small__value count my-3"><?php echo $Compras?></h6>
+                        <h6 class="stats-small__value count my-3"><?php echo "$".number_format($Compras,0,'.','.');?></h6>
                       </div>
                       <div class="stats-small__data">
                         <span class="stats-small__percentage stats-small__percentage--decrease">2.4%</span>
@@ -365,21 +365,22 @@ while($m = mysqli_fetch_array($RankingProductos))
                   <div class="card-header border-bottom">
                     <h6 class="m-0">Comentarios</h6>
                   </div>
-                  <div class="card-body p-0">
+      <?php while($U = mysqli_fetch_array($ComentariosPublicos))
+				{
+?>             <div class="card-body p-0">
                     <div class="blog-comments__item d-flex p-3">
                       <div class="blog-comments__avatar mr-3">
-                        <img src="images/avatars/1.jpg" alt="User avatar" /> </div>
+      
+	   <img src="images/avatars/1.jpg" alt="User avatar" /> </div>
                       <div class="blog-comments__content">
-<?php while($U = mysqli_fetch_array($Consultausuario))
-				{
-?>
+
                         <div class="blog-comments__meta text-muted">
                           <a class="text-secondary" href="#"><?php echo $U['Nombre'];?></a>
                           
                           <span class="text-muted">– 3 days ago</span>
 						    <span class="text-muted">- Estado: <?php echo $U['estado']?></span>
                         </div>
-                        <p class="m-0 my-1 mb-2 text-muted">Well, the way they make shows is, they make one show ...</p>
+                        <p class="m-0 my-1 mb-2 text-muted"><?php echo $U['comentario']?></p>
                         
 
 						
@@ -387,19 +388,23 @@ while($m = mysqli_fetch_array($RankingProductos))
                           <div class="btn-group btn-group-sm">
  <?php if($U['estado']=="Bloqueado")
 { ?>              
-
-						   <button type="button" class="btn btn-white">
+						<form action="procesaDesbloquearUsuario.php" method="post">
+						<input type="hidden" name="idUsuario" value="<?php echo $U['id']; ?>">
+						   <button type="submit" name="desbloquear" class="btn btn-white">
                               <span class="text-success">
                                 <i class="material-icons">check</i>
                               </span> Desbloquear </button>
+							  </form>
 							  
 <?php	}if($U['estado']=="ok"){ ?>
 							  
-							  
-                            <button type="button" class="btn btn-white">
+							  <form action="procesaBloquearUsuario.php" method="post">
+							  	<input type="hidden" name="idUsuario" value="<?php echo $U['id']; ?>">
+                            <button type="submit" name="bloquear" class="btn btn-white">
                               <span class="text-danger">
                                 <i class="material-icons">clear</i>
                               </span> Bloquear </button>
+							  </form>
 <?php 
 	}
 ?>	                      
@@ -409,11 +414,12 @@ while($m = mysqli_fetch_array($RankingProductos))
                       </div>
                     </div>
 
-					  <?php 
-				}
-					?>	
+					  	
                     
                   </div>
+<?php 
+				}
+?>
 				  <form method="post" action="ComentariosGenerales.php">
                   <div class="card-footer border-top">
                     <div class="row">
@@ -435,13 +441,13 @@ while($m = mysqli_fetch_array($RankingProductos))
                   </div>
                   <div class="card-body p-0">
                     <ul class="list-group list-group-small list-group-flush">
-                      <?php			  while($f=mysqli_fetch_array($ConsultaUsuario))
-{
-	?>
+<?php			  while($f=mysqli_fetch_array($ConsultaUsuario))
+					{
+?>
 					  
 					  <li class="list-group-item d-flex px-3">
                         <span class="text-semibold text-fiord-blue"><?php echo $f['Nombre']; ?></span>
-                        <span class="ml-auto text-right text-semibold text-reagent-gray">19,291</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><?php echo "$".number_format($f['total'],0,'.','.');?></span>
                       </li>
 					  <?php
 }

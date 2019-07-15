@@ -14,11 +14,11 @@ require_once ("MontosInvolucrados.php");
 include_once ("../../conexionBD/conexion.php");
 $conexion = new Conexion();
 
-$query ="SELECT nombre,visitas, count(*) as number FROM categoria GROUP BY nombre limit 5";
+$query ="SELECT nombre,visitas, count(*) as number FROM categoria GROUP BY nombre ";
 
 $categoria = $conexion->realizarConsulta($query);
 
-$query ="SELECT nombre,visitas, count(*) as number FROM producto GROUP BY nombre limit 5";
+$query ="SELECT nombre,visitas, count(*) as number FROM producto GROUP BY nombre";
 
 $producto = $conexion->realizarConsulta($query);
 
@@ -188,8 +188,11 @@ $producto = $conexion->realizarConsulta($query);
 		  <div align="center">
    <form method="post" id="make_pdf" action="CrearPdf.php">
     <input type="hidden" name="hidden_html" id="hidden_html" />
-    <button type="button" name="create_pdf" id="create_pdf" class="btn btn-danger btn-xs">Descargar</button>
+    <button type="button" name="create_pdf" id="create_pdf" class="btn btn-primary">Descargar</button>
    </form>
+   <form action="Administrador.php">
+  <br> <button type="submit" class="btn btn-danger btn-xs">Regresar</button>
+  </form>
 	 </div>
     
 	  

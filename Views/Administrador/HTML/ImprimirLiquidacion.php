@@ -4,17 +4,21 @@ session_start();
 
 include_once ("../../conexionBD/conexion.php");
 $conexion = new Conexion();
-
-
-
 require_once ("MontosInvolucrados.php");
 
-include_once ("../../conexionBD/conexion.php");
-$conexion = new Conexion();
+
+
+
 
 $query ="SELECT nombre,visitas, count(*) as number FROM categoria GROUP BY nombre limit 5";
-
 $categoria = $conexion->realizarConsulta($query);
+
+$trans ="SELECT Nombre,total, count(*) as number 
+		FROM transaccion as trans
+		inner join usuario as user on trans.idUsuario = user.id
+		GROUP BY nombre ";
+$transaccion = $conexion->realizarConsulta($trans);
+
 
 
 
@@ -55,23 +59,19 @@ $categoria = $conexion->realizarConsulta($query);
 
       function drawTable() {
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Name');
-        data.addColumn('number', 'Salary');
-        data.addColumn('boolean', 'Full Time Employee');
-        data.addRows([
-          ['Mike',  {v: 10000, f: '$10,000'}, true],
-          ['Jim',   {v:8000,   f: '$8,000'},  false],
-          ['Alice', {v: 12500, f: '$12,500'}, true],
-          ['Bob',   {v: 7000,  f: '$7,000'},  true]
-		  
-		  <?php
-     foreach($liquidaciones as $row)
-     {
-      echo "['".$row["nombre"]."', ".$row["debe"]."],";
-     }
-     ?>
+        data.addColumn('string', 'Usuario');
+        data.addColumn('number', 'Debe');
+        data.addRows([ 
+	<?php
+while($liquidaciones = mysqli_fetch_array($transaccion))
+{
+?>
+	   [<?php echo "'".$liquidaciones["Nombre"]."'";?>, <?php echo $liquidaciones["total"];?>],
+	   
+<?php
+}
+?>	   
         ]);
-
         var table = new google.visualization.Table(document.getElementById('table_div'));
 
         table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
@@ -81,22 +81,25 @@ $categoria = $conexion->realizarConsulta($query);
    
   </head>
   <body>
-   <div class="container" id="testing">  
-            <h3 class=" text-center ">Liquidación</h3> 
-    <!-- Small Stats Blocks -->
-            
-  
-	 <div id="table_div"></div>
-	 
+   <div class="container" >  
+            <h1 class="text-center" >Liquidación</h1> 
+		<div id="testing">
+	 <div id="table_div" ></div>
+	</div>
 
    
         </div>
 		
 		  <div align="center">
-   <form method="post" id="make_pdf" action="CrearPdf.php">
-    <input type="hidden" name="hidden_html" id="hidden_html" />
-    <button type="button" name="create_pdf" id="create_pdf" class="btn btn-danger btn-xs">Descargar</button>
+
+   <form method="post" id="make_pdf" action="Liquidacion1.php">
+   <br> <input type="hidden" name="hidden_html" id="hidden_html" />
+
+	 <button type="button" name="create_pdf" id="create_pdf" class="btn btn-primary">Descargar</button>
    </form>
+   <form action="Administrador.php">
+  <br> <button type="submit" class="btn btn-danger btn-xs">Regresar</button>
+  </form>
 	 </div>
     
 	  

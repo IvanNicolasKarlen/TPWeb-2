@@ -162,67 +162,68 @@ require_once ("MontosInvolucrados.php");
             <div class="row">
             
               
-              <!-- PERMITIR O BLOQUEAR -->
+            <!-- Discussions Component -->
               <div class="col-lg-12 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small blog-comments">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0 text-center">Comentarios</h6>
+                    <h6 class="m-0">Comentarios</h6>
                   </div>
-                  <div class="card-body p-0">
+      <?php while($U = mysqli_fetch_array($ComentariosGenerales))
+				{
+?>             <div class="card-body p-0">
                     <div class="blog-comments__item d-flex p-3">
                       <div class="blog-comments__avatar mr-3">
-                        <img src="images/avatars/1.jpg" alt="User avatar" /> </div>
+      
+	   <img src="images/avatars/1.jpg" alt="User avatar" /> </div>
                       <div class="blog-comments__content">
-                        
-				<?php while($U = mysqli_fetch_array($Consultausuario))
-				{
-					?>
-						<div class="blog-comments__meta text-muted">
-                          <a class="text-secondary" href="#"><?php echo $U['Nombre'];?></a> on
-                          <a class="text-secondary" href="#">Hello World!</a>
+
+                        <div class="blog-comments__meta text-muted">
+                          <a class="text-secondary" href="#"><?php echo $U['Nombre'];?></a>
                           
-						  <span class="text-muted">- Estado: <?php echo $U['estado']?></span>
+                          <span class="text-muted">– 3 days ago</span>
+						    <span class="text-muted">- Estado: <?php echo $U['estado']?></span>
                         </div>
-                        <p class="m-0 my-1 mb-2 text-muted">Well, the way they make shows is, they make one show ...</p>
-           
-						<?php if($U['estado']=="Bloqueado")
-							{ ?>
-					<div class="blog-comments__actions">
-					
+                        <p class="m-0 my-1 mb-2 text-muted"><?php echo $U['comentario']?></p>
+                        
 
-					<form method="post" action="procesaDesbloquearUsuario.php">
-
-						 <div class="btn-group btn-group-sm">
-						 <input type="hidden" name="idUsuario" value="<?php echo $U['id'];?>">
-                            <button type="submit" name="desbloquear" class="btn btn-white">
+						
+						<div class="blog-comments__actions">
+                          <div class="btn-group btn-group-sm">
+ <?php if($U['estado']=="Bloqueado")
+{ ?>              
+						<form action="procesaDesbloquearUsuario.php" method="post">
+						<input type="hidden" name="idUsuario" value="<?php echo $U['id']; ?>">
+						   <button type="submit" name="desbloquear" class="btn btn-white">
                               <span class="text-success">
                                 <i class="material-icons">check</i>
                               </span> Desbloquear </button>
 							  </form>
-					<?php	}if($U['estado']=="ok"){ ?>
-							<form method="post" action="procesaBloquearUsuario.php">
-							<input type="hidden" name="idUsuario" value="<?php echo $U['id'];?>">
-							<button type="submit" name="bloquear" class="btn btn-white">
+							  
+<?php	}if($U['estado']=="ok"){ ?>
+							  
+							  <form action="procesaBloquearUsuario.php" method="post">
+						<input type="hidden" name="idUsuario" value="<?php echo $U['id']; ?>">
+                            <button type="submit" name="bloquear" class="btn btn-white">
                               <span class="text-danger">
                                 <i class="material-icons">clear</i>
                               </span> Bloquear </button>
-							  
-					<?php 
-								}
-					?>	
 							  </form>
-                            
+<?php 
+	}
+?>	                      
                           </div>
-                        </div>
-					<?php 
-				}
-					?>				
+                        </div>	
 						
                       </div>
                     </div>
-                    
+
+					  	
                     
                   </div>
+<?php 
+				}
+?>
+				  
                 </div>
               </div>
               <!-- End Discussions Component -->

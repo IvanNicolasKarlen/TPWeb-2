@@ -67,8 +67,8 @@ class Conexion{
 		$consulta->store_result();
 		$em="";
 		$consulta->bind_result($em); //asignamos la variable donde guardar el resultado
-		$consulta->num_rows();
-		return $consulta->fetch(); //los trae y guarda en la variable asignada arriba ($id)
+		$consulta->fetch();
+		return $em ; //los trae y guarda en la variable asignada arriba ($id)
 		
 	 }
 

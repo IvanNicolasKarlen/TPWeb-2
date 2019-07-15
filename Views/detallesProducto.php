@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once("verificacionSesion.php");
 
 include_once("header.php");
 
@@ -25,31 +25,6 @@ if(isset($_POST["detalles"]))
 	
 	//Traer el articulo que presiono ver más	
 	$consulta="SELECT * FROM producto WHERE id = '".$idProducto."'";
-	
-	
-	//Para mostrar los articulos relacionados a la busqueda hecha con un nombre parecido al producto que esta viendo
-	//$consultaExtra="SELECT * FROM producto WHERE nombre like '%".$NombreProducto."%'";
-	
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//Saber si se hizo la compra, si el usuario esta en la tabla compra
-	//Si está, traer toda esa fila.
-	//Mostrar el chat
 	
 		//Id del usuario que esta usando
 		$id_Usuario = $_SESSION['id'];
@@ -82,19 +57,12 @@ while($dato = mysqli_fetch_array($resultadoVendedor))
 				or p.idUsuario = '".$id_Usuario."' and	c.idProducto =  '".$idProducto."'" ;
 	
 	$resultado= $conexion->realizarConsulta($consulta);
-//	$extra= $conexion->realizarConsulta($consultaExtra);
 	$consultaEstado= $conexion->realizarConsulta($estado);
 	
 	$privado= $conexion->realizarConsulta($chatprivado);
 	$EstadoDePrivado= $conexion->cantidadDeFilas($consultaEstado);
 	
 
-	
-	//$publico= $conexion->realizarConsulta($chatpublico);
-	
-	
-	
-	
 		//Contiene los metodos de la categoria mas buscada
 		require_once("CategoriasMasVisitadas.php");
 		include_once("ProductoMasVisitado.php");
@@ -216,19 +184,9 @@ while($f=mysqli_fetch_array($resultado)){
 							
 						</div>
 					
-					
-					
-					
-					
-					
 						
 					</div>
 					
-							
-						
-							
-					
-
 					<form method="post" action="ProcesaAddCarrito.php">
 					<div class="col-md-6">
 						                            <div class="product-body">
@@ -304,7 +262,7 @@ while($f=mysqli_fetch_array($resultado)){
 						<div class="product-tab">
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Descripcion</a></li>
-								<li><a data-toggle="tab" href="#tab2">Details</a></li>
+								<li><a data-toggle="tab" href="#tab2">Ubicacion</a></li>
 								<li><a data-toggle="tab" href="#tab3">Comentarios</a></li>
 								
 <?php
@@ -457,12 +415,6 @@ $valoraciones=$conexion->traerValoraciones($idU);
 
 								</div>
 								
-								
-								
-								
-								
-								
-								
 							</div>
 						</div>
 					</div>
@@ -502,7 +454,7 @@ $array = explode(' ', $NombreProducto);
 
 foreach ($array as $var) {
  
-$busquedaaa=("SELECT DISTINCT * FROM producto WHERE nombre LIKE '%".$var."%' OR estado LIKE '%".$var."%' OR precio LIKE '%".$var."%' OR marca LIKE '%".$var."%' OR genero LIKE '%".$var."%' OR palabrasClaves LIKE '%".$var."%' OR descripcion LIKE '%".$var."%'");
+$busquedaaa=("SELECT DISTINCT * FROM producto WHERE nombre LIKE '%".$var."%' OR estado LIKE '%".$var."%' OR precio LIKE '%".$var."%' OR marca LIKE '%".$var."%' OR genero LIKE '%".$var."%' OR palabrasClaves LIKE '%".$var."%' OR descripcion LIKE '%".$var."%' limit 3");
 
 $resultadooo = $conexion->realizarConsulta($busquedaaa);
 
@@ -531,8 +483,6 @@ while($f=mysqli_fetch_array($resultadooo)){
 		
 		foreach ($ProductoSinRepetidos as $var) 
 		{
-			
-			
 			$select="SELECT * FROM producto WHERE id=$var";
 			$resultado = $conexion->realizarConsulta($select);
 		
@@ -565,10 +515,7 @@ $resultado2 = $conexion->realizarConsulta($consulta2);
 							<?php
 								}
 							 ?>
-									
-							
-							
-							
+								
 						</div>
 						<div class="product-body">
 							<h3 class="product-price"><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
@@ -616,5 +563,3 @@ $resultado2 = $conexion->realizarConsulta($consulta2);
     ?>
     <script src="js/maps.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiq3xISXSZYgkd9GDAOdajy4NK2d3L7dY&callback=iniciarMap2"></script>
-
-

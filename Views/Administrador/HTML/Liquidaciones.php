@@ -179,7 +179,7 @@ require_once ("MontosInvolucrados.php");
 	?> 
 					  <li class="list-group-item d-flex px-3">
 						<span class="text-semibold text-fiord-blue"><?php echo $f['Nombre']; ?></span>
-                        <span class="ml-auto text-right text-semibold text-reagent-gray">19,291</span>
+                        <span class="ml-auto text-right text-semibold text-reagent-gray"><?php echo "$".number_format($f['total'],0,'.','.');?></span>
                       </li>
 					  <?php
 }
