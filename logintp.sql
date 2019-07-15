@@ -6,7 +6,9 @@
 -- Tiempo de generación: 15-07-2019 a las 01:21:40
 -- Versión del servidor: 5.7.25-log
 -- Versión de PHP: 7.3.0
-
+drop database if exists logintp;
+create database logintp;
+use logintp;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -256,7 +258,11 @@ INSERT INTO `productocarrito` (`id`, `idUsuario`, `idProducto`, `cantidad`) VALU
 (21, 21, 1, 1);
 
 -- --------------------------------------------------------
-
+CREATE TABLE tipoUser(
+	id int(11) NOT NULL,
+    tipo varchar(50) NOT NULL,
+    primary key (id)
+);
 --
 -- Estructura de tabla para la tabla `usuario`
 --
@@ -266,14 +272,16 @@ CREATE TABLE `usuario` (
   `email` varchar(50) NOT NULL,
   `password` varchar(20) NOT NULL,
   `Nombre` varchar(20) NOT NULL,
+  `estado` varchar(200) NOT NULL,
   `pais` varchar(100) NOT NULL,
   `latitud` varchar(100) NOT NULL,
   `longitud` varchar(100) NOT NULL,
   `rol` varchar(100) NOT NULL,
-  `idTipoUser` int(11),
+    `idTipoUser` int(11),
   FOREIGN KEY (idTipoUser) references tipoUser(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
 INSERT INTO tipoUser (id,tipo)
 VALUES		(1,"Usuario Top"),
 			(2,"Usuario Medio Pelo"),
@@ -282,33 +290,27 @@ VALUES		(1,"Usuario Top"),
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `email`, `password`, `Nombre`, `pais`, `latitud`, `longitud`, `rol`,`idTipoUser`) VALUES
-(1, 'ejemplo1@gmail.com', '1234', 'Ejemplo', '', '0', '0', 'usuario',2),
-(2, 'Nicolas@gmail.com', '1234', 'Nicolas', '', '0', '0', 'usuario',1),
-(3, 'Nicolas7@gmail.com', '1234', 'Nicolas', '', '0', '0', 'usuario',1),
-(4, 'Viendo@gmail.com', '1234', 'Viendo', '', '0', '0', 'usuario',2),
-(5, 'Gustavo@gmail.com', '1234', 'Gustavo', '', '0', '0', 'usuario',3),
-(6, 'Ivan@hotmail.com', '1234', 'Ivan', '', '0', '0', 'administrador',1),
-(7, 'user@gmail.com', '12', 'Usuario', '', '0', '0', 'usuario',1),
-(8, 'Roberto@hotmail.com', '12', 'Roberto', '', '0', '0', 'usuario',3),
-(9, 'UserNew@gmail.com', '1234', 'UsuarioNuevo', '', '0', '0', 'usuario',2),
-(10, 'Esteban@gmail.com', '12345', 'Esteban', '', '0', '0', 'usuario',3),
-(11, 'Ismael@gmail.com', '145', 'Ismael', '', '0', '0', 'usuario',1),
-(12, 'Diegote@gmail.com', '1234', 'Diego', '', '0', '0', 'usuario',3),
-(13, 'Maicol@gmail.com', '1234', 'Maicol', '', '0', '0', 'usuario',1),
-(14, 'Luis@gmail.com', 'abcd', 'Luis', '', '0', '0', 'usuario',2),
-(15, 'ejemplo5@gmail.com', '123', 'ejemplo5', 'Colombia', '0', '0', 'usuario',1),
-(16, 'ejemplo6@gmail.com', '123', 'ejemplo6', 'Bolivia', '0', '0', 'usuario',2),
-(17, 'ejemplo7@gmail.com', '123', 'ejemplo7', 'Brasil', '0', '0', 'usuario',2),
-(18, 'ejemplo8@gmail.com', '123', 'ejemplo8', 'Ecuador', '0', '0', 'usuario',1),
-(19, 'ejemplo9@gmail.com', '123', 'ejemplo9', 'Chile', '0', '0', 'administrador',1),
-(20, 'ejemplo99@gmail.com', '123', 'ejemplo99', 'Argentina', '0', '0', 'usuario',3),
-(21, 'Domi@gmail.com', '1234', 'Dominio', 'Argentina', '-34.717815099999996', '-58.4841618', 'administrador',1),
-(22, 'men@gmail.com', '1234', 'Men', 'Argentina', '-34.7178069', '-58.4841452', 'usuario',2),
-(23, 'z@gmail.com', '1234', 'z', '', 'Null', 'Usuario nego la solicitud de Geolocalizacion.', 'usuario',2),
-(24, 'zz@gmail.com', '1234', 'zz', 'Brasil', 'Null', 'Usuario nego la solicitud de Geolocalizacion.', 'usuario',3),
-(25, 'DiegoteEEEE@gmail.com', '1234', 'Diegote', 'Argentina', '-34.7177995', '-58.4841682', 'usuario',1);
+INSERT INTO `usuario` (`id`, `email`, `password`, `Nombre`, `estado`, `pais`, `latitud`, `longitud`, `rol`,`idTipoUser`) VALUES
+(1, 'ejemplo1@gmail.com', '1234', 'Ejemplo', 'ok', '', '0', '0', 'usuario',2),
+(2, 'Nicolas@gmail.com', '1234', 'Nicolas', 'ok', '', '0', '0', 'usuario',2),
+(3, 'Nicolas7@gmail.com', '1234', 'Nicolas', 'ok', '', '0', '0', 'usuario',2),
+(4, 'Viendo@gmail.com', '1234', 'Viendo', 'ok', '', '0', '0', 'usuario',3),
+(5, 'Gustavo@gmail.com', '1234', 'Gustavo', 'ok', '', '0', '0', 'usuario',2),
+(6, 'Ivan@hotmail.com', '1234', 'Ivan', 'ok', '', '0', '0', 'administrador',1),
+(7, 'user@gmail.com', '12', 'Usuario', 'ok', '', '0', '0', 'usuario',1),
+(8, 'Roberto@hotmail.com', '12', 'Roberto', 'ok', '', '0', '0', 'usuario',1),
+(9, 'UserNew@gmail.com', '1234', 'UsuarioNuevo', 'ok', '', '0', '0', 'usuario',2),
+(10, 'Esteban@gmail.com', '12345', 'Esteban', 'ok', '', '0', '0', 'usuario',3),
+(11, 'Ismael@gmail.com', '145', 'Ismael', 'ok', '', '0', '0', 'usuario',3),
+(12, 'Diegote@gmail.com', '1234', 'Diego', 'ok', '', '0', '0', 'usuario',2),
+(13, 'Maicol@gmail.com', '1234', 'Maicol', 'ok', '', '0', '0', 'usuario',1),
+(14, 'Luis@gmail.com', 'abcd', 'Luis', 'Bloqueado', '', '0', '0', 'usuario',2),
+(15, 'ejemplo5@gmail.com', '123', 'ejemplo5', 'ok', 'Colombia', '0', '0', 'usuario',1),
+(16, 'ejemplo6@gmail.com', '123', 'ejemplo6', 'ok', 'Bolivia', '0', '0', 'usuario',1),
+(21, 'Domi@gmail.com', '1234', 'Dominio', 'ok', 'Argentina', '-34.717815099999996', '-58.4841618', 'administrador',2),
+(25, 'DiegoteEEEE@gmail.com', '1234', 'Diegote', 'ok', 'Argentina', '-34.7177995', '-58.4841682', 'usuario',1);
 
+--
 -- Índices para tablas volcadas
 --
 
@@ -362,7 +364,6 @@ ALTER TABLE `productocarrito`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
-
 
 CREATE TABLE valoracion(
 	id int(11) NOT NULL auto_increment,
