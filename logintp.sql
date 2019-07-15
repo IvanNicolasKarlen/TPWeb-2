@@ -1,14 +1,12 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-07-2019 a las 01:21:40
+-- Tiempo de generación: 15-07-2019 a las 06:07:22
 -- Versión del servidor: 5.7.25-log
--- Versión de PHP: 7.3.0
-drop database if exists logintp;
-create database logintp;
-use logintp;
+-- Versión de PHP: 7.3.2
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -42,9 +40,9 @@ CREATE TABLE `categoria` (
 
 INSERT INTO `categoria` (`id`, `nombre`, `visitas`) VALUES
 (1, 'Servicios', 1),
-(2, 'Inmuebles', 19),
+(2, 'Inmuebles', 21),
 (3, 'Vehiculos', 8),
-(4, 'Productos y otros', 306);
+(4, 'Productos y otros', 308);
 
 -- --------------------------------------------------------
 
@@ -126,14 +124,14 @@ CREATE TABLE `imgprincipal` (
 
 INSERT INTO `imgprincipal` (`id`, `idProducto`, `nombre`) VALUES
 (1, 61, 'imagen2.jpg'),
-(2, 63, 'descarga (1).jpg'),
 (3, 1, 'zm01.jpg'),
 (4, 2, 'adidaszz.jpg'),
 (5, 43, 'pinup.jpg'),
 (6, 44, 'b.jpg'),
 (7, 45, 'd.jpg'),
 (8, 46, 'dpto2.jpg'),
-(9, 3, '15940444_1318220971550973_7681097437073195512_n.jpg ');
+(9, 3, '15940444_1318220971550973_7681097437073195512_n.jpg '),
+(10, 62, 'imagen2.jpg');
 
 -- --------------------------------------------------------
 
@@ -201,41 +199,23 @@ CREATE TABLE `producto` (
   `imgprincipal` varchar(80) NOT NULL,
   `idUsuario` int(11) NOT NULL,
   `latitud` varchar(120) NOT NULL,
-  `longitud` varchar(120) NOT NULL,
-  `ventas` int(11) NOT NULL
+  `longitud` varchar(120) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `envio`,
-                        `marca`, `stock`, `genero`, `categoria`, `palabrasClaves`, `descripcion`, `visitas`, `imgprincipal`, `idUsuario`, `latitud`, `longitud`,`ventas`) VALUES
-(1, 'Zapatillas Modernas', 'Nuevo', 1200, 'Efectivo', 'Gratis', 'Nike', 12, 'Hombre',
- 'Productos y otros', 'palabra\nclave', 'descrip', 256, 'zm01.jpg', 1, '', '',5),
-(2, 'Zapatillas Adidas', 'Usado', 1400, 'Efectivo', 'Gratis', 'Adidas', 1200, 'Hombre',
- 'Productos y otros', 'palabra\nclave', 'Zapatillas Adidas usadas pero impecables', 232,
- 'adidaszz.jpg', 3, '', '',3),
-(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 'Unisex',
- 'Productos y otros', 'palabra\nclave', 'Soy una descripcion ', 232,
- '15940444_1318220971550973_7681097437073195512_n.jpg', 3, '', '',10),
-(43, 'Vestido marinero PinUp', 'Nuevo', 3200, 'Transferencia Bancaria', 'Gratis',
- 'BrillaDark', 20, 'Mujer', 'Productos y otros', 'Vestido pinup', 'Hermoso vestido', 232,
- 'pinup.jpg', 7, '', '',20),
-(44, 'Remeras para colegios', 'Nuevo', 300, 'Efectivo', 'Domicilio con cargo', 'Suavicer',
- 2000, 'Infantil', 'Productos y otros', 'Remeras Dibujos Colegios', 'Remeras para colegios
-primarios', 232, 'b.jpg', 2, '', '',32),
-(45, 'Toyota Corola', 'Usado', 430000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex',
- 'Vehiculos', 'Auto Usado Toyota', 'Auto Usado Toyota', 232, 'd.jpg', 2, '', '',1),
-(46, 'Depto. 2 ambientes', 'Usado', 2520000, 'Tarjeta', 'Entrega en local', 'Inmuebles
-Alfredo', 1, 'Unisex', 'Inmuebles', 'departamento', 'Departamento 2 ambientes capital', 238,
- 'dpto2.jpg', 2, '', '',0),
-(61, 'Cuadros de Arte', 'Nuevo', 2000, 'Mercado de Pago', 'Gratis', 'Torres', 200, 'Unisex',
- 'Productos y otros', '', 'Realizo cuadres de arte de todo tipo', 233, 'not_863107_20_215919
-.jpg', 6, '', '',28),
-(62, 'Cuadros', 'Nuevo', 10000, 'Mercado de Pago', 'Entrega en local', 'Cornelio ', 1,
- 'Unisex', 'Productos y otros', '', '', 232, 'not_863107_20_215919.jpg', 6, '-34.6163127',
- '-58.42878189999999',7);
+INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `envio`, `marca`, `stock`, `genero`, `categoria`, `palabrasClaves`, `descripcion`, `visitas`, `imgprincipal`, `idUsuario`, `latitud`, `longitud`) VALUES
+(1, 'Zapatillas Modernas', 'Nuevo', 1200, 'Efectivo', 'Gratis', 'Nike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'descrip', 270, 'zm01.jpg', 1, '', ''),
+(2, 'Zapatillas Adidas', 'Usado', 1400, 'Efectivo', 'Gratis', 'Adidas', 1200, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Zapatillas Adidas usadas pero impecables', 270, 'adidaszz.jpg', 3, '', ''),
+(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 'Unisex', 'Productos y otros', 'palabra\nclave', 'Soy una descripcion ', 270, '15940444_1318220971550973_7681097437073195512_n.jpg', 3, '', ''),
+(43, 'Vestido marinero PinUp', 'Nuevo', 3200, 'Transferencia Bancaria', 'Gratis', 'BrillaDark', 20, 'Mujer', 'Productos y otros', 'Vestido pinup', 'Hermoso vestido', 270, 'pinup.jpg', 7, '', ''),
+(44, 'Remeras para colegios', 'Nuevo', 300, 'Efectivo', 'Domicilio con cargo', 'Suavicer', 2000, 'Infantil', 'Productos y otros', 'Remeras Dibujos Colegios', 'Remeras para colegios primarios', 270, 'b.jpg', 2, '', ''),
+(45, 'Toyota Corola', 'Usado', 430000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex', 'Vehiculos', 'Auto Usado Toyota', 'Auto Usado Toyota', 270, 'd.jpg', 2, '', ''),
+(46, 'Depto. 2 ambientes', 'Usado', 2520000, 'Tarjeta', 'Entrega en local', 'Inmuebles Alfredo', 1, 'Unisex', 'Inmuebles', 'departamento', 'Departamento 2 ambientes capital', 270, 'dpto2.jpg', 2, '', ''),
+(61, 'Cuadros de Arte', 'Nuevo', 2000, 'Mercado de Pago', 'Gratis', 'Torres', 200, 'Unisex', 'Productos y otros', '', 'Realizo cuadres de arte de todo tipo', 270, 'not_863107_20_215919.jpg', 6, '', ''),
+(62, 'Cuadros', 'Nuevo', 10000, 'Mercado de Pago', 'Entrega en local', 'Cornelio ', 1, 'Unisex', 'Productos y otros', '', '', 270, 'not_863107_20_215919.jpg', 6, '-34.6163127', '-58.42878189999999');
 
 -- --------------------------------------------------------
 
@@ -257,30 +237,32 @@ CREATE TABLE `productocarrito` (
 INSERT INTO `productocarrito` (`id`, `idUsuario`, `idProducto`, `cantidad`) VALUES
 (1, 2, 44, 1),
 (2, 2, 46, 1),
-(3, 2, 46, 1),
 (4, 2, 45, 1),
 (5, 2, 1, 1),
-(6, 2, 1, 1),
-(7, 2, 2, 1),
-(8, 2, 2, 1),
-(9, 2, 3, 7),
-(10, 2, 3, 7),
-(11, 2, 44, 9),
-(12, 2, 46, 2),
-(13, 2, 46, 2),
-(14, 2, 46, 2),
-(17, 2, 3, 5),
-(18, 2, 1, 12),
-(19, 2, 1, 2),
-(20, 2, 44, 1),
 (21, 21, 1, 1);
 
 -- --------------------------------------------------------
-CREATE TABLE tipoUser(
-	id int(11) NOT NULL,
-    tipo varchar(50) NOT NULL,
-    primary key (id)
-);
+
+--
+-- Estructura de tabla para la tabla `tipouser`
+--
+
+CREATE TABLE `tipouser` (
+  `id` int(11) NOT NULL,
+  `tipo` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tipouser`
+--
+
+INSERT INTO `tipouser` (`id`, `tipo`) VALUES
+(1, 'Usuario Top'),
+(2, 'Usuario Medio Pelo'),
+(3, 'Usuario Pa\'tras');
+
+-- --------------------------------------------------------
+
 --
 -- Estructura de tabla para la tabla `usuario`
 --
@@ -295,38 +277,55 @@ CREATE TABLE `usuario` (
   `latitud` varchar(100) NOT NULL,
   `longitud` varchar(100) NOT NULL,
   `rol` varchar(100) NOT NULL,
-    `idTipoUser` int(11),
-  FOREIGN KEY (idTipoUser) references tipoUser(id)
+  `idTipoUser` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
-INSERT INTO tipoUser (id,tipo)
-VALUES		(1,"Usuario Top"),
-			(2,"Usuario Medio Pelo"),
-            (3,"Usuario Pa'tras");
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `email`, `password`, `Nombre`, `estado`, `pais`, `latitud`, `longitud`, `rol`,`idTipoUser`) VALUES
-(1, 'ejemplo1@gmail.com', '1234', 'Ejemplo', 'ok', '', '0', '0', 'usuario',2),
-(2, 'Nicolas@gmail.com', '1234', 'Nicolas', 'ok', '', '0', '0', 'usuario',2),
-(3, 'Nicolas7@gmail.com', '1234', 'Nicolas', 'ok', '', '0', '0', 'usuario',2),
-(4, 'Viendo@gmail.com', '1234', 'Viendo', 'ok', '', '0', '0', 'usuario',3),
-(5, 'Gustavo@gmail.com', '1234', 'Gustavo', 'ok', '', '0', '0', 'usuario',2),
-(6, 'Ivan@hotmail.com', '1234', 'Ivan', 'ok', '', '0', '0', 'administrador',1),
-(7, 'user@gmail.com', '12', 'Usuario', 'ok', '', '0', '0', 'usuario',1),
-(8, 'Roberto@hotmail.com', '12', 'Roberto', 'ok', '', '0', '0', 'usuario',1),
-(9, 'UserNew@gmail.com', '1234', 'UsuarioNuevo', 'ok', '', '0', '0', 'usuario',2),
-(10, 'Esteban@gmail.com', '12345', 'Esteban', 'ok', '', '0', '0', 'usuario',3),
-(11, 'Ismael@gmail.com', '145', 'Ismael', 'ok', '', '0', '0', 'usuario',3),
-(12, 'Diegote@gmail.com', '1234', 'Diego', 'ok', '', '0', '0', 'usuario',2),
-(13, 'Maicol@gmail.com', '1234', 'Maicol', 'ok', '', '0', '0', 'usuario',1),
-(14, 'Luis@gmail.com', 'abcd', 'Luis', 'Bloqueado', '', '0', '0', 'usuario',2),
-(15, 'ejemplo5@gmail.com', '123', 'ejemplo5', 'ok', 'Colombia', '0', '0', 'usuario',1),
-(16, 'ejemplo6@gmail.com', '123', 'ejemplo6', 'ok', 'Bolivia', '0', '0', 'usuario',1),
-(21, 'Domi@gmail.com', '1234', 'Dominio', 'ok', 'Argentina', '-34.717815099999996', '-58.4841618', 'administrador',2),
-(25, 'DiegoteEEEE@gmail.com', '1234', 'Diegote', 'ok', 'Argentina', '-34.7177995', '-58.4841682', 'usuario',1);
+INSERT INTO `usuario` (`id`, `email`, `password`, `Nombre`, `estado`, `pais`, `latitud`, `longitud`, `rol`, `idTipoUser`) VALUES
+(1, 'ejemplo1@gmail.com', '1234', 'Ejemplo', 'ok', '', '0', '0', 'usuario', 3),
+(2, 'Nicolas@gmail.com', '1234', 'Nicolas', 'ok', '', '0', '0', 'usuario', 1),
+(3, 'Nicolas7@gmail.com', '1234', 'Nicolas', 'ok', '', '0', '0', 'usuario', 3),
+(4, 'Viendo@gmail.com', '1234', 'Viendo', 'ok', '', '0', '0', 'usuario', 3),
+(5, 'Gustavo@gmail.com', '1234', 'Gustavo', 'ok', '', '0', '0', 'usuario', 2),
+(6, 'Ivan@hotmail.com', '1234', 'Ivan', 'ok', '', '0', '0', 'administrador', 1),
+(7, 'user@gmail.com', '12', 'Usuario', 'ok', '', '0', '0', 'usuario', 1),
+(8, 'Roberto@hotmail.com', '12', 'Roberto', 'ok', '', '0', '0', 'usuario', 1),
+(9, 'UserNew@gmail.com', '1234', 'UsuarioNuevo', 'ok', '', '0', '0', 'usuario', 2),
+(10, 'Esteban@gmail.com', '12345', 'Esteban', 'ok', '', '0', '0', 'usuario', 3),
+(11, 'Ismael@gmail.com', '145', 'Ismael', 'ok', '', '0', '0', 'usuario', 3),
+(12, 'Diegote@gmail.com', '1234', 'Diego', 'ok', '', '0', '0', 'usuario', 2),
+(13, 'Maicol@gmail.com', '1234', 'Maicol', 'ok', '', '0', '0', 'usuario', 1),
+(14, 'Luis@gmail.com', 'abcd', 'Luis', 'Bloqueado', '', '0', '0', 'usuario', 2),
+(15, 'ejemplo5@gmail.com', '123', 'ejemplo5', 'ok', 'Colombia', '0', '0', 'usuario', 1),
+(16, 'ejemplo6@gmail.com', '123', 'ejemplo6', 'ok', 'Bolivia', '0', '0', 'usuario', 1),
+(21, 'Domi@gmail.com', '1234', 'Dominio', 'ok', 'Argentina', '-34.717815099999996', '-58.4841618', 'administrador', 2),
+(25, 'DiegoteEEEE@gmail.com', '1234', 'Diegote', 'ok', 'Argentina', '-34.7177995', '-58.4841682', 'usuario', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `valoracion`
+--
+
+CREATE TABLE `valoracion` (
+  `id` int(11) NOT NULL,
+  `comentario` varchar(600) DEFAULT NULL,
+  `puntaje` int(11) NOT NULL,
+  `idUsuario` int(11) DEFAULT NULL,
+  `idVendedor` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `valoracion`
+--
+
+INSERT INTO `valoracion` (`id`, `comentario`, `puntaje`, `idUsuario`, `idVendedor`) VALUES
+(1, 'muy amable', 5, 6, 2),
+(2, 'tuve un problema con la compra y me lo solucionó rápidamente', 4, 3, 2),
+(3, 'genial', 5, 10, 2);
 
 --
 -- Índices para tablas volcadas
@@ -378,28 +377,26 @@ ALTER TABLE `productocarrito`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `tipouser`
+--
+ALTER TABLE `tipouser`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idTipoUser` (`idTipoUser`);
 
-CREATE TABLE valoracion(
-	id int(11) NOT NULL auto_increment,
-    comentario varchar(600),
-    puntaje int NOT NULL,
-    idUsuario int(11),
-    idVendedor int(11),
-    primary key (id),
-    foreign key (idUsuario) references usuario(id),
-    foreign key (idVendedor) references usuario(id)
-);
+--
+-- Indices de la tabla `valoracion`
+--
+ALTER TABLE `valoracion`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idUsuario` (`idUsuario`),
+  ADD KEY `idVendedor` (`idVendedor`);
 
-
-
-INSERT INTO valoracion(comentario, puntaje, idUsuario,idVendedor)
-VALUES  ('muy amable',5,6,2),
-		('tuve un problema con la compra y me lo solucionó rápidamente',4,3,2),
-        ('genial',5,10,2);
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
@@ -426,7 +423,7 @@ ALTER TABLE `compra`
 -- AUTO_INCREMENT de la tabla `imgprincipal`
 --
 ALTER TABLE `imgprincipal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `imgproducto`
@@ -447,10 +444,10 @@ ALTER TABLE `productocarrito`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT de la tabla `usuario`
+-- AUTO_INCREMENT de la tabla `valoracion`
 --
-ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+ALTER TABLE `valoracion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
@@ -461,8 +458,22 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `producto`
   ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`id`);
+
+--
+-- Filtros para la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`idTipoUser`) REFERENCES `tipouser` (`id`);
+
+--
+-- Filtros para la tabla `valoracion`
+--
+ALTER TABLE `valoracion`
+  ADD CONSTRAINT `valoracion_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`id`),
+  ADD CONSTRAINT `valoracion_ibfk_2` FOREIGN KEY (`idVendedor`) REFERENCES `usuario` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
