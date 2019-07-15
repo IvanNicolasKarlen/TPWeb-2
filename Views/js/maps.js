@@ -40,3 +40,19 @@ function iniciarMap(){
         document.getElementById('longitud').value =place.geometry.location.lng();
     });
 }
+
+function iniciarMap2(){
+    var lat = document.getElementById('lat');
+    var lng = document.getElementById('lng');
+    var coord= { lat : lat,
+                 lng : lng
+                };
+    var map = new google.maps.Map(document.getElementById('map'),{
+        zoom: 15,
+        center: coord
+    });
+    var marker = new google.maps.Marker({
+        position: coord,
+        map: map
+    });
+}
