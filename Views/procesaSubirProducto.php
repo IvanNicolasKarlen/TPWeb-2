@@ -90,8 +90,7 @@ $errorI="";
 
 				$direc= new Direccion();
 				$sql = "INSERT INTO producto(nombre,estado,precio,formasdepago,envio,marca,stock,genero,categoria,palabrasClaves,descripcion,visitas,idUsuario,latitud,longitud)
-				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$genero','$categoria','$palabras','$descripcion','$idUsuario',0,'$latitud','$longitud')";
-				
+				values('$nombre','$estado','$precio','$formas', '$envio', '$marca','$stock','$genero','$categoria','$palabras','$descripcion',0,'$idUsuario','$latitud','$longitud')";
 				
 				if($conexion->realizarConsulta($sql))
 			{
