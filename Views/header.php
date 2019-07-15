@@ -135,7 +135,8 @@ while($n = mysqli_fetch_array($resultado))
                             <?php if(($estado == "administrador" )) { ?>
 							<li><a href="Administrador/HTML/Administrador.php"><i class="fa fa-user-o"></i>Administrador</a></li>
 							<?php } ?>
-							<li><a href="#"><i class="fa fa-user-o"></i> Mis Datos</a></li>
+							<li><a href="datos.php"><i class="fa fa-user-o"></i> Mis
+                                    Datos</a></li>
 							<li><a href="#"><i class="fa fa-heart-o"></i> Favoritos</a></li>
                             <li><a href="#"><i class="fa fa-check"></i> Ventas</a></li>
                             <li><a href="listarPublicaciones.php"><i class="fa fa-list"></i> Publicaciones</a></li>
