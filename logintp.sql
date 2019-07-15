@@ -201,23 +201,41 @@ CREATE TABLE `producto` (
   `imgprincipal` varchar(80) NOT NULL,
   `idUsuario` int(11) NOT NULL,
   `latitud` varchar(120) NOT NULL,
-  `longitud` varchar(120) NOT NULL
+  `longitud` varchar(120) NOT NULL,
+  `ventas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `envio`, `marca`, `stock`, `genero`, `categoria`, `palabrasClaves`, `descripcion`, `visitas`, `imgprincipal`, `idUsuario`, `latitud`, `longitud`) VALUES
-(1, 'Zapatillas Modernas', 'Nuevo', 1200, 'Efectivo', 'Gratis', 'Nike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'descrip', 256, 'zm01.jpg', 1, '', ''),
-(2, 'Zapatillas Adidas', 'Usado', 1400, 'Efectivo', 'Gratis', 'Adidas', 1200, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Zapatillas Adidas usadas pero impecables', 232, 'adidaszz.jpg', 3, '', ''),
-(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 'Unisex', 'Productos y otros', 'palabra\nclave', 'Soy una descripcion ', 232, '15940444_1318220971550973_7681097437073195512_n.jpg', 3, '', ''),
-(43, 'Vestido marinero PinUp', 'Nuevo', 3200, 'Transferencia Bancaria', 'Gratis', 'BrillaDark', 20, 'Mujer', 'Productos y otros', 'Vestido pinup', 'Hermoso vestido', 232, 'pinup.jpg', 7, '', ''),
-(44, 'Remeras para colegios', 'Nuevo', 300, 'Efectivo', 'Domicilio con cargo', 'Suavicer', 2000, 'Infantil', 'Productos y otros', 'Remeras Dibujos Colegios', 'Remeras para colegios primarios', 232, 'b.jpg', 2, '', ''),
-(45, 'Toyota Corola', 'Usado', 430000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex', 'Vehiculos', 'Auto Usado Toyota', 'Auto Usado Toyota', 232, 'd.jpg', 2, '', ''),
-(46, 'Depto. 2 ambientes', 'Usado', 2520000, 'Tarjeta', 'Entrega en local', 'Inmuebles Alfredo', 1, 'Unisex', 'Inmuebles', 'departamento', 'Departamento 2 ambientes capital', 238, 'dpto2.jpg', 2, '', ''),
-(61, 'Cuadros de Arte', 'Nuevo', 2000, 'Mercado de Pago', 'Gratis', 'Torres', 200, 'Unisex', 'Productos y otros', '', 'Realizo cuadres de arte de todo tipo', 233, 'not_863107_20_215919.jpg', 6, '', ''),
-(62, 'Cuadros', 'Nuevo', 10000, 'Mercado de Pago', 'Entrega en local', 'Cornelio ', 1, 'Unisex', 'Productos y otros', '', '', 232, 'not_863107_20_215919.jpg', 6, '-34.6163127', '-58.42878189999999');
+INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `envio`,
+                        `marca`, `stock`, `genero`, `categoria`, `palabrasClaves`, `descripcion`, `visitas`, `imgprincipal`, `idUsuario`, `latitud`, `longitud`,`ventas`) VALUES
+(1, 'Zapatillas Modernas', 'Nuevo', 1200, 'Efectivo', 'Gratis', 'Nike', 12, 'Hombre',
+ 'Productos y otros', 'palabra\nclave', 'descrip', 256, 'zm01.jpg', 1, '', '',5),
+(2, 'Zapatillas Adidas', 'Usado', 1400, 'Efectivo', 'Gratis', 'Adidas', 1200, 'Hombre',
+ 'Productos y otros', 'palabra\nclave', 'Zapatillas Adidas usadas pero impecables', 232,
+ 'adidaszz.jpg', 3, '', '',3),
+(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 'Unisex',
+ 'Productos y otros', 'palabra\nclave', 'Soy una descripcion ', 232,
+ '15940444_1318220971550973_7681097437073195512_n.jpg', 3, '', '',10),
+(43, 'Vestido marinero PinUp', 'Nuevo', 3200, 'Transferencia Bancaria', 'Gratis',
+ 'BrillaDark', 20, 'Mujer', 'Productos y otros', 'Vestido pinup', 'Hermoso vestido', 232,
+ 'pinup.jpg', 7, '', '',20),
+(44, 'Remeras para colegios', 'Nuevo', 300, 'Efectivo', 'Domicilio con cargo', 'Suavicer',
+ 2000, 'Infantil', 'Productos y otros', 'Remeras Dibujos Colegios', 'Remeras para colegios
+primarios', 232, 'b.jpg', 2, '', '',32),
+(45, 'Toyota Corola', 'Usado', 430000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex',
+ 'Vehiculos', 'Auto Usado Toyota', 'Auto Usado Toyota', 232, 'd.jpg', 2, '', '',1),
+(46, 'Depto. 2 ambientes', 'Usado', 2520000, 'Tarjeta', 'Entrega en local', 'Inmuebles
+Alfredo', 1, 'Unisex', 'Inmuebles', 'departamento', 'Departamento 2 ambientes capital', 238,
+ 'dpto2.jpg', 2, '', '',0),
+(61, 'Cuadros de Arte', 'Nuevo', 2000, 'Mercado de Pago', 'Gratis', 'Torres', 200, 'Unisex',
+ 'Productos y otros', '', 'Realizo cuadres de arte de todo tipo', 233, 'not_863107_20_215919
+.jpg', 6, '', '',28),
+(62, 'Cuadros', 'Nuevo', 10000, 'Mercado de Pago', 'Entrega en local', 'Cornelio ', 1,
+ 'Unisex', 'Productos y otros', '', '', 232, 'not_863107_20_215919.jpg', 6, '-34.6163127',
+ '-58.42878189999999',7);
 
 -- --------------------------------------------------------
 

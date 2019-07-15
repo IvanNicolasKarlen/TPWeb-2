@@ -296,8 +296,19 @@ while($f=mysqli_fetch_array($resultado)){
                                                required>
                                     </div>
                                     <br><br><br><br><br>
-								
-								<button type="submit" name="AddCarrito" class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Añadir al carrito</button>
+                                            <?php
+                                            if($f['stock']==0){
+                                                echo"<button disabled type='reset'  
+                                                class='btn btn-danger'><i class='fa
+                                                fa-shopping-cart'></i> No hay stock</button>";
+                                            }else{
+                                                echo"<button type='submit' name='AddCarrito' 
+                                                class='primary-btn add-to-cart'><i class='fa
+                                                fa-shopping-cart'></i> Añadir al carrito</button>";
+                                            }
+                                            ?>
+
+
 								<input type="hidden" name="Add" value="<?php echo $f['id'];?>">
 								<input type="hidden" name="id_Usuario" value="$_Session['id']">
 								

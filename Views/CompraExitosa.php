@@ -25,6 +25,12 @@ $compras = $productosComprados->num_rows;
 				$insertar="INSERT INTO compra(idUsuario, idProducto,cantidad, costo )
 				VALUES ($id_Usuario,".$f['idProducto'].",".$f['cantidad'].",".$f['cantidad']*$f['precio'].")";		
 				$resul=$conexion->realizarConsulta($insertar);
+				$stockk=$f['stock']-$f['cantidad'];
+				$ventas=$f['ventas']+$f['cantidad'];
+                $conexion->realizarConsulta("UPDATE producto SET stock=$stockk WHERE 
+				id=$f[idProducto]");
+                $conexion->realizarConsulta("UPDATE producto SET ventas=$ventas WHERE id=$f[idProducto]");
+
   }
  
    //Vaciar CARRITO
