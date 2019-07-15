@@ -5,7 +5,8 @@ require_once("conexionBD/conexion.php");// incluir la configuracion de conexion 
 		//Abrir conexion
 		$conexion = new Conexion;
 
-
+		$idVendedorTabla = '';
+		$idChat= ''; 
 
 $idVendedor = $_POST["Vendedor"];
 $idProducto = $_POST["Producto"];
@@ -53,7 +54,7 @@ if($idVendedorTabla==$id_Usuario)//Verifico si yo soy el vendedor
 //Traigo el id del chat que se genero en la tabla compra
 
 $Compra = "SELECT * 
-			FROM COMPRA 
+			FROM comentarios 																	//ACA
 			WHERE idVendedor = '".$id_Usuario."'";
 			
 $compra= $conexion->realizarConsulta($Compra);
@@ -71,7 +72,7 @@ while($b = mysqli_fetch_array($compra))
 
 
 //Traigo el id del chat que se genero en la tabla compra
-$Compra = "SELECT * FROM COMPRA WHERE idUsuario = '".$id_Usuario."' ";
+$Compra = "SELECT * FROM comentarios WHERE idUsuario = '".$id_Usuario."' ";							//ACA
 $compra= $conexion->realizarConsulta($Compra);
 while($b = mysqli_fetch_array($compra))
 {
@@ -132,7 +133,7 @@ require_once("header.php");
 											
 <?php
 
-if($CantidadDeMensajes==0 and $CantidadDeMensajesVendedor==0)
+if($CantidadDeMensajes=null and $CantidadDeMensajesVendedor=0)
 {
 ?>
 <br>
