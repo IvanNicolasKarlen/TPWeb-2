@@ -21,7 +21,9 @@ class Direccion
 	{
 		return "location:CarritoDetalles.php?error=$error";
 	}
-	
+	    public function index($msj){
+        return "location:index.php?info=$msj";
+    }
 	
 	
 }
