@@ -1,6 +1,6 @@
 <?php
 require_once("verificacionSesion.php");
-
+include_once("header.php");
 		//Consultamos los productos a listar
 		require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
 		//Abrir conexion
@@ -17,7 +17,7 @@ $id=isset($_GET["cod"]) ? $_GET["cod"] : "";
 		$imgProducto = $conexion->realizarConsulta($consulta2);
 		$imgPrincipal = $conexion->realizarConsulta($consulta3);
 
-include_once("header.php");
+
 
 ?>
 
