@@ -433,8 +433,8 @@ $valoraciones=$conexion->traerValoraciones($idU);
 													</div>
 												</div>
                                                 <?php
-                                                if(($conexion->buscarCompra($id_Usuario,
-                                                $idProducto))>0)
+                                                $numm=$conexion->verificarCompra($idVendedor,$id_Usuario);
+                                                if($numm>0)
                                                 {
                                                     echo "<button class='primary-btn'>Enviar</button>";
                                                 }

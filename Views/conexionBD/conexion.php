@@ -156,14 +156,12 @@ class Conexion{
 		return $tipo;
 	}
 
-
-	public function buscarCompra($idu, $idp){
-		$consulta = $this->msq->prepare("SELECT * FROM compra as c, producto as p WHERE c.idProducto=p.id AND idUsuario=?");
-		$consulta->bind_param("ii",$idu,$idp);
-		$consulta->execute();
-		$consulta->store_result();
-		$num = $consulta->num_rows();
-		return $num;
+	public function verificarCompra($idV,$idU){
+		$consulta=$this->realizarConsulta("SELECT * FROM producto as prod 
+										inner join compra as c on prod.id=c.idProducto
+										WHERE prod.idUsuario = $idV
+										AND c.idUsuario = $idU");
+		return $consulta->num_rows;
 	}
 }
 
