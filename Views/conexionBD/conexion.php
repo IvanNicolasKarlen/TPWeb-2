@@ -154,7 +154,17 @@ class Conexion{
 			$this->msq->query("UPDATE usuario SET idTipoUser=3 WHERE id=$idV");
 		}
 		return $tipo;
-	}	
+	}
+
+
+	public function buscarCompra($idu, $idp){
+		$consulta = $this->msq->prepare("SELECT * FROM compra as c, producto as p WHERE c.idProducto=p.id AND idUsuario=?");
+		$consulta->bind_param("ii",$idu,$idp);
+		$consulta->execute();
+		$consulta->store_result();
+		$num = $consulta->num_rows();
+		return $num;
+	}
 }
 
 

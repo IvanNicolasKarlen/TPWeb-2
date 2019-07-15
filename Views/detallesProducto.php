@@ -421,7 +421,18 @@ $valoraciones=$conexion->traerValoraciones($idU);
 														</div>
 													</div>
 												</div>
-												<button class="primary-btn">Submit</button>
+                                                <?php
+                                                if(($conexion->buscarCompra($id_Usuario,
+                                                $idProducto))>0)
+                                                {
+                                                    echo "<button class='primary-btn'>Enviar</button>";
+                                                }
+                                                else{
+                                                    echo "<p class='text-info'>¡Debes comprarle algo al vendedor antes de opinar sobre él!</p>";
+                                                    echo "<button type='reset' disabled class='btn btn-danger'>Enviar</button>'";
+                                                }
+
+												?>
 											</form>
 														
 										</div>

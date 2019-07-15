@@ -5,25 +5,15 @@ session_start();
 include_once("header.php");
 include_once ("conexionBD/conexion.php");
 $conect = new Conexion();
-$resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Productos y otros' LIMIT 5");
-$info=isset($_GET["info"])?$_GET["info"]:"";
+$resultado=$conect->realizarConsulta("SELECT nombre, precio, imgprincipal FROM producto WHERE categoria='Productos y otros' LIMIT 5");
 ?>
-
-
-
-
-
 	<!-- HOME -->
-<div class="alert-info text-center"><?php echo"$info"; ?></div>
+
 	<div id="home">
 		<!-- container -->
 		<div class="container">
 			<!-- home wrap -->
 			<div class="home-wrap">
-			
-			
-			
-			
 				<!-- home slick -->
 				<div id="home-slick">
 					<!-- banner -->
@@ -99,10 +89,9 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
 				</form>
 				<!-- /banner -->
 
-					
 				<!-- banner -->
 				<form method="post" action="ProductoBuscado.php">
-				<div class="col-md-4 col-sm-6">
+				<div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
 					<a class="banner banner-1" >
 						<img src="img/banner12.jpg" alt="">
 						<div class="banner-caption text-center" >
@@ -157,44 +146,17 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
                     <div class="row">
                         <div id="product-slick-1" class="product-slick">
                             <!-- Product Single -->
-                         <?php while($f=mysqli_fetch_array($resultado)){
-							 
-							 
-							 
-								$consulta2="SELECT * FROM imgprincipal WHERE idProducto= '".$f['id']."'";
-								$resultado2 = $conexion->realizarConsulta($consulta2);
-								
-							?>
-							 
+                           <?php while($f=mysqli_fetch_array($resultado)){
 
-                            <div class='product product-single'>
+
+                            echo "<div class='product product-single'>
                                 <div class='product-thumb'>
                                    
-                                    <form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-							<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
-							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
-								</form>
-								
-								
-								<?php
-							while($g=mysqli_fetch_array($resultado2)){
-							 ?>
-								
-                                    <img src="imgPublicadas/<?php echo $g["nombre"];?>" style='height: 400px;'>
-									
-								<?php
-								}
-								 ?>	
-									
+                                    <button class='main-btn quick-view'><i class='fa fa-search-plus'></i> Quick view</button>
+                                    <img src='./imgPublicadas/$f[imgprincipal]' style='height: 400px;'>
                                 </div>
-								
-								
-									
-								
                                 <div class='product-body'>
-                                    <h3 class='product-price'><?php echo "$".number_format($f['precio'],0,'.','.');?></h3>
+                                    <h3 class='product-price'>$$f[precio]</h3>
                                     <div class='product-rating'>
                                         <i class='fa fa-star'></i>
                                         <i class='fa fa-star'></i>
@@ -202,23 +164,15 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
                                         <i class='fa fa-star'></i>
                                         <i class='fa fa-star-o empty'></i>
                                     </div>
-									<p>Articulo: <?php echo $f["id"];?></p>
-                                    <h2 class='product-name'><a href='#'><?php echo $f["nombre"];?></a></h2>
+                                    <h2 class='product-name'><a href='#'>$f[nombre]</a></h2>
                                     <div class='product-btns'>
                                         <button class='main-btn icon-btn'><i class='fa fa-heart'></i></button>
                                         <button class='main-btn icon-btn'><i class='fa fa-exchange'></i></button>
-                                       <form method="post" action="detallesProducto.php">
-										<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-										<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-										<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
-							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
-										</form>
+                                        <button class='primary-btn add-to-cart'><i class='fa fa-shopping-cart'></i> Añadir al carrito</button>
                                     </div>
                                 </div>
-                            </div>
-                             <?php
-							 }
-?>							 
+                            </div>";
+                             } ?>
                             <!-- /Product Single -->
 
                         </div>
@@ -323,10 +277,7 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
 				<div class="col-md-3 col-sm-6 col-xs-6">
 					<div class="product product-single">
 						<div class="product-thumb">
-						<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
 							<img src="img/product04.jpg" alt="">
 						</div>
 						<div class="product-body">
@@ -342,10 +293,7 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
-						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
 							</div>
 						</div>
 					</div>
@@ -359,10 +307,7 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
 							<div class="product-label">
 								<span>New</span>
 							</div>
-							<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
 							<img src="img/product03.jpg" alt="">
 						</div>
 						<div class="product-body">
@@ -378,10 +323,7 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
-						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
 							</div>
 						</div>
 					</div>
@@ -395,10 +337,7 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
 							<div class="product-label">
 								<span class="sale">-20%</span>
 							</div>
-							<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
 							<img src="img/product02.jpg" alt="">
 						</div>
 						<div class="product-body">
@@ -414,10 +353,7 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
-						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
 							</div>
 						</div>
 					</div>
@@ -432,10 +368,7 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
 								<span>New</span>
 								<span class="sale">-20%</span>
 							</div>
-							<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
 							<img src="img/product01.jpg" alt="">
 						</div>
 						<div class="product-body">
@@ -451,10 +384,7 @@ $info=isset($_GET["info"])?$_GET["info"]:"";
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
-						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
 							</div>
 						</div>
 					</div>
