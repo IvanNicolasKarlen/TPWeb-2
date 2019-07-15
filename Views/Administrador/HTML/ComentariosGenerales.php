@@ -223,13 +223,6 @@ require_once ("MontosInvolucrados.php");
                     
                     
                   </div>
-                  <div class="card-footer border-top">
-                    <div class="row">
-                      <div class="col text-center view-report">
-                       
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
               <!-- End Discussions Component -->
