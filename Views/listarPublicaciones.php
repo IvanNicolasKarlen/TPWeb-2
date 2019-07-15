@@ -111,7 +111,7 @@ $id = $_SESSION['id'];
                         <td><?php echo $f['envio'];?></td>
                         <td><?php echo "$".number_format($f['precio'],0,'.','.');?> </td>
 						<td><a href="modificarProducto.php?cod=<?php echo $f['id'];?>"><i class="fa fa-edit"></i></a> </td>
-						<td><a href="listarPublicaciones.php"><i class="fa fa-trash"></i></a></td>
+						<td><a href="EliminarPublicacion.php?cod=<?php echo $f['id'];?>"><i class="fa fa-trash"></i></a></td>
 		        
  
 				  
