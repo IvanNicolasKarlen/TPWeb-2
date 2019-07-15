@@ -22,6 +22,7 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 				 $_SESSION['username'] = $email;
 				 $_SESSION['id'] = $consultar['id'];
 					header($direccion->carpRaiz("Index"));
+					$conexion->modificarTransaccion($consultar['id']);
 					exit();
 					break;
 		case 'administrador': echo '<script> alert("Ingresado")</script>';

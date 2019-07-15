@@ -163,6 +163,55 @@ class Conexion{
 										AND c.idUsuario = $idU");
 		return $consulta->num_rows;
 	}
+	public function traerTransaccion($idU){
+	$c = $this->msq->prepare("SELECT idPorcentaje, total from transaccion WHERE idUsuario=?");
+	$c->bind_param("i",$idU);
+	$c->execute();
+	$c->store_result();
+	$idp = ""; $total="";
+	$c->bind_result($idp,$total);
+	$c->fetch();
+	$array=array(
+	"idPorcentaje" => $idp,
+	"total" => $total
+		);
+	$c->close();
+	return $array;
+}
+	public function modificarTransaccion($idU){
+		$c = $this->msq->prepare("SELECT ventas, precio FROM producto WHERE idUsuario=?");
+		$c->bind_param("i",$idU);
+		$c->execute();
+		$r = $c->get_result();
+		$monto=0;
+		$resultado="";
+		while($resultado = $r->fetch_assoc()){
+			$monto = $monto+(($resultado['ventas'])*($resultado['precio']));
+		}
+		$c->close();
+		$array=$this->traerTransaccion($idU);
+		$valorp=$this->traerPorcentaje($array["idPorcentaje"]);
+		$final=$monto*$valorp;
+		$c->prepare("UPDATE transaccion SET total=? WHERE idUsuario=?");
+		$c->bind_param("di",$final,$idU);
+		return $c->execute();
+	}
+
+	public function traerPorcentaje($idP){
+		$consulta = $this->msq->prepare("SELECT valor FROM porcentaje where id=?");
+		$consulta->bind_param("i",$idP);
+		$consulta->execute();
+		$consulta->store_result();
+		$porc=1;
+		$consulta->bind_result($porc);
+		$consulta->fetch();
+
+		return $porc;
+	}
+
+	public function ventasTotales($idU){
+		$c = $this->msq->prepare("SELECT ventas FROM ")
+	}
 }
 
 

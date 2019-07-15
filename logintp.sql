@@ -198,26 +198,26 @@ CREATE TABLE `producto` (
   `palabrasClaves` varchar(110) NOT NULL,
   `descripcion` varchar(600) NOT NULL,
   `visitas` int(11) NOT NULL,
-  `imgprincipal` varchar(80) NOT NULL,
   `idUsuario` int(11) NOT NULL,
   `latitud` varchar(120) NOT NULL,
-  `longitud` varchar(120) NOT NULL
+  `longitud` varchar(120) NOT NULL,
+  `ventas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `envio`, `marca`, `stock`, `genero`, `categoria`, `palabrasClaves`, `descripcion`, `visitas`, `imgprincipal`, `idUsuario`, `latitud`, `longitud`) VALUES
-(1, 'Zapatillas Modernas', 'Nuevo', 1200, 'Efectivo', 'Gratis', 'Nike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'descrip', 270, 'zm01.jpg', 1, '', ''),
-(2, 'Zapatillas Adidas', 'Usado', 1400, 'Efectivo', 'Gratis', 'Adidas', 1200, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Zapatillas Adidas usadas pero impecables', 270, 'adidaszz.jpg', 3, '', ''),
-(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 'Unisex', 'Productos y otros', 'palabra\nclave', 'Soy una descripcion ', 270, '15940444_1318220971550973_7681097437073195512_n.jpg', 3, '', ''),
-(43, 'Vestido marinero PinUp', 'Nuevo', 3200, 'Transferencia Bancaria', 'Gratis', 'BrillaDark', 20, 'Mujer', 'Productos y otros', 'Vestido pinup', 'Hermoso vestido', 270, 'pinup.jpg', 7, '', ''),
-(44, 'Remeras para colegios', 'Nuevo', 300, 'Efectivo', 'Domicilio con cargo', 'Suavicer', 2000, 'Infantil', 'Productos y otros', 'Remeras Dibujos Colegios', 'Remeras para colegios primarios', 270, 'b.jpg', 2, '', ''),
-(45, 'Toyota Corola', 'Usado', 430000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex', 'Vehiculos', 'Auto Usado Toyota', 'Auto Usado Toyota', 270, 'd.jpg', 2, '', ''),
-(46, 'Depto. 2 ambientes', 'Usado', 2520000, 'Tarjeta', 'Entrega en local', 'Inmuebles Alfredo', 1, 'Unisex', 'Inmuebles', 'departamento', 'Departamento 2 ambientes capital', 270, 'dpto2.jpg', 2, '', ''),
-(61, 'Cuadros de Arte', 'Nuevo', 2000, 'Mercado de Pago', 'Gratis', 'Torres', 200, 'Unisex', 'Productos y otros', '', 'Realizo cuadres de arte de todo tipo', 270, 'not_863107_20_215919.jpg', 6, '', ''),
-(62, 'Cuadros', 'Nuevo', 10000, 'Mercado de Pago', 'Entrega en local', 'Cornelio ', 1, 'Unisex', 'Productos y otros', '', '', 270, 'not_863107_20_215919.jpg', 6, '-34.6163127', '-58.42878189999999');
+INSERT INTO `producto` (`id`, `nombre`, `estado`, `precio`, `formasdepago`, `envio`, `marca`, `stock`, `genero`, `categoria`, `palabrasClaves`, `descripcion`, `visitas`, `idUsuario`, `latitud`, `longitud`,`ventas`) VALUES
+(1, 'Zapatillas Modernas', 'Nuevo', 1200, 'Efectivo', 'Gratis', 'Nike', 12, 'Hombre', 'Productos y otros', 'palabra\nclave', 'descrip', 270, 'zm01.jpg', 1, '', '',202),
+(2, 'Zapatillas Adidas', 'Usado', 1400, 'Efectivo', 'Gratis', 'Adidas', 1200, 'Hombre', 'Productos y otros', 'palabra\nclave', 'Zapatillas Adidas usadas pero impecables', 270, 3, '', '',20),
+(3, 'Promociono Ojotas', 'Usado', 700, '', 'Domicilio con Cargo', 'Torres', 1200, 'Unisex', 'Productos y otros', 'palabra\nclave', 'Soy una descripcion ', 270, 3, '', '',4),
+(43, 'Vestido marinero PinUp', 'Nuevo', 3200, 'Transferencia Bancaria', 'Gratis', 'BrillaDark', 20, 'Mujer', 'Productos y otros', 'Vestido pinup', 'Hermoso vestido', 270, 7, '', '',9),
+(44, 'Remeras para colegios', 'Nuevo', 300, 'Efectivo', 'Domicilio con cargo', 'Suavicer', 2000, 'Infantil', 'Productos y otros', 'Remeras Dibujos Colegios', 'Remeras para colegios primarios', 270,  2, '', '',3),
+(45, 'Toyota Corola', 'Usado', 430000, 'Tarjeta', 'Entrega en local', 'Toyota', 1, 'Unisex', 'Vehiculos', 'Auto Usado Toyota', 'Auto Usado Toyota', 270, 'd.jpg', 2, '', '',15),
+(46, 'Depto. 2 ambientes', 'Usado', 2520000, 'Tarjeta', 'Entrega en local', 'Inmuebles Alfredo', 1, 'Unisex', 'Inmuebles', 'departamento', 'Departamento 2 ambientes capital', 270, 2, '', '',28),
+(61, 'Cuadros de Arte', 'Nuevo', 2000, 'Mercado de Pago', 'Gratis', 'Torres', 200, 'Unisex', 'Productos y otros', '', 'Realizo cuadres de arte de todo tipo', 270, 6, '', '',30),
+(62, 'Cuadros', 'Nuevo', 10000, 'Mercado de Pago', 'Entrega en local', 'Cornelio ', 1, 'Unisex', 'Productos y otros', '', '', 270, 6, '-34.6163127', '-58.42878189999999',40);
 
 -- --------------------------------------------------------
 
@@ -401,7 +401,7 @@ CREATE TABLE transaccion(
 	id int(11) NOT NULL,
     idPorcentaje int(11),
     idUsuario int(11),
-    total int,
+    total double,
     primary key(id),
     foreign key(idPorcentaje) references porcentaje(id),
     foreign key(idUsuario) references usuario(id)
