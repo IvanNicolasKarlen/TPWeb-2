@@ -301,7 +301,7 @@ $resultado = $conexion->realizarConsulta($busqueda);
 						<div class="product-thumb">
 						<form method="post" action="detallesProducto.php">
 							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $g['id'];?>">
+							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
 							</form>
 							
 							<img style="height:270px;width:227px;margin:auto;margin-left: auto;margin-right: auto;display: block;
