@@ -3,7 +3,7 @@ require_once("verificacionSesion.php");
 
 
 		
-if(isset($_POST["AddCarrito"]))
+if(isset($_GET["AddCarrito"]))
 		{
 		require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
 		 require_once("conexionBD/direccion.php");
@@ -16,11 +16,11 @@ if(isset($_POST["AddCarrito"]))
 		
 		
      $direccion = new Direccion();
-		
- 		$id_producto = $_POST['Add'];
+		$id_pro = $_GET['AddCarrito'];
+ 		$id_producto = $_GET['Add'];
 		$id_usuario = $_SESSION['id'];
-		$cantidad = $_POST['cantidad'];
-		
+		$cantidad = $_GET['cantidad'];
+		$id_vendedor = $_GET['vendedor'];
 		
 		
 		
@@ -47,7 +47,7 @@ if(isset($_POST["AddCarrito"]))
 			}else{
 						
 				
-				$sql = "INSERT INTO productocarrito(idUsuario,idProducto,cantidad) Values ('$id_usuario','$id_producto','$cantidad')";
+				$sql = "INSERT INTO productocarrito(idUsuario,idProducto,cantidad,vendedor) Values ('$id_usuario','$id_producto','$cantidad','$id_vendedor' )";
 			
 				//ejecutar la consulta
 				$resultado = $conexion->realizarConsulta($sql);
@@ -55,13 +55,6 @@ if(isset($_POST["AddCarrito"]))
 				
 				if($resultado===true)
 				{
-				
-				$ultimo_id = $conexion->obtenerIdGenerado(); 
-				$sql2 =  "UPDATE producto
-						SET idCarrito='$ultimo_id'
-						WHERE id ='$id_producto';";
-						
-				$conexion->realizarConsulta($sql2);
 				
 					echo '<script language= "javascript">alert("Agregado al Carrito");</script>';
 					header("location:CarritoDetalles.php");

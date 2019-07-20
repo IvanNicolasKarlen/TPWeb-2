@@ -22,7 +22,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 						<div class="banner-caption text-center">
 							<h1 style="color:#6675df;">Bags sale</h1>
 							<h3 class="white-color font-weak">Up to 50% Discount</h3>
-							<a href="../Views/Cliente/productosCliente.php"><button class="primary-btn" >Shop Now</button></a>
+							<button class="primary-btn" >Shop Now</button>
 						</div>
 					</div>
 					<!-- /banner -->
@@ -32,7 +32,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 						<img src="img/banner02.jpg" alt="">
 						<div class="banner-caption">
 							<h1 class="primary-color">HOT DEAL<br><span class="white-color font-weak">Up to 50% OFF</span></h1>
-							<a href="../Views/Cliente/productosCliente.php"><button class="primary-btn" >Shop Now</button></a>
+							<button class="primary-btn" >Shop Now</button>
 						</div>
 					</div>
 					<!-- /banner -->
@@ -42,7 +42,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 						<img src="img/banner03.jpg" alt="">
 						<div class="banner-caption">
 							<h1 class="white-color">New Product <span>Collection</span></h1>
-							<a href="../Views/Cliente/productosCliente.php"><button class="primary-btn" >Shop Now</button></a>
+							<button class="primary-btn" >Shop Now</button>
 						</div>
 					</div>
 					<!-- /banner -->
@@ -62,7 +62,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 			<!-- row -->
 			<div class="row">
 				<!-- banner -->
-				<form method="post" action="ProductoBuscado.php">
+				<form method="GET" action="ProductoBuscado.php?Vehiculos=Vehiculos">
 				<div class="col-md-4 col-sm-6">
 					<a class="banner banner-1" >
 						<img src="img/banner10.jpg" alt="">
@@ -76,7 +76,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 				<!-- /banner -->
 
 				<!-- banner -->
-				<form method="post" action="ProductoBuscado.php">
+				<form method="GET" action="ProductoBuscado.php?Servicios=Servicios">
 				<div class="col-md-4 col-sm-6">
 					<a class="banner banner-1">
 						<img src="img/banner11.jpg" alt="">
@@ -90,7 +90,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 				<!-- /banner -->
 
 				<!-- banner -->
-				<form method="post" action="ProductoBuscado.php">
+				<form method="GET" action="ProductoBuscado.php?Inmuebles=Inmuebles">
 				<div class="col-md-4 col-md-offset-0 col-sm-6 col-sm-offset-3">
 					<a class="banner banner-1" >
 						<img src="img/banner12.jpg" alt="">
@@ -128,8 +128,8 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
                 <!-- /section-title -->
 
                 <!-- banner -->
-				<form method="post" action="ProductoBuscado.php">
-                <div class="col-md-3 col-sm-6 col-xs-6">
+				<form method="GET" action="ProductoBuscado.php?Productos=Productos">
+				<div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="banner banner-2">
                         <img src="./img/banner14.jpg" alt="">
                         <div class="banner-caption">
@@ -152,7 +152,8 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
                             <div class='product product-single'>
                                 <div class='product-thumb'>
                                    
-                                    <form method="post" action="detallesProducto.php">
+                                    <form METHOD="get" action="detallesProducto.php?Productoid=<?php echo $f['id'];?>&Nombre=<?php echo $f['nombre'];?>&categoria=<?php echo $f['categoria'];?> ">
+						
 							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
 							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
 								<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
@@ -179,7 +180,8 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
                                     <div class='product-btns'>
                                         <button class='main-btn icon-btn'><i class='fa fa-heart'></i></button>
                                         <button class='main-btn icon-btn'><i class='fa fa-exchange'></i></button>
-                                       <form method="post" action="detallesProducto.php">
+                                       <form METHOD="get" action="detallesProducto.php?Productoid=<?php echo $f['id'];?>&Nombre=<?php echo $f['nombre'];?>&categoria=<?php echo $f['categoria'];?> ">
+						
 										<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
 										<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
 											<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
@@ -222,7 +224,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 			<!-- row -->
 			<div class="row">
 				<!-- banner -->
-				<form method="post" action="ProductoBuscado.php">
+			<form method="GET" action="ProductoBuscado.php?Productos=Productos">
 				<div class="col-md-8">
 					<div class="banner banner-1">
 						<img src="img/banner13.jpg" alt="">
@@ -236,7 +238,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 				<!-- /banner -->
 
 				<!-- banner -->
-				<form method="post" action="ProductoBuscado.php">
+					<form method="GET" action="ProductoBuscado.php?Servicios=Servicios">
 				<div class="col-md-4 col-sm-6">
 					<a class="banner banner-1">
 						<img src="img/banner11.jpg" alt="">
@@ -250,7 +252,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 				<!-- /banner -->
 
 				<!-- banner -->
-				<form method="post" action="ProductoBuscado.php">
+				<form method="GET" action="ProductoBuscado.php?Inmuebles=Inmuebles">
 				<div class="col-md-4 col-sm-6">
 					<a class="banner banner-1">
 						<img src="img/banner12.jpg" alt="">
@@ -284,155 +286,7 @@ $resultado=$conect->realizarConsulta("SELECT * FROM producto WHERE categoria='Pr
 			<!-- row -->
 			<div class="row">
 				<!-- section title -->
-				<div class="col-md-12">
-					<div class="section-title">
-						<h2 class="title">Picked For You</h2>
-					</div>
-				</div>
-				<!-- section title -->
-
-				<!-- Product Single -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="product product-single">
-						<div class="product-thumb">
-						<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
-							<img src="img/product04.jpg" alt="">
-						</div>
-						<div class="product-body">
-							<h3 class="product-price">$32.50</h3>
-							<div class="product-rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-o empty"></i>
-							</div>
-							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-							<div class="product-btns">
-								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
-						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Product Single -->
-
-				<!-- Product Single -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="product product-single">
-						<div class="product-thumb">
-							<div class="product-label">
-								<span>New</span>
-							</div>
-							<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
-							<img src="img/product03.jpg" alt="">
-						</div>
-						<div class="product-body">
-							<h3 class="product-price">$32.50</h3>
-							<div class="product-rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-o empty"></i>
-							</div>
-							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-							<div class="product-btns">
-								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
-						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Product Single -->
-
-				<!-- Product Single -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="product product-single">
-						<div class="product-thumb">
-							<div class="product-label">
-								<span class="sale">-20%</span>
-							</div>
-							<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
-							<img src="img/product02.jpg" alt="">
-						</div>
-						<div class="product-body">
-							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-							<div class="product-rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-o empty"></i>
-							</div>
-							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-							<div class="product-btns">
-								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
-						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Product Single -->
-
-				<!-- Product Single -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
-					<div class="product product-single">
-						<div class="product-thumb">
-							<div class="product-label">
-								<span>New</span>
-								<span class="sale">-20%</span>
-							</div>
-							<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
-							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
-							<img src="img/product01.jpg" alt="">
-						</div>
-						<div class="product-body">
-							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-							<div class="product-rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-o empty"></i>
-							</div>
-							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-							<div class="product-btns">
-								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
-						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
-						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
-						</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Product Single -->
-			</div>
+</div>
 			<!-- /row -->
 		</div>
 		<!-- /container -->

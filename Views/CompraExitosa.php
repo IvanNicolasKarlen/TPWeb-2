@@ -8,13 +8,20 @@ if(isset($_GET["pagar"]))
 		//Abrir conexion
 		$conexion = new Conexion;
 
-
+/*
 		$id_Usuario = $_SESSION['id'];
 		$consulta="SELECT *
 				FROM producto as prod 
 				inner join productocarrito as car on prod.id=car.idProducto
 				WHERE car.idUsuario = '".$id_Usuario."'";
 
+	*/			
+				
+				$consulta="SELECT *
+				FROM producto as prod 
+				inner join productocarrito as car on prod.id=car.idProducto
+				inner join usuario as user on car.vendedor = user.id
+				WHERE car.idUsuario = '".$id_Usuario."'";
 				
 	$productosComprados= $conexion->realizarConsulta($consulta);
 $compras = $productosComprados->num_rows;
@@ -22,8 +29,8 @@ $compras = $productosComprados->num_rows;
 	
  while($f=mysqli_fetch_array($productosComprados)){
 
-				$insertar="INSERT INTO compra(idUsuario, idProducto,cantidad, costo )
-				VALUES ($id_Usuario,".$f['idProducto'].",".$f['cantidad'].",".$f['cantidad']*$f['precio'].")";		
+				$insertar="INSERT INTO compra(idUsuario, idProducto,cantidad, costo, vendedor )
+				VALUES ($id_Usuario,".$f['idProducto'].",".$f['cantidad'].",".$f['cantidad']*$f['precio'].", '".$f['Nombre']."')";		
 				$resul=$conexion->realizarConsulta($insertar);
 				$stockk=$f['stock']-$f['cantidad'];
 				$ventas=$f['ventas']+$f['cantidad'];

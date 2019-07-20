@@ -104,11 +104,20 @@ session_start();
 							
 						</select>
 					</div>
+					<div class="flex-m w-full p-b-33">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="location"  onclick="getLocation()" required>
+							<label class="label-checkbox100" for="ckb1" >
+								<span class="txt1">
+									Permitir compartir mi ubicacion
+								</span>
+							</label>
+						</div>
 
 						
-						<!--inputs invisibles para guardar lat y long-->
-						<input type="text"  style="display: none" name="latitud" id="latitud">
-						<input type="text" style="display: none" name="longitud" id="longitud">
+					</div>
+						<input type="hidden"  class="form-control" name="longitud" id="longitud" value=""> 
+						<input type="hidden"  class="form-control" name="latitud" id="latitud" value="">
 						
 						
 						
@@ -132,16 +141,10 @@ session_start();
 						
 						?>
 						
-						<a href="login.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10
+						<a href="index.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10
 						p-l-30">
 							Login
 							<i class="fa fa-long-arrow-right m-l-5"></i>
-						</a>
-						
-						<a href="Index.php" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10
-						p-l-30">
-							Regresar
-							<i class="fa fa-long-arrow-left m-l-5"></i>
 						</a>
 					</div>
 				</form>

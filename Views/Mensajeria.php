@@ -1,5 +1,12 @@
 <?php
 
+
+//$resultado = $conexion->realizarConsulta( "SELECT * FROM mensajeria WHERE idProducto='$idProducto' AND idUsuario ='$idUsuario' AND idVendedor='$idVendedor' ORDER BY DATE DESC");
+//hacer el while
+
+
+
+
 require_once("verificacionSesion.php");
 require_once("conexionBD/conexion.php");// incluir la configuracion de conexion a la BD
 		//Abrir conexion
@@ -15,126 +22,25 @@ $idProducto = $_POST["Producto"];
 $id_Usuario = $_SESSION['id'];
 		
 		
-//Traigo el id del Vendedor		
-$productos ="SELECT * FROM producto WHERE id = '".$idProducto."'";	
-$listaProductos= $conexion->realizarConsulta($productos);
-while($dato = mysqli_fetch_array($listaProductos))
-{
-	$idVendedor = $dato['idUsuario'];
-}
-
-//Traigo nombre del Vendedor
-$vendedor = "SELECT * FROM USUARIO WHERE id = '".$idVendedor."'";
-$resultadoVendedor= $conexion->realizarConsulta($vendedor);
-while($dato = mysqli_fetch_array($resultadoVendedor))
-{
-	$nombreVendedor = $dato['Nombre'];
-}
-
-
-
-
-
-//Verifico si yo soy el vendedor o el comprador 
-
-//Compruebo si yo soy el vendedor
-$CONSCompra = "SELECT * FROM COMENTARIOS WHERE idVendedor = '".$id_Usuario."' or idProducto= '".$idProducto."'";
-$compra= $conexion->realizarConsulta($CONSCompra);
-while($g = mysqli_fetch_array($compra))
-{
-	$idVendedorTabla = $g['idVendedor'];
-	$nombreCompradores = $g['nombreUsuario'];
-}
-
-
-
-if($idVendedorTabla==$id_Usuario)//Verifico si yo soy el vendedor 
-{
-
-//Traigo el id del chat que se genero en la tabla compra
-
-$Compra = "SELECT * 
-			FROM comentarios 																	//ACA
-			WHERE idVendedor = '".$id_Usuario."'";
-			
-$compra= $conexion->realizarConsulta($Compra);
-while($b = mysqli_fetch_array($compra))
-{
-	$idChat = $b['idChat'];														//TIENE QUE SER UN ARRAY
-}
-
-}else{//Si yo soy un comprador
-
-
-
-//traer todos los comentarios cuando el idproducto= id producto
-
-
-
-//Traigo el id del chat que se genero en la tabla compra
-$Compra = "SELECT * FROM comentarios WHERE idUsuario = '".$id_Usuario."' ";							//ACA
-$compra= $conexion->realizarConsulta($Compra);
-while($b = mysqli_fetch_array($compra))
-{
-	$idChat = $b['idChat'];
-}
-
-
-
-}
-
-
-
-
-if($idVendedorTabla==$id_Usuario)
-{
-	$chatprivado ="SELECT DISTINCT(nombreUsuario), idVendedor, texto, idChat
-						FROM comentarios 
-						WHERE  idProducto= '".$idProducto."'  and idUsuario != '".$id_Usuario."' GROUP BY nombreUsuario";
+	require_once("header.php");	
+		
+$sql =  "SELECT * FROM comentarios WHERE idProducto=$idProducto AND idUsuario =$id_Usuario AND idVendedor=$idVendedor ORDER BY fecha DESC";
+		
 	
 
-	$privado= $conexion->realizarConsulta($chatprivado);
-	
-	
-}else{
-
-
-		$chatprivado ="SELECT *
-						FROM comentarios 
-						WHERE  idProducto= '".$idProducto."' and idUsuario!= '".$id_Usuario."' and idChat = '".$idChat."'";
-	
-
-	$privado= $conexion->realizarConsulta($chatprivado);
-}	
-
-	//Verifico si existe algun comentario ya hecho
-	$ExisteChat = "SELECT * FROM COMENTARIOS WHERE idChat = '".$idChat."'";
-	$existeAlgo= $conexion->realizarConsulta($ExisteChat);
-	$CantidadDeMensajes= $conexion->cantidadDeFilas($existeAlgo);
-	
-		//Verifico si existe algun comentario ya hecho por el vendedor
-	$ExisteMsjVendedor = "SELECT * FROM COMENTARIOS WHERE idChat = '".$idChat."' and idUsuario = '".$idVendedor."'";
-	$existealgo= $conexion->realizarConsulta($ExisteMsjVendedor);
-	$CantidadDeMensajesVendedor= $conexion->cantidadDeFilas($existealgo);
-	
-	
-
-
-
-require_once("verificacionSesion.php");
-require_once("header.php");
-
-
-
-
+		
+$resultado = $conexion->realizarConsulta($sql);
 
 ?>
 
 											
 <?php
 
-if($CantidadDeMensajes=null and $CantidadDeMensajesVendedor=0)
+
+if ($conexion->cantidadDeFilas($resultado)==0) 
 {
+	
+	
 ?>
 <br>
 <h3 class="text-center "> No has recibido ningun mensaje.</h3>
@@ -162,17 +68,20 @@ if($CantidadDeMensajes=null and $CantidadDeMensajesVendedor=0)
 											
 <?PHP
 }else{
+	
+	
+echo $conexion->cantidadDeFilas($resultado);
  //Comienzo a rellenar los campos con los datos obtenidos con el select
-while($name=mysqli_fetch_array($privado)){
+while($name=mysqli_fetch_array($resultado)){
 	
 ?>											
 											<div class="single-review">
 
 												<div class="review-heading">
 
-														<div><a href="#"><i class="fa fa-user-o"></i> <?php echo $name['nombreUsuario'];?></a></div>
+														<div><a><i class="fa fa-user-o"></i> <?php echo $name['nombreUsuario'];?></a></div>
 														
-														<div><a href="#"><i class="fa fa-clock-o"></i> 27 DEC 2017 / 8:0 PM</a></div>
+														<div><a><i class="fa fa-clock-o"></i> <?php echo $name['fecha'];?></a></div>
 														
 													</div>
 													<div class="review-body">

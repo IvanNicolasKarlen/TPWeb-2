@@ -5,7 +5,7 @@
 //Categorias mas visitadas
 
 
-		$categoria = $_POST["Categoria"];
+		$categoria = $_GET["Categoria"];
 		
 	//Cual es la categoria mas buscada
 	$consultaCat = "Select visitas from categoria where nombre like '".$categoria."'";

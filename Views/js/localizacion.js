@@ -14,8 +14,8 @@ class Localizacion{
     } //fin constructor
 
     enviarLocalizacionr(){
-        document.getElementById("longitud").value = this.longitude;
-        document.getElementById("latitud").value = this.latitude;
+        document.getElementById("longitud").setAttribute('value',this.longitude);
+        document.getElementById("latitud").setAttribute('value',this.latitude);
 
     }
 

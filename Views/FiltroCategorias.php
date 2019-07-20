@@ -51,8 +51,8 @@ $resultado = $conexion->realizarConsulta($busqueda);
 				<div class="col-md-3 col-sm-6 col-xs-6" >
 					<div class="product product-single">
 						<div class="product-thumb">
-							<form method="post" action="detallesProducto.php">
-							<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
+							<form METHOD="get" action="detallesProducto.php?Productoid=<?php echo $f['id'];?>&Nombre=<?php echo $f['nombre'];?>&categoria=<?php echo $f['categoria'];?> ">
+						<button type="submit" class="main-btn quick-view" name="detalles"><i class="fa fa-search-plus"></i> Ver más</button>
 							<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
 							<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">
 							<input type="hidden" name="Categoria" value="<?php echo $f['categoria'];?>">
@@ -79,7 +79,8 @@ $resultado = $conexion->realizarConsulta($busqueda);
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<form method="post" action="detallesProducto.php">
+								<form METHOD="get" action="detallesProducto.php?Productoid=<?php echo $f['id'];?>&Nombre=<?php echo $f['nombre'];?>&categoria=<?php echo $f['categoria'];?> ">
+						
 						<button type="submit" class="primary-btn add-to-cart" name="detalles"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button>
 						<input type="hidden" name="Productoid" value="<?php echo $f['id'];?>">
 						<input type="hidden" name="ProductoNombre" value="<?php echo $f['nombre'];?>">

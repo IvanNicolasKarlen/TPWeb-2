@@ -186,7 +186,7 @@ $producto = $conexion->realizarConsulta($query);
         </div>
 		
 		  <div align="center">
-   <form method="post" id="make_pdf" action="CrearPdf.php">
+   <form method="post" id="make_pdf" target="_blank" action="CrearPdf.php">
     <input type="hidden" name="hidden_html" id="hidden_html" />
     <button type="button" name="create_pdf" id="create_pdf" class="btn btn-primary">Descargar</button>
    </form>

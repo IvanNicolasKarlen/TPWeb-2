@@ -21,7 +21,7 @@ $long = $_POST['longitud'];
 		
 		$consultar = $conexion->controlRegistrar($email);
 
-		$numFilas = $conexion->cantidadDeFilas($resultado);
+		//$numFilas = $conexion->cantidadDeFilas($consultar);
 
 		//pregunto si la cantidad de filas es distinto a cero porque ya existe otro email igual
 		if($consultar!=null)
@@ -45,8 +45,8 @@ $long = $_POST['longitud'];
 				$idTipoUser = 3;
 				 $rol= "usuario";
 				
-				$sql = "INSERT INTO usuario(email, password, Nombre, estado, pais, latitud, longitud, rol, idTipoUser)
-				values('$email','$pass','$nombre','$estado','$pais','$lat', '$long','$rol','$idTipoUser')";
+				$sql = "INSERT INTO usuario(email, password, Nombre, estado, pais, latitud, longitud, rol,idTipoUser)
+				values('$email','$pass','$nombre','$estado','$pais','$lat', '$long','$rol',$idTipoUser)";
 				
 				if($conexion->realizarConsulta($sql)===true)
 			{

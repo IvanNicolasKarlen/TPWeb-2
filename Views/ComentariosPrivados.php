@@ -42,7 +42,8 @@ while($dato = mysqli_fetch_array($resultadoVendedor))
 
 
 $insertar = "INSERT INTO comentarios(texto,idUsuario, nombreUsuario, idProducto, idVendedor, idChat) values ('$texto','$id_Usuario','$NombreUsuario','$idProducto','$idVendedor','$idChat')";
-	
+
+//die($insertar);	
 $hecho= $conexion->realizarConsulta($insertar);
 
 

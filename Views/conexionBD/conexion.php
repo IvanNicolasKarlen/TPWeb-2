@@ -27,16 +27,16 @@ class Conexion{
 	 
 	
 	 public function realizarConsulta($consulta){
- if(!$resultado = $this->msq->query($consulta) )
- {
-	 echo "Ha ocurrido un error al ejecutar la consulta   ";
- }else{
-	 
-	 return $resultado; //muestra las filas afectadas
-	 //return $this->msq->query($consulta);
-
-	   }
- }
+		 if(!$resultado = $this->msq->query($consulta) )
+		 {
+		   die( "Ha ocurrido un error al ejecutar la consulta :" . $consulta);
+		   
+		 }else{
+			 
+			 return $resultado; //muestra las filas afectadas
+			 //return $this->msq->query($consulta);	  
+		}
+	}
 
 	 
 		 public function controlLogin($email,$password){
@@ -233,6 +233,85 @@ class Conexion{
 		$consulta->bind_result($nombrep);
 		$consulta->fetch();
 		return $nombrep;
+	}
+
+	public function buscarPreguntasComprador($idC,$idV,$idP){
+		$consulta=$this->msq->prepare("SELECT * FROM pregunta WHERE idComprador=? AND idVendedor=? AND idProducto=?");
+		$consulta->bind_param("iii",$idC,$idV,$idP);
+		$consulta->execute();
+		return $consulta->get_result();
+
+	}
+
+	public function buscarPreguntasVendedor($idVendedor,$idP){
+		$consulta=$this->msq->prepare("SELECT * FROM pregunta WHERE idVendedor=? AND idProducto=?");
+		$consulta->bind_param("ii",$idVendedor,$idP);
+		$consulta->execute();
+		return $consulta->get_result();
+	}
+
+	public function insertarPregunta($idC,$idV,$idP,$texto){
+		$consulta=$this->msq->prepare("INSERT INTO pregunta (texto,idComprador,idVendedor,idProducto)
+											VALUES (?,?,?,?)");
+		$consulta->bind_param("siii",$texto,$idC,$idV,$idP);
+		if($consulta->execute()){
+			return "Pregunta realizada con exito";
+		}else{
+			return "Ha ocurrido un error al realizar tu pregunta";
+		}
+	}
+	public function buscarRespuestas($idPregunta){
+		$consulta=$this->msq->prepare("SELECT idUsuario, texto, fecha FROM respuesta WHERE idPregunta=?");
+		$consulta->bind_param("i",$idPregunta);
+		$consulta->execute();
+		return $consulta->get_result();
+	}
+	public function insertarRespuesta($idPregunta,$idusuario,$texto){
+		$consulta=$this->msq->prepare("INSERT INTO respuesta (idUsuario,texto,idPregunta)
+											VALUES(?,?,?)");
+		$consulta->bind_param("isi",$idusuario,$texto,$idPregunta);
+		if($consulta->execute()){
+			return "Respuesta añadida con exito";
+		}else{
+			return "Ha ocurrido un error al agregar tu respuesta";
+		}
+	}
+
+	public function buscarPreguntasEnMisPublicaciones($idUsuario){
+		$consulta=$this->msq->prepare("SELECT * FROM pregunta WHERE idVendedor=?");
+		$consulta->bind_param("i",$idUsuario);
+		$consulta->execute();
+		return $consulta->get_result();
+	}
+
+	public function consultarPublicaciones($idProducto){
+		$consulta=$this->msq->prepare("SELECT * FROM producto WHERE id=?");
+		$consulta->bind_param("i",$idProducto);
+		$consulta->execute();
+		return $consulta->get_result();
+	}
+
+	public function buscarPreguntasQueHice($idUsuario){
+		$consulta=$this->msq->prepare("SELECT * FROM pregunta WHERE idComprador=?");
+		$consulta->bind_param("i",$idUsuario);
+		$consulta->execute();
+		return $consulta->get_result();
+	}
+	
+	public function buscarProducto($idp){
+		$consulta=$this->msq->prepare("SELECT * FROM producto WHERE id=?");
+		$consulta->bind_param("i",$idp);
+		$consulta->execute();
+		return $consulta->get_result();
+	}
+		public function traerPregunta($idp){
+		$consulta=$this->msq->prepare("SELECT texto FROM pregunta WHERE id=?");
+		$consulta->bind_param("i",$idp);
+		$consulta->execute();
+		$txt="";
+		$consulta->bind_result($txt);
+		$consulta->fetch();
+		return $txt;
 	}
 }
 

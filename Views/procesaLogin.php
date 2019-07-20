@@ -14,6 +14,23 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		//Traigo los datos buscados en un array
 		$consultar=$conexion->controlLogin($email,$password);
 		$direccion= new Direccion();
+		
+		$CONS = "select * from usuario where email = '".$email."' ";
+		$query = $conexion->realizarConsulta($CONS);
+		while($f = mysqli_fetch_array($query))
+		{
+			$estado = $f['estado'];
+		}
+		
+		if($estado == "Bloqueado")
+		{
+			
+			$error="Lo sentimos, has infringido las reglas del sistema. Estas bloqueado";
+				header($direccion->errorLogin($error));
+				exit();
+		}else{
+		
+		
 	switch($consultar['rol'])
 	{
 		case 'usuario': echo '<script> alert("Ingresado")</script>';
@@ -37,6 +54,8 @@ if(isset($_POST["email"])){ //Si completa una vez el campo usuario
 		case '': $error="USUARIO O PASSWORD INCORRECTA, POR FAVOR REGISTRESE PARA PODER INGRESAR";
 				header($direccion->errorLogin($error));
 				exit();
+				
+	}
 	}
 }
 ?>

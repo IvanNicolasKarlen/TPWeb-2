@@ -199,6 +199,7 @@ $mostrar = $mostrar+$subtotal;
 <button type="submit" name="ComprarTodo" class="primary-btn add-to-cart" style="float:right;"><i class="fa fa-shopping-cart"></i> Comprar todo</button>
 								<input type="hidden" name="Add" value="<?php echo $mostrar;?>">
 								<input type="hidden" name="id_Usuario" value="$_Session['id']">
+								<input type="hidden" name="vendedor" value="<?php echo $id_vendedor; ?>">
 								<input type="hidden" name="total" value="<?php echo "Total: $".number_format($mostrar,0,'.','.');?>">
 </form>
 		</div>
